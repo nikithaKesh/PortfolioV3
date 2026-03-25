@@ -3,14 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Nikitha Keshan — Software Developer, System Automation Creator, Web Developer." />
-  <title>Nikitha Keshan | Portfolio</title>
+  <meta name="description" content="Nikitha Keshan — Software Developer, Web Developer, and System Automation Creator. Building business websites, internal tools, and scalable digital experiences." />
+  <meta name="author" content="Nikitha Keshan" />
+  
+  <meta property="og:title" content="Nikitha Keshan | Software & System Developer" />
+  <meta property="og:description" content="Engineering business systems, web applications, and automated workflows." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nikithakesh.github.io/" />
+  <meta property="og:image" content="https://nikithakesh.github.io/social-preview.png" />
+
+  <title>Nikitha Keshan | Software & System Developer</title>
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230b0e0c'/><text x='50' y='72' font-size='70' font-family='serif' fill='%23d4c2a5' text-anchor='middle'>N</text></svg>">
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
   
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
@@ -19,53 +27,50 @@
        CSS VARIABLES: THEME SYSTEM
        ========================================= */
     :root {
-      /* Dark Theme (Nature Vibe) */
+      /* Dark Theme (Nature/Futuristic Vibe) */
       --bg: #0b0e0c;          
       --bg-soft: #121713;     
-      --surface: rgba(22, 28, 24, 0.65); 
-      --surface-2: rgba(30, 38, 32, 0.95);
-      --surface-3: rgba(255, 255, 255, 0.03);
+      --surface: rgba(22, 28, 24, 0.4); 
+      --surface-2: rgba(30, 38, 32, 0.8);
+      --surface-3: rgba(255, 255, 255, 0.05);
       
       --text: #e8ece9;        
       --muted: #9ba89f;       
       --muted-2: #6b7a70;
       
-      --line: rgba(181, 201, 186, 0.12);
+      --line: rgba(181, 201, 186, 0.1);
       --line-strong: rgba(181, 201, 186, 0.25);
       
       --primary: #759279;     
       --primary-2: #a2bba5;   
       --accent: #d4c2a5;      
       
-      --btn-text: #000000;
+      --btn-text: #0b0e0c;
       
-      --nav-bg: rgba(14, 18, 15, 0.6);
+      --nav-bg: rgba(11, 14, 12, 0.5);
       --nav-bg-scrolled: rgba(11, 14, 12, 0.85);
-      --nav-bg-solid: rgba(14, 18, 15, 0.95);
       --backdrop: rgba(5, 8, 6, 0.8);
       --input-bg: rgba(0, 0, 0, 0.2);
-      --glow-inset: inset 0 0 80px rgba(255,255,255,0.02);
-
+      
       --shadow: 0 30px 80px rgba(0,0,0,0.6);
-      --shadow-soft: 0 15px 40px rgba(5, 10, 6, 0.4);
+      --shadow-soft: 0 15px 40px rgba(0, 0, 0, 0.4);
 
-      /* Dynamic Alphas for Glows and Hovers (Nature) */
+      /* Glows & Interactive States */
       --glow-1: rgba(117, 146, 121, 0.08);
       --glow-2: rgba(212, 194, 165, 0.05);
       --glow-3: rgba(117, 146, 121, 0.03);
       --primary-glow: rgba(117, 146, 121, 0.2);
       --primary-glow-hover: rgba(117, 146, 121, 0.3);
-      --primary-alpha-05: rgba(117, 146, 121, 0.05);
       --primary-alpha-10: rgba(117, 146, 121, 0.1);
       --cursor-bg: rgba(162, 187, 165, 0.1);
       
       --radius-xl: 32px;
-      --radius-lg: 20px;
+      --radius-lg: 24px;
       --radius-md: 16px;
       --radius-sm: 8px;
       
       --container: 1240px;
-      --nav-h: 84px;
+      --nav-h: 80px;
       --transition: 400ms cubic-bezier(0.25, 1, 0.35, 1);
       
       --font-sans: "DM Sans", sans-serif;
@@ -74,53 +79,48 @@
     }
 
     [data-theme="light"] {
-      /* Light Theme (Fresh Light Green / Mint Vibe) */
-      --bg: #ebf3ee; /* Pale sage/mint */
-      --bg-soft: #dceae1; 
-      --surface: rgba(255, 255, 255, 0.6); /* Frosted glass */
+      /* Light Theme (Fresh/Minimal Vibe) */
+      --bg: #f4f7f5; 
+      --bg-soft: #e9eee9; 
+      --surface: rgba(255, 255, 255, 0.6); 
       --surface-2: rgba(255, 255, 255, 0.9);
-      --surface-3: rgba(255, 255, 255, 0.65); 
+      --surface-3: rgba(255, 255, 255, 0.8); 
       
-      --text: #17241d; /* Deep forest slate */
-      --muted: #4d6657; /* Muted forest */
-      --muted-2: #759181; /* Sage */
+      --text: #17241d; 
+      --muted: #5b6b61; 
+      --muted-2: #759181; 
       
-      --line: rgba(255, 255, 255, 0.9); /* Solid white lines for glassy feel */
-      --line-strong: rgba(58, 125, 84, 0.2); /* Soft forest green for structural borders */
+      --line: rgba(58, 125, 84, 0.1); 
+      --line-strong: rgba(58, 125, 84, 0.25); 
       
-      --primary: #3a7d54; /* Readable forest green */
+      --primary: #3a7d54; 
       --primary-2: #245e3a; 
-      --accent: #d97743; /* Warm terracotta/earthy sun */
+      --accent: #c46835; 
       
       --btn-text: #ffffff;
 
-      --nav-bg: rgba(235, 243, 238, 0.6);
-      --nav-bg-scrolled: rgba(220, 234, 225, 0.85);
-      --nav-bg-solid: rgba(235, 243, 238, 0.98);
-      --backdrop: rgba(235, 243, 238, 0.7);
+      --nav-bg: rgba(244, 247, 245, 0.6);
+      --nav-bg-scrolled: rgba(244, 247, 245, 0.9);
+      --backdrop: rgba(244, 247, 245, 0.8);
       --input-bg: rgba(255, 255, 255, 0.8);
-      --glow-inset: inset 0 0 80px rgba(255,255,255,0.7);
 
-      --shadow: 0 30px 60px rgba(23, 36, 29, 0.06); 
-      --shadow-soft: 0 15px 30px rgba(23, 36, 29, 0.03);
+      --shadow: 0 30px 60px rgba(23, 36, 29, 0.08); 
+      --shadow-soft: 0 15px 30px rgba(23, 36, 29, 0.04);
 
-      /* Dynamic Alphas for Glows and Hovers (Light Green) */
-      --glow-1: rgba(255, 255, 255, 0.8); /* Morning mist */
-      --glow-2: rgba(255, 255, 255, 0.5); /* Morning mist */
-      --glow-3: rgba(255, 255, 255, 0.6); /* Morning mist */
-      --primary-glow: rgba(58, 125, 84, 0.2);
-      --primary-glow-hover: rgba(58, 125, 84, 0.35);
-      --primary-alpha-05: rgba(255, 255, 255, 0.9); /* Re-purposed to solid white for hovers */
-      --primary-alpha-10: rgba(255, 255, 255, 1);
+      --glow-1: rgba(255, 255, 255, 0.8); 
+      --glow-2: rgba(255, 255, 255, 0.5); 
+      --glow-3: rgba(255, 255, 255, 0.6); 
+      --primary-glow: rgba(58, 125, 84, 0.15);
+      --primary-glow-hover: rgba(58, 125, 84, 0.25);
+      --primary-alpha-10: rgba(58, 125, 84, 0.08);
       --cursor-bg: rgba(58, 125, 84, 0.1);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    
     html { scroll-behavior: smooth; scroll-padding-top: 120px; }
 
     /* =========================================
-       GLOBAL & AMBIENT NATURAL BACKGROUND
+       GLOBAL ACCESSIBILITY & BASE
        ========================================= */
     body {
       min-height: 100vh;
@@ -129,60 +129,29 @@
       background-color: var(--bg);
       overflow-x: hidden;
       transition: background-color var(--transition), color var(--transition);
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* Base Radial Gradients */
+    /* Focus states for Keyboard Navigation */
+    :focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: 4px;
+      border-radius: var(--radius-sm);
+    }
+
+    /* Ambient Background */
     body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: -2;
-      background: 
-        radial-gradient(circle at 10% 20%, var(--glow-1), transparent 40%),
-        radial-gradient(circle at 90% 80%, var(--glow-2), transparent 40%),
-        radial-gradient(circle at 50% 50%, var(--glow-3), transparent 60%);
+      content: ""; position: fixed; inset: 0; pointer-events: none; z-index: -2;
+      background: radial-gradient(circle at 10% 20%, var(--glow-1), transparent 40%),
+                  radial-gradient(circle at 90% 80%, var(--glow-2), transparent 40%),
+                  radial-gradient(circle at 50% 50%, var(--glow-3), transparent 60%);
       transition: background var(--transition);
     }
 
-    /* Ambient Drifting Mist (Only visible in Light Theme) */
-    html::before {
-      content: "";
-      position: fixed;
-      inset: -20%; /* Extended to allow panning */
-      z-index: -3;
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 800ms ease;
-    }
-    
-    [data-theme="light"] html::before {
-      opacity: 1;
-      background: 
-          radial-gradient(ellipse at 15% 25%, rgba(255, 255, 255, 0.9) 0%, transparent 45%),
-          radial-gradient(ellipse at 85% 15%, rgba(217, 119, 67, 0.25) 0%, transparent 40%), /* Soft amber sun glow */
-          radial-gradient(ellipse at 35% 75%, rgba(255, 255, 255, 0.85) 0%, transparent 50%),
-          radial-gradient(ellipse at 85% 85%, rgba(255, 255, 255, 0.7) 0%, transparent 40%);
-      background-size: 100% 100%;
-      filter: blur(40px);
-      animation: driftMist 30s ease-in-out infinite alternate;
-    }
-
-    @keyframes driftMist {
-      0% { transform: translate(0%, 0%) scale(1); }
-      100% { transform: translate(-5%, -5%) scale(1.05); }
-    }
-
-    /* Noise Texture */
     body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: -1;
+      content: ""; position: fixed; inset: 0; pointer-events: none; z-index: -1;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-      opacity: 0.03;
-      mix-blend-mode: overlay;
+      opacity: 0.03; mix-blend-mode: overlay;
     }
 
     ::selection { background: var(--primary-glow); color: var(--text); }
@@ -191,673 +160,273 @@
     ::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 10px; }
     ::-webkit-scrollbar-thumb:hover { background: var(--primary); }
 
-    img { max-width: 100%; display: block; }
+    img { max-width: 100%; display: block; border-radius: var(--radius-sm); }
     button, a, input, textarea, select { font: inherit; outline: none; }
-    button { border: 0; background: none; color: inherit; cursor: none; }
-    a { color: inherit; text-decoration: none; cursor: none; }
+    button { border: 0; background: none; color: inherit; cursor: pointer; }
+    a { color: inherit; text-decoration: none; cursor: pointer; }
     ul { list-style: none; }
 
-    .container { width: min(var(--container), calc(100% - 40px)); margin-inline: auto; }
+    .container { width: min(var(--container), calc(100% - 48px)); margin-inline: auto; }
 
     /* =========================================
-       TYPOGRAPHY SYSTEM
+       TYPOGRAPHY
        ========================================= */
-    .mono {
-      font-family: var(--font-mono);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-size: 0.75rem;
-      color: var(--primary-2);
-      font-weight: 300;
-    }
-
+    .mono { font-family: var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.75rem; color: var(--primary-2); font-weight: 500; }
+    
     .section-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      padding: 10px 18px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: var(--surface-3);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      margin-bottom: 24px;
+      display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px;
+      border-radius: 999px; border: 1px solid var(--line); background: var(--surface-3);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); margin-bottom: 24px;
     }
-
     .section-tag i { color: var(--accent); font-size: 1.1rem; }
 
-    .title-xl, .title-lg, .title-md, .title-sm {
-      font-family: var(--font-display);
-      line-height: 1.1;
-      font-weight: 400;
-    }
-
-    .title-xl { font-size: clamp(3.2rem, 7vw, 6.5rem); letter-spacing: -0.02em; }
-    .title-lg { font-size: clamp(2.4rem, 4vw, 4rem); letter-spacing: -0.01em; }
-    .title-md { font-size: clamp(1.6rem, 2.2vw, 2.2rem); }
-    .title-sm { font-size: 1.25rem; font-weight: 500; }
+    h1, h2, h3, h4 { line-height: 1.1; font-weight: 400; color: var(--text); }
+    .title-xl { font-family: var(--font-display); font-size: clamp(3rem, 6vw, 5.5rem); letter-spacing: -0.02em; }
+    .title-lg { font-family: var(--font-display); font-size: clamp(2.2rem, 4vw, 3.5rem); letter-spacing: -0.01em; }
+    .title-md { font-family: var(--font-display); font-size: clamp(1.4rem, 2vw, 1.8rem); font-weight: 500;}
+    .title-sm { font-family: var(--font-sans); font-size: 1.15rem; font-weight: 500; }
     
     .italic-serif { font-style: italic; font-weight: 500; color: var(--primary-2); }
-
-    .lead { font-size: clamp(1.05rem, 1.4vw, 1.15rem); line-height: 1.8; color: var(--muted); max-width: 68ch; font-weight: 300; }
+    .lead { font-size: clamp(1.05rem, 1.4vw, 1.2rem); line-height: 1.7; color: var(--muted); max-width: 60ch; font-weight: 300; }
     .muted { color: var(--muted); }
-    .small { font-size: 0.95rem; line-height: 1.7; color: var(--muted); font-weight: 300; }
+    .small { font-size: 0.95rem; line-height: 1.6; color: var(--muted); font-weight: 300; }
 
     /* =========================================
-       LAYOUT GRIDS & SURFACES
+       LAYOUT & COMPONENTS
        ========================================= */
-    .grid { display: grid; gap: 24px; }
     .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
     .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 
     .card {
-      position: relative;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-soft);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      overflow: hidden;
-      transition: var(--transition);
-      display: flex;
-      flex-direction: column;
-      height: 100%;
+      background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      transition: var(--transition); display: flex; flex-direction: column; height: 100%; position: relative; overflow: hidden;
     }
-
-    .card::before {
-      content: ""; position: absolute; inset: 0;
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), transparent 40%);
-      pointer-events: none;
-    }
-
-    [data-theme="light"] .card::before,
-    [data-theme="light"] .project-card::before {
-      background: linear-gradient(135deg, rgba(255,255,255,0.6), rgba(255,255,255,0));
-    }
-
     .card-pad { padding: 32px; }
 
-    /* =========================================
-       COMPONENTS (BUTTONS & CHIPS)
-       ========================================= */
+    /* Buttons */
     .btn {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      min-height: 54px;
-      padding: 0 28px;
-      border-radius: var(--radius-sm);
-      border: 1px solid transparent;
-      transition: var(--transition);
-      cursor: none;
-      white-space: nowrap;
-      font-weight: 500;
-      letter-spacing: 0.02em;
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      min-height: 50px; padding: 0 28px; border-radius: var(--radius-sm);
+      font-weight: 500; transition: var(--transition); white-space: nowrap; border: 1px solid transparent;
     }
-
     .btn:hover { transform: translateY(-2px); }
-
-    .btn-primary {
-      background: var(--primary);
-      color: var(--btn-text);
-      font-weight: 600;
-      box-shadow: 0 10px 30px var(--primary-glow);
-    }
-
-    .btn-primary:hover {
-      background: var(--primary-2);
-      box-shadow: 0 15px 40px var(--primary-glow-hover);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      border-color: var(--line-strong);
-      color: var(--text);
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--primary-2);
-      background: var(--primary-alpha-05);
-    }
-
-    .btn-ghost {
-      min-height: 44px; padding: 0 20px;
-      border: 1px solid transparent; color: var(--muted);
-      border-radius: var(--radius-sm);
-    }
-
-    .btn-ghost.active, .btn-ghost:hover {
-      color: var(--text);
-      border-color: var(--line-strong);
-      background: var(--surface-3);
-    }
-
-    .chip-row { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn-primary { background: var(--primary); color: var(--btn-text); box-shadow: 0 10px 30px var(--primary-glow); }
+    .btn-primary:hover { background: var(--primary-2); box-shadow: 0 15px 40px var(--primary-glow-hover); }
+    .btn-secondary { background: transparent; border-color: var(--line-strong); color: var(--text); }
+    .btn-secondary:hover { border-color: var(--primary-2); background: var(--primary-alpha-10); }
 
     .chip {
-      display: inline-flex; align-items: center; gap: 8px;
-      min-height: 38px; padding: 0 16px;
-      border: 1px solid var(--line); border-radius: var(--radius-sm);
-      background: var(--surface-3); color: var(--muted);
-      font-size: 0.9rem; font-weight: 400;
-      transition: var(--transition);
-      backdrop-filter: blur(10px);
+      display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 12px;
+      border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface-3);
+      color: var(--muted); font-size: 0.85rem; font-weight: 400; font-family: var(--font-mono);
     }
     
-    a.chip:hover {
-      background: var(--primary-alpha-10);
-      border-color: var(--primary-2);
-      color: var(--text);
-    }
-
-    .chip i { color: var(--primary-2); font-size: 1.1rem; transition: color var(--transition);}
-
     /* =========================================
-       NAVIGATION & THEME TOGGLE
+       NAVIGATION
        ========================================= */
-    .site-header { position: sticky; top: 0; z-index: 100; padding-top: 24px; }
-
+    .site-header { position: fixed; top: 0; width: 100%; z-index: 100; transition: var(--transition); padding-top: 16px; }
     .nav-shell {
-      width: min(calc(var(--container) + 40px), calc(100% - 24px));
-      margin-inline: auto; height: var(--nav-h);
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 24px; border: 1px solid var(--line);
-      border-radius: var(--radius-md);
-      background: var(--nav-bg);
-      backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
-      transition: var(--transition);
+      width: min(calc(var(--container) + 40px), calc(100% - 32px)); margin-inline: auto; height: var(--nav-h);
+      display: flex; align-items: center; justify-content: space-between; padding: 0 24px;
+      border: 1px solid transparent; border-radius: var(--radius-lg); transition: var(--transition);
+    }
+    .site-header.scrolled .nav-shell {
+      background: var(--nav-bg-scrolled); border-color: var(--line);
+      backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); box-shadow: var(--shadow-soft);
     }
 
-    .nav-shell.scrolled {
-      background: var(--nav-bg-scrolled);
-      border-color: var(--line-strong);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    }
-
-    .brand { display: flex; align-items: center; gap: 16px; min-width: 0; }
-
+    .brand { display: flex; align-items: center; gap: 12px; }
     .brand-mark {
-      width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;
-      border-radius: var(--radius-sm);
+      width: 40px; height: 40px; display: grid; place-items: center; border-radius: var(--radius-sm);
       background: var(--surface-3); border: 1px solid var(--line);
-      font-family: var(--font-display); font-weight: 600; font-style: italic; font-size: 1.1rem;
-      color: var(--accent);
+      font-family: var(--font-display); font-weight: 600; font-style: italic; font-size: 1.2rem; color: var(--accent);
     }
+    .brand-meta { display: flex; flex-direction: column; }
+    .brand-title { font-weight: 600; font-family: var(--font-sans); font-size: 1rem; }
+    .brand-sub { color: var(--muted); font-size: 0.75rem; font-weight: 400; }
 
-    .brand-meta { display: flex; flex-direction: column; gap: 2px; justify-content: center;}
-    .brand-title { font-weight: 500; font-family: var(--font-display); font-size: 1.1rem; letter-spacing: 0.02em; line-height: 1;}
-    .brand-sub { color: var(--muted-2); font-size: 0.82rem; font-weight: 300; line-height: 1;}
-
-    .nav-links { display: flex; align-items: center; gap: 6px; }
-
+    .nav-links { display: flex; gap: 8px; }
     .nav-link {
-      min-height: 42px; padding: 0 18px; border-radius: var(--radius-sm);
-      color: var(--muted); transition: var(--transition);
-      font-size: 0.95rem; display: flex; align-items: center;
+      padding: 8px 16px; border-radius: var(--radius-sm); color: var(--muted);
+      font-size: 0.95rem; font-weight: 400; transition: var(--transition);
     }
-
     .nav-link:hover, .nav-link.active { color: var(--text); background: var(--surface-3); }
 
     .nav-actions { display: flex; align-items: center; gap: 12px; }
-
     .theme-toggle {
-      width: 44px; height: 44px; display: grid; place-items: center;
-      border-radius: var(--radius-sm); border: 1px solid transparent;
-      color: var(--muted); font-size: 1.2rem; transition: var(--transition);
+      width: 40px; height: 40px; display: grid; place-items: center; border-radius: var(--radius-sm);
+      border: 1px solid transparent; color: var(--muted); font-size: 1.2rem; transition: var(--transition);
     }
     .theme-toggle:hover { color: var(--text); background: var(--surface-3); border-color: var(--line); }
 
-    .mobile-toggle {
-      display: none; width: 44px; height: 44px; border-radius: var(--radius-sm);
-      border: 1px solid var(--line); background: var(--surface-3); cursor: none;
-    }
-    .mobile-toggle span, .mobile-toggle::before, .mobile-toggle::after {
-      content: ""; display: block; width: 20px; height: 1.5px;
-      border-radius: 2px; margin-inline: auto; background: var(--text);
-      transition: var(--transition);
-    }
-    .mobile-toggle::before { margin-bottom: 6px; }
-    .mobile-toggle::after { margin-top: 6px; }
+    /* Mobile Nav Menu */
+    .mobile-toggle { display: none; width: 44px; height: 44px; border-radius: var(--radius-sm); border: 1px solid var(--line); background: var(--surface-3); }
+    .mobile-toggle span, .mobile-toggle::before, .mobile-toggle::after { content: ""; display: block; width: 20px; height: 1.5px; background: var(--text); margin-inline: auto; transition: var(--transition); }
+    .mobile-toggle::before { margin-bottom: 6px; } .mobile-toggle::after { margin-top: 6px; }
     .mobile-toggle.active span { opacity: 0; }
     .mobile-toggle.active::before { transform: translateY(7.5px) rotate(45deg); }
     .mobile-toggle.active::after { transform: translateY(-7.5px) rotate(-45deg); }
 
     .mobile-panel {
-      position: fixed; inset: calc(var(--nav-h) + 36px) 12px auto; z-index: 90;
-      padding: 24px; border-radius: var(--radius-md);
-      background: var(--nav-bg-solid); border: 1px solid var(--line-strong);
-      backdrop-filter: blur(24px); box-shadow: var(--shadow);
-      transform: translateY(-16px); opacity: 0; visibility: hidden;
-      transition: var(--transition);
+      position: absolute; top: calc(100% + 16px); left: 16px; right: 16px;
+      padding: 24px; border-radius: var(--radius-lg); background: var(--bg-soft); border: 1px solid var(--line-strong);
+      box-shadow: var(--shadow); transform: translateY(-16px); opacity: 0; visibility: hidden; transition: var(--transition);
     }
     .mobile-panel.open { opacity: 1; visibility: visible; transform: translateY(0); }
-    .mobile-panel .nav-link { width: 100%; justify-content: flex-start; display: inline-flex; min-height: 48px; margin-bottom: 8px; }
+    .mobile-panel .nav-link { display: flex; width: 100%; min-height: 48px; align-items: center; }
 
     /* =========================================
-       PAGE ROUTING & REVEALS
+       PAGE STRUCTURE & REVEALS
        ========================================= */
-    .page-shell { padding: 40px 0 60px; }
-    .page { display: block; padding-top: 60px; } 
+    main { padding-top: 140px; }
+    .section { padding: 60px 0; }
+    .section-head { margin-bottom: 48px; max-width: 700px; }
     
-    .section { padding: 60px 0 80px; }
-    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 800ms ease, transform 800ms ease; }
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 800ms ease, transform 800ms ease; }
     .reveal.show { opacity: 1; transform: translateY(0); }
 
     /* =========================================
-       HERO SECTION 
+       HERO
        ========================================= */
-    .hero {
-      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px;
-      align-items: center; min-height: calc(100vh - 160px);
-    }
-
-    .hero-copy { display: flex; flex-direction: column; gap: 24px; justify-content: center; }
-
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 16px; }
-
-    .hero-visual {
-      position: relative; display: flex; align-items: center; justify-content: center;
-      height: 100%; min-height: 600px;
-    }
-
+    .hero { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center; min-height: 75vh; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 32px; }
+    
+    .hero-visual { position: relative; display: flex; align-items: center; justify-content: center; }
     .organic-frame {
-      position: relative; width: min(100%, 520px); height: 620px;
-      border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      box-shadow: var(--glow-inset), var(--shadow-soft);
-      backdrop-filter: blur(30px);
-      display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 40px;
-      animation: morph 15s ease-in-out infinite alternate;
-      overflow: hidden;
-      transition: var(--transition);
+      width: min(100%, 450px); aspect-ratio: 4/5; border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, var(--surface), transparent);
+      border: 1px solid var(--line); box-shadow: var(--shadow-soft);
+      display: flex; flex-direction: column; padding: 40px; justify-content: flex-end; position: relative; overflow: hidden;
     }
     
-    /* Light Theme Specific: Glowing Mist Frame */
-    [data-theme="light"] .organic-frame {
-      border: 2px solid rgba(255, 255, 255, 0.9);
-      background: linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.3));
-      box-shadow: 0 30px 60px rgba(58, 125, 84, 0.08), inset 0 0 80px rgba(255,255,255,1);
+    .status-indicator {
+      position: absolute; top: 24px; right: 24px; display: flex; align-items: center; gap: 8px;
+      font-size: 0.8rem; font-family: var(--font-mono); color: var(--primary-2);
     }
-
-    @keyframes morph {
-      0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
-      50% { border-radius: 60% 40% 30% 70% / 50% 60% 40% 60%; }
-      100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
-    }
-
-    .organic-blob {
-      position: absolute; width: 300px; height: 300px;
-      background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
-      opacity: 0.15; filter: blur(40px);
-      animation: float 10s ease-in-out infinite;
-      transition: var(--transition);
-    }
-    .blob-1 { top: -50px; left: -50px; }
-    .blob-2 { bottom: -50px; right: -50px; background: radial-gradient(circle, var(--accent) 0%, transparent 70%); animation-delay: -5s; }
-
-    /* Light Theme Specific: Inner Dew and Sun */
-    [data-theme="light"] .organic-blob.blob-1 {
-      background: rgba(255, 255, 255, 1);
-      box-shadow: 0 0 100px rgba(255,255,255,1);
-      filter: blur(30px);
-      opacity: 0.9;
-    }
-    [data-theme="light"] .organic-blob.blob-2 {
-      background: radial-gradient(circle, var(--accent) 0%, transparent 60%);
-      filter: blur(40px);
-      opacity: 0.5;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translate(0, 0); }
-      50% { transform: translate(30px, 40px); }
-    }
-
-    .field-notes {
-      position: relative; z-index: 2; width: 100%;
-      background: var(--nav-bg);
-      border: 1px solid var(--line);
-      border-radius: var(--radius-md);
-      padding: 28px;
-    }
-
-    .field-notes-head {
-      display: flex; justify-content: space-between; align-items: center;
-      margin-bottom: 24px; border-bottom: 1px solid var(--line); padding-bottom: 16px;
-    }
-
-    .field-list { display: grid; gap: 16px; }
-    .field-item { display: flex; flex-direction: column; gap: 4px; }
-    .field-key { font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted-2); text-transform: uppercase; letter-spacing: 1px;}
-    .field-value { font-size: 0.95rem; color: var(--text); font-weight: 300; }
+    .status-dot { width: 8px; height: 8px; background: var(--primary); border-radius: 50%; box-shadow: 0 0 10px var(--primary); animation: pulse 2s infinite; }
+    
+    @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
 
     /* =========================================
-       SECTION ARCHITECTURE
+       ABOUT & SKILLS
        ========================================= */
-    .section-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 48px; }
-    .section-head .lead { max-width: 50ch; margin-bottom: 8px;}
-
-    .icon-box {
-      width: 48px; height: 48px; min-width: 48px;
-      border-radius: 50%; 
-      display: grid; place-items: center;
-      background: var(--surface-3); border: 1px solid var(--line);
-      color: var(--primary-2); font-size: 1.4rem;
-      backdrop-filter: blur(10px);
-    }
-
-    .stack-list, .principle-list { display: grid; gap: 16px; height: 100%;}
+    .about-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: start; }
+    .about-image { width: 100%; aspect-ratio: 1/1; object-fit: cover; filter: grayscale(10%); border: 1px solid var(--line); }
     
-    .stack-item {
-      padding: 24px; border-radius: var(--radius-md);
-      border: 1px solid var(--line); background: var(--surface);
-      display: flex; align-items: flex-start; gap: 20px;
-      transition: var(--transition);
-      flex: 1;
-      backdrop-filter: blur(20px);
-    }
-    .stack-item:hover { transform: translateX(6px); border-color: var(--primary); background: var(--surface-2); }
-
-    .highlight-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 32px; }
-
-    /* =========================================
-       ABOUT SECTION SPECIFICS 
-       ========================================= */
-    .about-profile-layout {
-      display: grid; grid-template-columns: 240px 1fr; gap: 32px;
-      margin-bottom: 24px;
-    }
-
-    .about-image-wrapper {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 4/5;
-      border-radius: var(--radius-sm);
-      overflow: hidden;
-      border: 1px solid var(--line);
-      background: var(--surface-3);
-    }
-
-    .about-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center; 
-      filter: grayscale(20%) contrast(1.1); 
-      transition: var(--transition);
-    }
-    .card-pad:hover .about-image { filter: grayscale(0%) contrast(1); }
-
-    @media (max-width: 768px) {
-      .about-profile-layout { grid-template-columns: 1fr; }
-      .about-image-wrapper { aspect-ratio: 16/9; max-height: 300px; }
-    }
-
-    /* =========================================
-       SKILLS (INTERACTIVE SPOTLIGHT)
-       ========================================= */
-    .spotlight-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: flex-start;}
-    
-    .skill-groups { display: grid; gap: 24px; }
-    .skill-group { padding: 28px; border-radius: var(--radius-md); border: 1px solid var(--line); background: var(--surface); backdrop-filter: blur(20px);}
-    .skill-group-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
-    
+    .skill-categories { display: grid; gap: 32px; margin-top: 40px; }
+    .skill-row { display: grid; grid-template-columns: 200px 1fr; gap: 24px; align-items: start; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+    .skill-row h4 { font-family: var(--font-mono); text-transform: uppercase; font-size: 0.85rem; color: var(--primary-2); margin-top: 8px;}
     .skill-tags { display: flex; flex-wrap: wrap; gap: 10px; }
-    .skill-pill {
-      min-height: 40px; padding: 0 16px; border-radius: var(--radius-sm);
-      border: 1px solid var(--line); background: var(--surface-3); color: var(--muted);
-      transition: var(--transition); display: flex; align-items: center;
-    }
-    .skill-pill:hover, .skill-pill.active {
-      color: var(--bg); background: var(--primary-2); border-color: var(--primary-2); transform: translateY(-2px);
-    }
-
-    .skill-spotlight-wrapper { position: sticky; top: 120px; height: max-content; z-index: 10; }
-
-    .skill-spotlight {
-      display: flex; flex-direction: column; justify-content: space-between; gap: 24px;
-      padding: 36px; border-radius: var(--radius-md); border: 1px solid var(--line);
-      background: linear-gradient(180deg, var(--surface), var(--primary-alpha-05));
-      max-height: calc(100vh - 140px); overflow-y: auto; scrollbar-width: none;
-      backdrop-filter: blur(20px);
-    }
-    .skill-spotlight::-webkit-scrollbar { display: none; }
-    
-    .skill-spotlight-head { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 16px; border-bottom: 1px solid var(--line); padding-bottom: 20px;}
-    
-    .skill-meter { width: 100%; height: 4px; border-radius: 2px; background: var(--line-strong); overflow: hidden; margin-top: 24px; }
-    .skill-meter span { display: block; height: 100%; width: 0; background: var(--primary); transition: width 800ms ease; }
-
-    .bullet-list { display: grid; gap: 14px; margin-top: 20px; }
-    .bullet-list li { display: flex; align-items: flex-start; gap: 12px; color: var(--muted); line-height: 1.6; font-weight: 300; }
-    .bullet-list li i { color: var(--primary-2); font-size: 1.1rem; margin-top: 2px; }
 
     /* =========================================
        PROJECTS
        ========================================= */
-    .project-toolbar { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px; }
-    .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
-
     .project-card {
-      padding: 24px; border-radius: var(--radius-md); border: 1px solid var(--line);
-      background: var(--surface); transition: var(--transition);
-      display: flex; flex-direction: column; height: 100%;
-      backdrop-filter: blur(20px);
+      padding: 32px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg);
+      transition: var(--transition); display: flex; flex-direction: column; cursor: pointer;
     }
-    .project-card:hover {
-      transform: translateY(-8px); border-color: var(--primary); background: var(--surface-2);
-      box-shadow: var(--shadow);
-    }
-
-    .project-visual {
-      position: relative; height: 260px; border-radius: var(--radius-sm);
-      border: 1px solid var(--line); overflow: hidden; margin-bottom: 24px;
-      background: var(--bg-soft);
-      display: flex; align-items: center; justify-content: center;
-    }
+    .project-card:hover { transform: translateY(-6px); border-color: var(--primary); background: var(--surface-2); }
     
-    .project-visual i { font-size: 4rem; color: var(--line-strong); transition: var(--transition); }
-    .project-card:hover .project-visual i { transform: scale(1.1); color: var(--muted); }
-
-    .project-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
-    .project-tag {
-      padding: 6px 12px; border-radius: 4px; border: 1px solid var(--line);
-      background: var(--surface-3); color: var(--muted); font-size: 0.8rem;
-    }
-
-    .project-links { margin-top: auto; padding-top: 24px; display: flex; gap: 16px; flex-wrap: wrap;} 
-    .text-link {
-      display: inline-flex; align-items: center; gap: 8px; color: var(--primary-2);
-      font-weight: 500; transition: gap var(--transition), color var(--transition); border-bottom: 1px solid transparent; padding-bottom: 2px;
-    }
-    .text-link:hover { gap: 12px; color: var(--text); border-color: var(--text); }
+    .project-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; }
+    .project-icon { width: 48px; height: 48px; border-radius: var(--radius-sm); background: var(--surface-3); display: grid; place-items: center; font-size: 1.5rem; color: var(--primary-2); border: 1px solid var(--line); }
+    
+    .project-tags { display: flex; gap: 8px; margin-top: auto; padding-top: 32px; }
 
     /* =========================================
        EXPERIENCE TIMELINE
        ========================================= */
-    .timeline-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    .timeline { position: relative; padding-left: 32px; display: grid; gap: 40px; }
+    .timeline::before { content: ""; position: absolute; left: 0; top: 8px; bottom: 0; width: 1px; background: var(--line-strong); }
     
-    .timeline-column { 
-      display: flex; flex-direction: column; gap: 32px; 
-      position: relative; padding-left: 32px; 
+    .timeline-item { position: relative; }
+    .timeline-item::before {
+      content: ""; position: absolute; left: -36px; top: 8px; width: 9px; height: 9px;
+      border-radius: 50%; background: var(--primary); box-shadow: 0 0 0 4px var(--bg);
     }
-
-    .timeline-column::before {
-      content: ""; position: absolute; left: 4px; top: 12px; bottom: 0; width: 2px; 
-      background: var(--line-strong);
-    }
-
-    .timeline-card {
-      position: relative; padding: 28px;
-      border-radius: var(--radius-md); border: 1px solid var(--line); background: var(--surface);
-      display: flex; flex-direction: column; flex: 1;
-      backdrop-filter: blur(20px);
-    }
+    .timeline-meta { font-family: var(--font-mono); font-size: 0.85rem; color: var(--muted); margin-bottom: 8px; display: block; }
     
-    .timeline-card::before {
-      content: ""; position: absolute; left: -32px; top: 32px; width: 10px; height: 10px; 
-      border-radius: 50%; background: var(--primary); border: 2px solid var(--bg);
-      z-index: 2;
-    }
-
-    .eyebrow {
-      display: inline-flex; align-items: center; gap: 8px; font-size: 0.8rem;
-      color: var(--muted-2); margin-bottom: 12px; font-family: var(--font-mono); text-transform: uppercase;
-    }
-    .eyebrow .status { color: var(--accent); }
-    
-    .timeline-list { margin-top: 16px; display: grid; gap: 12px; }
-    .timeline-list li { display: flex; align-items: flex-start; gap: 12px; color: var(--muted); line-height: 1.6; font-weight: 300;}
-    .timeline-list li i { color: var(--primary-2); font-size: 1.1rem; margin-top: 2px;}
-
-    .foundation-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px;}
-    .foundation-card {
-      padding: 20px; border-radius: var(--radius-sm); border: 1px solid var(--line);
-      background: var(--surface-3); display: flex; flex-direction: column; height: 100%;
-    }
-    .foundation-card h4 { font-family: var(--font-sans); font-size: 1rem; color: var(--text); margin-bottom: 8px; display: flex; align-items: center; gap: 8px;}
-    .foundation-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; font-weight: 300;}
-    
-    @media (max-width: 640px) {
-      .foundation-grid { grid-template-columns: 1fr; }
-    }
-
     /* =========================================
-       CONTACT FORM & SOCIAL GRID
+       CONTACT
        ========================================= */
-    .contact-layout { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 40px; align-items: flex-start;}
-    
-    .contact-list { display: grid; gap: 16px; margin-top: 32px; }
-    .contact-item {
-      display: flex; align-items: center; justify-content: space-between; gap: 16px;
-      padding: 20px; border-radius: var(--radius-sm); border: 1px solid var(--line); background: var(--surface);
-    }
-    .contact-item i.main-icon { font-size: 1.5rem; color: var(--primary-2); }
-
-    .social-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 12px; width: 100%;
-    }
-
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
     .social-btn {
-      display: inline-flex; align-items: center; gap: 10px;
-      padding: 12px 18px; border-radius: var(--radius-sm);
-      background: var(--surface-3); border: 1px solid var(--line);
-      color: var(--text); font-size: 0.9rem; font-weight: 500;
-      transition: var(--transition); justify-content: center;
-      backdrop-filter: blur(10px);
+      display: flex; align-items: center; gap: 12px; padding: 16px; border-radius: var(--radius-sm);
+      border: 1px solid var(--line); background: var(--surface-3); transition: var(--transition);
     }
-    .social-btn i { font-size: 1.2rem; color: var(--primary-2); transition: var(--transition);}
-    .social-btn:hover { background: var(--primary-alpha-10); border-color: var(--primary-2); transform: translateY(-2px); color: var(--text);}
+    .social-btn:hover { background: var(--primary-alpha-10); border-color: var(--primary-2); color: var(--text); transform: translateX(4px);}
+    .social-btn i { font-size: 1.4rem; color: var(--primary-2); }
 
-    .contact-form { display: grid; gap: 24px; }
-    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-    .field { position: relative; }
-    .field label { display: block; margin-bottom: 10px; color: var(--muted); font-size: 0.9rem; }
-    
-    .input, .textarea {
-      width: 100%; border: 1px solid var(--line); background: var(--input-bg);
-      color: var(--text); border-radius: var(--radius-sm); padding: 18px;
-      transition: var(--transition); font-weight: 300;
+    .form-group { margin-bottom: 24px; }
+    .form-group label { display: block; margin-bottom: 8px; font-size: 0.9rem; color: var(--muted); }
+    .form-control {
+      width: 100%; background: var(--input-bg); border: 1px solid var(--line); color: var(--text);
+      padding: 16px; border-radius: var(--radius-sm); transition: var(--transition);
     }
-    .input { min-height: 56px; }
-    .textarea { min-height: 180px; resize: vertical; }
-    
-    .input:focus, .textarea:focus {
-      border-color: var(--primary); background: var(--surface-3); outline: none; box-shadow: 0 0 0 2px var(--primary-glow);
-    }
+    .form-control:focus { border-color: var(--primary); outline: none; background: var(--surface-3); }
+    textarea.form-control { resize: vertical; min-height: 120px; }
 
     /* =========================================
-       FOOTER & MODALS
+       MODAL (PROJECT DETAILS)
        ========================================= */
-    .footer { padding: 40px 0; border-top: 1px solid var(--line); margin-top: 40px;}
-    .footer-bar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
-    .footer-links { display: flex; gap: 24px; }
-
-    /* Modal */
-    .backdrop {
-      position: fixed; inset: 0; background: var(--backdrop);
-      backdrop-filter: blur(10px); z-index: 110; opacity: 0; visibility: hidden; transition: var(--transition);
-    }
+    .backdrop { position: fixed; inset: 0; background: var(--backdrop); backdrop-filter: blur(8px); z-index: 1000; opacity: 0; visibility: hidden; transition: var(--transition); }
     .backdrop.show { opacity: 1; visibility: visible; }
     
     .modal {
-      position: fixed; inset: 50% auto auto 50%; width: min(800px, calc(100% - 32px));
-      max-height: calc(100vh - 64px); overflow: auto; transform: translate(-50%, calc(-50% + 30px));
-      z-index: 120; opacity: 0; visibility: hidden; transition: var(--transition);
+      position: fixed; top: 50%; left: 50%; transform: translate(-50%, -45%);
+      width: min(900px, calc(100% - 32px)); max-height: 90vh; overflow-y: auto;
+      background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius-lg);
+      z-index: 1010; opacity: 0; visibility: hidden; transition: var(--transition);
+      box-shadow: var(--shadow);
     }
     .modal.show { opacity: 1; visibility: visible; transform: translate(-50%, -50%); }
     
-    .modal-card {
-      border-radius: var(--radius-lg); border: 1px solid var(--line);
-      background: var(--bg-soft); box-shadow: var(--shadow);
-    }
-    .modal-head, .modal-body, .modal-foot { padding: 32px; }
-    .modal-head { display: flex; align-items: flex-start; justify-content: space-between; border-bottom: 1px solid var(--line); }
-    .modal-foot { border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; }
+    .modal-header { padding: 32px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: flex-start; position: sticky; top: 0; background: var(--bg); z-index: 10; }
+    .modal-close { width: 40px; height: 40px; border-radius: 50%; background: var(--surface-3); display: grid; place-items: center; border: 1px solid var(--line); }
+    .modal-close:hover { background: var(--line); color: var(--text); }
     
-    .modal-close {
-      width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line);
-      display: grid; place-items: center; font-size: 1.2rem; color: var(--muted);
-      transition: var(--transition);
-    }
-    .modal-close:hover { color: var(--text); border-color: var(--text); transform: rotate(90deg); }
+    .modal-body { padding: 32px; display: grid; gap: 32px; }
+    .modal-meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding: 24px; background: var(--surface-3); border-radius: var(--radius-sm); border: 1px solid var(--line); }
+    .meta-block span { display: block; font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); margin-bottom: 8px; text-transform: uppercase; }
+    .meta-block strong { font-weight: 500; font-size: 1rem; color: var(--text); }
+    
+    .case-section h4 { font-family: var(--font-mono); font-size: 0.85rem; color: var(--primary-2); text-transform: uppercase; margin-bottom: 12px; }
+    .case-section p { font-size: 1rem; line-height: 1.7; color: var(--muted); font-weight: 300; }
+
+    .modal-footer { padding: 32px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; }
 
     /* Toast */
-    .toast {
-      position: fixed; right: 24px; bottom: 24px; z-index: 130;
-      padding: 16px 24px; border-radius: var(--radius-sm); border: 1px solid var(--primary);
-      background: var(--surface-2); color: var(--text); box-shadow: var(--shadow-soft);
-      transform: translateY(20px); opacity: 0; visibility: hidden; transition: var(--transition);
-    }
+    .toast { position: fixed; bottom: 24px; right: 24px; background: var(--surface-2); border: 1px solid var(--primary); padding: 16px 24px; border-radius: var(--radius-sm); z-index: 2000; transform: translateY(20px); opacity: 0; visibility: hidden; transition: var(--transition); }
     .toast.show { transform: translateY(0); opacity: 1; visibility: visible; }
 
-    /* Custom Cursor */
-    .cursor-dot, .cursor-ring {
-      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 140; border-radius: 50%;
-      opacity: 0; transition: opacity 200ms ease;
+    /* Custom Cursor (Hidden on touch devices) */
+    @media (pointer: fine) {
+      body { cursor: none; }
+      .cursor-dot { position: fixed; top: 0; left: 0; width: 6px; height: 6px; background: var(--primary-2); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); transition: opacity 0.2s; }
+      .cursor-ring { position: fixed; top: 0; left: 0; width: 40px; height: 40px; border: 1px solid var(--line-strong); border-radius: 50%; pointer-events: none; z-index: 9998; transform: translate(-50%, -50%); transition: width 0.2s, height 0.2s, background 0.2s; }
+      .cursor-ring.active { width: 60px; height: 60px; background: var(--cursor-bg); border-color: transparent; }
     }
-    .cursor-dot { width: 6px; height: 6px; background: var(--primary-2); transform: translate(-50%, -50%); }
-    .cursor-ring {
-      width: 40px; height: 40px; border: 1px solid var(--line-strong);
-      transform: translate(-50%, -50%); transition: width 200ms ease, height 200ms ease, background 200ms ease;
-    }
-    .cursor-ring.active { width: 60px; height: 60px; background: var(--cursor-bg); border-color: transparent;}
 
-    .hide-mobile { display: inline-flex; }
+    /* Footer */
+    footer { padding: 40px 0; border-top: 1px solid var(--line); margin-top: 80px; text-align: center; }
 
     /* =========================================
-       RESPONSIVE DESIGN
+       RESPONSIVE
        ========================================= */
-    @media (max-width: 1100px) {
-      .hero, .highlight-grid, .spotlight-layout, .contact-layout, .timeline-wrap, .grid-2 { grid-template-columns: 1fr; }
-      .project-grid { grid-template-columns: 1fr; }
-      .hero { min-height: auto; }
-      .organic-frame { height: 500px; }
-      .skill-spotlight-wrapper { position: static; } 
-    }
-    @media (max-width: 920px) {
+    @media (max-width: 960px) {
+      .hero, .about-grid, .contact-grid, .grid-2 { grid-template-columns: 1fr; }
+      .skill-row { grid-template-columns: 1fr; gap: 12px; }
       .nav-links, .hide-mobile { display: none; }
-      .mobile-toggle { display: grid; place-items: center; }
-      .field-row, .grid-3 { grid-template-columns: 1fr; }
-      .section-head, .footer-bar { flex-direction: column; align-items: flex-start; }
-      .title-xl { font-size: clamp(2.8rem, 10vw, 4rem); }
-      .timeline-column { padding-left: 20px; }
-      .timeline-column::before { left: 4px; }
-      .timeline-card::before { left: -21px; } 
+      .mobile-toggle { display: block; }
+      .hero-visual { order: -1; margin-bottom: 24px; }
+      .organic-frame { width: 100%; aspect-ratio: auto; min-height: 300px; }
     }
-    @media (max-width: 640px) {
-      .container { width: calc(100% - 32px); }
-      .nav-shell { padding-inline: 16px; }
-      .brand-sub { display: none; }
-      .hero-actions, .project-links, .chip-row, .social-grid { width: 100%; }
-      .social-grid { grid-template-columns: 1fr;}
-      .hero-actions .btn, .project-links .text-link { width: 100%; justify-content: center;}
-      .card-pad, .skill-spotlight, .project-card, .skill-group, .modal-head, .modal-body, .modal-foot { padding: 24px; }
-      .timeline-card { padding: 24px; }
+    @media (max-width: 600px) {
+      .section { padding: 40px 0; }
+      .card-pad, .modal-header, .modal-body, .modal-footer { padding: 24px; }
+      .modal-meta-grid { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; width: 100%; }
+      .hero-actions .btn { width: 100%; }
     }
   </style>
 </head>
@@ -866,1124 +435,505 @@
   <div class="cursor-dot" aria-hidden="true"></div>
   <div class="cursor-ring" aria-hidden="true"></div>
 
-  <header class="site-header">
-    <div class="nav-shell" id="navShell">
-      <a href="#home" class="brand" data-route-link="home" aria-label="Go to home page">
+  <header class="site-header" id="header">
+    <div class="nav-shell">
+      <a href="#home" class="brand" aria-label="Home">
         <div class="brand-mark">N</div>
         <div class="brand-meta">
           <span class="brand-title">Nikitha Keshan</span>
-          <span class="brand-sub">Developer & System Builder</span>
+          <span class="brand-sub">Software & System Developer</span>
         </div>
       </a>
 
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#home" class="nav-link active" data-route-link="home">Overview</a>
-        <a href="#about" class="nav-link" data-route-link="about">About</a>
-        <a href="#skills" class="nav-link" data-route-link="skills">Craft</a>
-        <a href="#projects" class="nav-link" data-route-link="projects">Work</a>
-        <a href="#experience" class="nav-link" data-route-link="experience">History</a>
-        <a href="#contact" class="nav-link" data-route-link="contact">Contact</a>
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#experience" class="nav-link">Experience</a>
       </nav>
 
       <div class="nav-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode"><i class="ph-light ph-sun"></i></button>
-        <a href="NikithaKeshan.pdf" class="btn btn-secondary hide-mobile" download><i class="ph-light ph-download-simple"></i> Resume</a>
-        <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
-          <span></span>
-        </button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme"><i class="ph-light ph-sun"></i></button>
+        <a href="NikithaKeshan_CV.pdf" class="btn btn-secondary hide-mobile" download>Download CV</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu" aria-expanded="false"><span></span></button>
       </div>
-    </div>
-
-    <div class="mobile-panel" id="mobilePanel" aria-hidden="true">
-      <a href="#home" class="nav-link active" data-route-link="home">Overview</a>
-      <a href="#about" class="nav-link" data-route-link="about">About</a>
-      <a href="#skills" class="nav-link" data-route-link="skills">Craft</a>
-      <a href="#projects" class="nav-link" data-route-link="projects">Work</a>
-      <a href="#experience" class="nav-link" data-route-link="experience">History</a>
-      <a href="#contact" class="nav-link" data-route-link="contact">Contact</a>
-      <a href="NikithaKeshan.pdf" class="btn btn-secondary" download style="width:100%; margin-top: 16px; justify-content:center;">Download Resume</a>
+      
+      <div class="mobile-panel" id="mobilePanel" aria-hidden="true">
+        <a href="#about" class="nav-link mobile-link">About</a>
+        <a href="#skills" class="nav-link mobile-link">Skills</a>
+        <a href="#work" class="nav-link mobile-link">Work</a>
+        <a href="#experience" class="nav-link mobile-link">Experience</a>
+        <a href="#contact" class="nav-link mobile-link">Contact</a>
+        <a href="NikithaKeshan_CV.pdf" class="btn btn-primary" style="margin-top: 16px; width: 100%;" download>Download CV</a>
+      </div>
     </div>
   </header>
 
-  <main class="page-shell">
-    <div class="container">
-      
-      <section class="page" data-page="home" id="home">
-        <div class="hero section">
-          <div class="hero-copy reveal">
-            <div class="section-tag mono"><i class="ph-fill ph-plant"></i> Cultivating practical digital solutions</div>
-
-            <div class="hero-title-wrap">
-              <h1 class="title-xl">
-                I build clean websites and <span class="italic-serif">smart systems</span> that foster growth.
-              </h1>
-
-              <p class="lead">
-                I am Nikitha Keshan — a software developer focused on the intersection of elegant web design and seamless business operations. I create tools that remove friction and interfaces that feel natural.
-              </p>
-            </div>
-
-            <div class="hero-actions">
-              <a href="#projects" class="btn btn-primary" data-route-link="projects">Explore Work</a>
-              <a href="#contact" class="btn btn-secondary" data-route-link="contact">Start a Conversation</a>
-            </div>
-            
-            <div class="chip-row" style="margin-top: 16px;">
-              <div class="chip"><i class="ph-light ph-map-pin"></i> Colombo, Sri Lanka</div>
-              <div class="chip"><i class="ph-light ph-code"></i> Full Stack & UI/UX</div>
-            </div>
-          </div>
-
-          <div class="hero-visual reveal" style="transition-delay: 200ms;">
-            <div class="organic-frame">
-              <div class="organic-blob blob-1"></div>
-              <div class="organic-blob blob-2"></div>
-              
-              <div class="field-notes">
-                <div class="field-notes-head">
-                  <span class="mono"><i class="ph-light ph-notebook"></i> Field Notes / 01</span>
-                </div>
-                <div class="field-list">
-                  <div class="field-item">
-                    <span class="field-key">Focus Area</span>
-                    <span class="field-value">Web Architecture & Automation</span>
-                  </div>
-                  <div class="field-item">
-                    <span class="field-key">Core Tools</span>
-                    <span class="field-value">C#, React, Node, SQL, Python</span>
-                  </div>
-                  <div class="field-item">
-                    <span class="field-key">Approach</span>
-                    <span class="field-value">Minimalist design, robust backend logic.</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+  <main>
+    <section id="home" class="section">
+      <div class="container hero">
+        <div class="hero-copy reveal">
+          <div class="section-tag mono"><i class="ph-light ph-terminal-window"></i> System Architecture & Web</div>
+          <h1 class="title-xl" style="margin-bottom: 24px;">
+            I engineer <span class="italic-serif">business systems</span> and scalable web applications.
+          </h1>
+          <p class="lead">
+            I am Nikitha Keshan. I build clean websites, internal tools, and automated workflows that remove operational friction and foster business growth.
+          </p>
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-secondary">Let's Collaborate</a>
           </div>
         </div>
-
-        <section class="section reveal">
-          <div class="section-head">
-            <div>
-              <div class="section-tag mono"><i class="ph-light ph-sparkle"></i> Design Philosophy</div>
-              <h2 class="title-lg">Rooted in utility and aesthetics.</h2>
+        <div class="hero-visual reveal">
+          <div class="organic-frame">
+            <div class="status-indicator">
+              <div class="status-dot"></div> Available for Work
             </div>
-            <p class="lead">A great system should feel invisible. My goal is to craft digital experiences that are as beautiful as they are functional, bridging the gap between raw data and human interaction.</p>
+            <div class="mono" style="margin-bottom: 8px;">Stack / Primary</div>
+            <h3 class="title-md">C# • Python • React • SQL</h3>
+            <p class="small" style="margin-top: 12px; border-top: 1px solid var(--line); padding-top: 12px;">Building robust backend logic with minimalist, highly responsive frontends.</p>
           </div>
-
-          <div class="grid-3">
-            <article class="card card-pad">
-              <div class="icon-box" aria-hidden="true"><i class="ph-light ph-drop"></i></div>
-              <h3 class="title-sm" style="margin: 24px 0 12px;">Fluid Experiences</h3>
-              <p class="small">Smooth transitions, intuitive layouts, and responsive designs that adapt naturally to any device.</p>
-            </article>
-            <article class="card card-pad">
-              <div class="icon-box" aria-hidden="true"><i class="ph-light ph-tree-structure"></i></div>
-              <h3 class="title-sm" style="margin: 24px 0 12px;">Deep Roots</h3>
-              <p class="small">Clean architecture, scalable APIs, and structured databases that ensure long-term stability.</p>
-            </article>
-            <article class="card card-pad">
-              <div class="icon-box" aria-hidden="true"><i class="ph-light ph-arrows-out-line-vertical"></i></div>
-              <h3 class="title-sm" style="margin: 24px 0 12px;">Scalable Logic</h3>
-              <p class="small">Automations and microservices built to grow with the business, reducing manual load over time.</p>
-            </article>
-          </div>
-        </section>
-      </section>
-
-      <section class="page" data-page="about" id="about">
-        <div class="section">
-          <div class="section-head reveal">
-            <div>
-              <div class="section-tag mono"><i class="ph-light ph-user"></i> About</div>
-              <h2 class="title-lg">A pragmatic builder with a holistic view.</h2>
-            </div>
-          </div>
-
-          <div class="highlight-grid">
-            <article class="card card-pad reveal">
-              
-              <div class="about-profile-layout">
-                <div class="about-image-wrapper">
-                    <img src="1760549322866.png" alt="Nikitha Keshan Portrait" class="about-image">
-                </div>
-                
-                <div>
-                  <div class="mono" style="margin-bottom: 16px;"><i class="ph-light ph-book-open"></i> The Narrative</div>
-                  <h3 class="title-md" style="margin-bottom: 20px;">Merging academic theory with ground-level execution.</h3>
-                  <p class="small" style="margin-bottom: 16px;">I am Nikitha Keshan, an aspiring Software Engineer focused on web development, software development, and system automation. My career goal is to become a professional software engineer who builds practical digital solutions that solve real business problems.</p>
-                  <p class="small" style="margin-bottom: 16px;">I have experience creating websites, developing internal tools, and building automation systems that improve workflows, reduce manual work, and support business operations.</p>
-                  <p class="small">I enjoy turning ideas and processes into useful, modern digital systems.</p>
-                </div>
-              </div>
-
-            </article>
-
-            <article class="card card-pad reveal" style="transition-delay: 100ms;">
-              <div class="mono" style="margin-bottom: 16px;"><i class="ph-light ph-compass"></i> Guiding Principles</div>
-              <div class="principle-list">
-                <div class="stack-item" style="padding: 20px;">
-                  <div>
-                    <h3 class="title-sm" style="margin-bottom: 8px;">Clarity Over Clutter</h3>
-                    <p class="small">Design should guide the user effortlessly.</p>
-                  </div>
-                </div>
-                <div class="stack-item" style="padding: 20px;">
-                  <div>
-                    <h3 class="title-sm" style="margin-bottom: 8px;">Automate the Mundane</h3>
-                    <p class="small">Technology should free humans for creative work.</p>
-                  </div>
-                </div>
-                <div class="stack-item" style="padding: 20px;">
-                  <div>
-                    <h3 class="title-sm" style="margin-bottom: 8px;">Build for Longevity</h3>
-                    <p class="small">Avoid shortcuts. Architect sustainable solutions.</p>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="page" data-page="skills" id="skills">
-        <div class="section">
-          <div class="section-head reveal">
-            <div>
-              <div class="section-tag mono"><i class="ph-light ph-hammer"></i> Craft</div>
-              <h2 class="title-lg">Tools cultivated for impact.</h2>
-            </div>
-            <p class="lead">Click on any discipline to explore how I apply it conceptually and practically across the full stack.</p>
-          </div>
-
-          <div class="spotlight-layout">
-            <div class="skill-groups reveal">
-              
-              <div class="skill-group">
-                <div class="skill-group-head">
-                  <h3 class="title-sm"><i class="ph-light ph-code" style="margin-right:8px; color:var(--primary)"></i> Languages</h3>
-                </div>
-                <div class="skill-tags">
-                  <button class="skill-pill active" data-skill="csharp">C#</button>
-                  <button class="skill-pill" data-skill="python">Python</button>
-                  <button class="skill-pill" data-skill="java">Java</button>
-                  <button class="skill-pill" data-skill="javascript">JavaScript</button>
-                  <button class="skill-pill" data-skill="typescript">TypeScript</button>
-                  <button class="skill-pill" data-skill="c">C / C++</button>
-                </div>
-              </div>
-
-              <div class="skill-group">
-                <div class="skill-group-head">
-                  <h3 class="title-sm"><i class="ph-light ph-layout" style="margin-right:8px; color:var(--primary)"></i> Frameworks & Web</h3>
-                </div>
-                <div class="skill-tags">
-                  <button class="skill-pill" data-skill="react">React & Next.js</button>
-                  <button class="skill-pill" data-skill="blazor">.NET Blazor</button>
-                  <button class="skill-pill" data-skill="htmlcss">HTML & CSS</button>
-                  <button class="skill-pill" data-skill="tailwind">Tailwind & UI</button>
-                </div>
-              </div>
-
-              <div class="skill-group">
-                <div class="skill-group-head">
-                  <h3 class="title-sm"><i class="ph-light ph-database" style="margin-right:8px; color:var(--primary)"></i> Backend & Databases</h3>
-                </div>
-                <div class="skill-tags">
-                  <button class="skill-pill" data-skill="dotnet">.NET Core</button>
-                  <button class="skill-pill" data-skill="nodejs">Node.js</button>
-                  <button class="skill-pill" data-skill="django">Django / Python</button>
-                  <button class="skill-pill" data-skill="sql">SQL / MySQL</button>
-                  <button class="skill-pill" data-skill="nosql">PostgreSQL / Mongo</button>
-                </div>
-              </div>
-
-              <div class="skill-group">
-                <div class="skill-group-head">
-                  <h3 class="title-sm"><i class="ph-light ph-devices" style="margin-right:8px; color:var(--primary)"></i> Mobile, Design & Tools</h3>
-                </div>
-                <div class="skill-tags">
-                  <button class="skill-pill" data-skill="flutter">Flutter / Dart</button>
-                  <button class="skill-pill" data-skill="figma">Figma & UI</button>
-                  <button class="skill-pill" data-skill="adobe">Adobe Suite</button>
-                  <button class="skill-pill" data-skill="devops">Git & Docker</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="skill-spotlight-wrapper reveal">
-              <article class="skill-spotlight" id="skillSpotlight" aria-live="polite">
-                <div>
-                  <div class="skill-spotlight-head">
-                    <div>
-                      <div class="mono" style="margin-bottom: 8px;">Selected Discipline</div>
-                      <h3 class="title-md" id="skillTitle" style="font-family: var(--font-display); font-style:italic;">C#</h3>
-                    </div>
-                    <div class="chip" id="skillLabel">Backend & Architecture</div>
-                  </div>
-
-                  <div style="margin-top: 24px;">
-                    <p class="small" id="skillDescription">I utilize C# to build out robust, strongly typed application logic and backend services, ensuring scale and maintainability.</p>
-                    <div class="skill-meter" aria-label="Skill confidence level"><span id="skillMeter"></span></div>
-                    <ul class="bullet-list" id="skillBullets"></ul>
-                  </div>
-                </div>
-                <div class="chip-row" id="skillTools" style="margin-top:24px;"></div>
-              </article>
-            </div>
-            
-          </div>
-        </div>
-      </section>
-
-      <section class="page" data-page="projects" id="projects">
-        <div class="section">
-          <div class="section-head reveal">
-            <div>
-              <div class="section-tag mono"><i class="ph-light ph-folder-open"></i> Work</div>
-              <h2 class="title-lg">Selected deployments.</h2>
-            </div>
-            <p class="lead">A collection of web interfaces, internal tools, and strategic brand solutions.</p>
-          </div>
-
-          <div class="project-toolbar reveal" id="projectFilters">
-            <button class="btn btn-ghost active" data-filter="all">Everything</button>
-            <button class="btn btn-ghost" data-filter="web">Web Interfaces</button>
-            <button class="btn btn-ghost" data-filter="automation">Automations</button>
-            <button class="btn btn-ghost" data-filter="repos">Repositories</button>
-          </div>
-
-          <div class="project-grid" id="projectGrid">
-            
-            <article class="project-card reveal" data-category="web">
-              <div class="project-visual">
-                <i class="ph-light ph-sparkle"></i>
-              </div>
-              <div class="project-tags">
-                <span class="project-tag">E-Commerce</span>
-                <span class="project-tag">UI / UX</span>
-              </div>
-              <h3 class="title-md" style="margin-bottom: 12px;">Biseka Cosmetics</h3>
-              <p class="small">Engineered the digital storefront. Focused on high-performance load times, a natural aesthetic, and a premium user journey to elevate online conversions.</p>
-              <div class="project-links">
-                <a href="https://biseka.co/" target="_blank" class="text-link">Live Site <i class="ph-light ph-arrow-up-right"></i></a>
-                <button class="text-link" data-open-project="biseka">Details</button>
-              </div>
-            </article>
-
-            <article class="project-card reveal" data-category="web" style="transition-delay: 100ms;">
-              <div class="project-visual">
-                <i class="ph-light ph-buildings"></i>
-              </div>
-              <div class="project-tags">
-                <span class="project-tag">Brand Site</span>
-                <span class="project-tag">Frontend</span>
-              </div>
-              <h3 class="title-md" style="margin-bottom: 12px;">Scrub and Butter</h3>
-              <p class="small">Developed the complete technical web presence and brand identity architecture, prioritizing clean layout and credibility.</p>
-              <div class="project-links">
-                <a href="https://scrubnbutter.com/" target="_blank" class="text-link">Live Site <i class="ph-light ph-arrow-up-right"></i></a>
-                <button class="text-link" data-open-project="scrub">Details</button>
-              </div>
-            </article>
-
-            <article class="project-card reveal" data-category="web">
-              <div class="project-visual">
-                <i class="ph-light ph-waves"></i>
-              </div>
-              <div class="project-tags">
-                <span class="project-tag">Lifestyle</span>
-                <span class="project-tag">Frontend</span>
-              </div>
-              <h3 class="title-md" style="margin-bottom: 12px;">MOB Surfskate</h3>
-              <p class="small">A dynamic web experience for a surfskate brand, focusing on high-quality visuals, motion, and a modern aesthetic.</p>
-              <div class="project-links">
-                <a href="https://mobsurfskate.com/" target="_blank" class="text-link">Live Site <i class="ph-light ph-arrow-up-right"></i></a>
-                <button class="text-link" data-open-project="mob">Details</button>
-              </div>
-            </article>
-
-            <article class="project-card reveal" data-category="web" style="transition-delay: 100ms;">
-              <div class="project-visual">
-                <i class="ph-light ph-storefront"></i>
-              </div>
-              <div class="project-tags">
-                <span class="project-tag">Hospitality</span>
-                <span class="project-tag">Responsive Design</span>
-              </div>
-              <h3 class="title-md" style="margin-bottom: 12px;">OLA Tangalle Hotel</h3>
-              <p class="small">Collaborated closely to engineer a premium frontend experience for a boutique hotel, highlighting imagery and booking flows.</p>
-              <div class="project-links">
-                <a href="https://olatangalle.com/" target="_blank" class="text-link">Live Site <i class="ph-light ph-arrow-up-right"></i></a>
-                <button class="text-link" data-open-project="ola">Details</button>
-              </div>
-            </article>
-
-            <article class="project-card reveal" data-category="web">
-              <div class="project-visual">
-                <i class="ph-light ph-drop"></i>
-              </div>
-              <div class="project-tags">
-                <span class="project-tag">E-Commerce</span>
-                <span class="project-tag">Brand Presence</span>
-              </div>
-              <h3 class="title-md" style="margin-bottom: 12px;">Exact Extract & LoveandLab</h3>
-              <p class="small">Web solutions for a perfume brand and a cosmetic brand, emphasizing product presentation and seamless WooCommerce integration.</p>
-              <div class="project-links">
-                 <a href="https://exactextract.lk/" target="_blank" class="text-link">Extract <i class="ph-light ph-arrow-up-right"></i></a>
-                 <a href="https://loveandlab.com/" target="_blank" class="text-link">LoveandLab <i class="ph-light ph-arrow-up-right"></i></a>
-              </div>
-            </article>
-
-            <article class="project-card reveal" data-category="automation" style="transition-delay: 100ms;">
-              <div class="project-visual">
-                <i class="ph-light ph-kanban"></i>
-              </div>
-              <div class="project-tags">
-                <span class="project-tag">Google Apps Script</span>
-                <span class="project-tag">Logic Systems</span>
-              </div>
-              <h3 class="title-md" style="margin-bottom: 12px;">Biseka Bulk Invoice Automation</h3>
-              <p class="small">Automated framework centralizing monthly data to instantly generate error-free tax invoices for Biseka Maldives, calculating discounts and sales tax dynamically.</p>
-              <div class="project-links">
-                <button class="text-link" data-open-project="invoice">Read Case Study <i class="ph-light ph-arrow-right"></i></button>
-              </div>
-            </article>
-
-            <article class="project-card reveal" data-category="automation">
-              <div class="project-visual">
-                <i class="ph-light ph-paper-plane-right"></i>
-              </div>
-              <div class="project-tags">
-                <span class="project-tag">Payroll</span>
-                <span class="project-tag">Email Delivery</span>
-              </div>
-              <h3 class="title-md" style="margin-bottom: 12px;">Pay slip & Email Delivery Automation</h3>
-              <p class="small">An integrated system that tracks complex salary components for 30+ employees, generates individual PDF payslips, and automates email delivery to staff.</p>
-              <div class="project-links">
-                <button class="text-link" data-open-project="payroll">Read Case Study <i class="ph-light ph-arrow-right"></i></button>
-              </div>
-            </article>
-
-            <article class="project-card reveal" data-category="automation" style="transition-delay: 100ms;">
-              <div class="project-visual">
-                <i class="ph-light ph-device-mobile"></i>
-              </div>
-              <div class="project-tags">
-                <span class="project-tag">API Integration</span>
-                <span class="project-tag">Logistics</span>
-              </div>
-              <h3 class="title-md" style="margin-bottom: 12px;">Logistics SMS Notification Framework</h3>
-              <p class="small">A centralized command center that pairs tracking numbers with automated SMS notifications for customers, managing multiple courier agents and logging API responses.</p>
-              <div class="project-links">
-                <button class="text-link" data-open-project="sms">Read Case Study <i class="ph-light ph-arrow-right"></i></button>
-              </div>
-            </article>
-
-            <article class="project-card reveal" data-category="automation">
-              <div class="project-visual">
-                <i class="ph-light ph-copy"></i>
-              </div>
-              <div class="project-tags">
-                <span class="project-tag">Data Architecture</span>
-                <span class="project-tag">Workspace</span>
-              </div>
-              <h3 class="title-md" style="margin-bottom: 12px;">Automated Monthly Sheet Generation</h3>
-              <p class="small">A centralized controller that dynamically generates, renames, and organizes specialized tracking sheets for different locations and roles across the organization.</p>
-              <div class="project-links">
-                <button class="text-link" data-open-project="sheets">Read Case Study <i class="ph-light ph-arrow-right"></i></button>
-              </div>
-            </article>
-
-            <article class="project-card reveal" data-category="repos" style="transition-delay: 100ms;">
-              <div class="project-visual">
-                <i class="ph-light ph-github-logo"></i>
-              </div>
-              <div class="project-tags">
-                <span class="project-tag">Code Repos</span>
-                <span class="project-tag">JS / HTML / CSS</span>
-              </div>
-              <h3 class="title-md" style="margin-bottom: 12px;">Development Archives</h3>
-              <p class="small">A collection of technical prototypes including a Customer Care Asset Form, a responsive Travel Site, a Movie Database layout, and interactive JS games.</p>
-              <div class="project-links">
-                <button class="text-link" data-open-project="repos">View Repositories <i class="ph-light ph-arrow-right"></i></button>
-              </div>
-            </article>
-
-          </div>
-        </div>
-      </section>
-
-      <section class="page" data-page="experience" id="experience">
-        <div class="section">
-          <div class="section-head reveal">
-            <div>
-              <div class="section-tag mono"><i class="ph-light ph-hourglass"></i> History</div>
-              <h2 class="title-lg">Timeline of growth.</h2>
-            </div>
-            <p class="lead">Tracing the path between academic foundations and applied professional experience.</p>
-          </div>
-
-          <div class="timeline-wrap">
-            <div class="timeline-column reveal">
-              <h3 class="title-sm" style="margin-bottom: 12px; font-family:var(--font-mono); text-transform:uppercase; color:var(--muted)">Professional Focus</h3>
-              
-              <article class="timeline-card">
-                <div class="eyebrow">July 2024 — Present <span class="status">• Active</span></div>
-                <h3 class="title-sm" style="margin-bottom: 6px;">Assistant IT Administrator</h3>
-                <p class="small" style="color: var(--primary-2); margin-bottom: 16px;">CER Group of Companies</p>
-                <p class="small" style="margin-bottom: 12px; font-style:italic;">(Biseka, Love&Lab, Scrub&Butter, ExactExtract, OlaTangalle, MobSurfskate)</p>
-                <ul class="timeline-list">
-                  <li><i class="ph-light ph-check-circle"></i> Manage IT systems, databases, and automation tools across all brands.</li>
-                  <li><i class="ph-light ph-check-circle"></i> Develop and improve automation scripts using Google Apps Script.</li>
-                  <li><i class="ph-light ph-check-circle"></i> Handle website updates, pricing, promotions, and WooCommerce logic.</li>
-                  <li><i class="ph-light ph-check-circle"></i> Manage Google Ads, Merchant Center, and Meta Business Suite integrations.</li>
-                  <li><i class="ph-light ph-check-circle"></i> Build operational dashboards in Looker Studio for KPI tracking.</li>
-                </ul>
-              </article>
-
-              <article class="timeline-card">
-                <div class="eyebrow">2025 — Present <span class="status">• Active</span></div>
-                <h3 class="title-sm" style="margin-bottom: 6px;">System Automation & Web Developer</h3>
-                <p class="small" style="color: var(--primary-2); margin-bottom: 16px;">CodeNest Team</p>
-                <ul class="timeline-list">
-                  <li><i class="ph-light ph-check-circle"></i> Serve as the technical lead for web development, system automation, and QA testing.</li>
-                  <li><i class="ph-light ph-check-circle"></i> Build automated workflows and data-driven insights to help client businesses scale efficiently.</li>
-                  <li><i class="ph-light ph-check-circle"></i> Collaborate with a multidisciplinary team focusing on brand structure, digital systems, and marketing architecture.</li>
-                </ul>
-              </article>
-              
-               <div style="margin-top: 12px; padding: 24px; border-radius: var(--radius-sm); border: 1px solid var(--line); background: var(--surface-3);">
-                    <p class="small" style="font-style: italic; color: var(--muted-2);">I do hereby declare that all statements made in this application are true and correct to the best of my knowledge.</p>
-                </div>
-
-            </div>
-
-            <div class="timeline-column reveal" style="transition-delay: 100ms;">
-               <h3 class="title-sm" style="margin-bottom: 12px; font-family:var(--font-mono); text-transform:uppercase; color:var(--muted)">Academic Roots</h3>
-               
-              <article class="timeline-card">
-                <div class="eyebrow">2024 — 2028</div>
-                <h3 class="title-sm" style="margin-bottom: 6px;">Bachelor of Information Technology</h3>
-                <p class="small" style="color: var(--primary-2); margin-bottom: 12px;">University of Colombo</p>
-                <p class="small">Rigorous study of software engineering principles, database architecture, and computer science fundamentals.</p>
-              </article>
-
-              <article class="timeline-card">
-                <div class="eyebrow">2025 — 2027</div>
-                <h3 class="title-sm" style="margin-bottom: 6px;">HND in Computer Science</h3>
-                <p class="small" style="color: var(--primary-2); margin-bottom: 12px;">Londontech City Campus</p>
-                <p class="small">Practical Higher National Diploma reinforcing hands-on coding paradigms and logic application.</p>
-              </article>
-
-              <article class="timeline-card" style="padding-bottom: 32px;">
-                <div class="eyebrow">Prior Education</div>
-                <h3 class="title-sm" style="margin-bottom: 16px;">Foundational Studies</h3>
-                
-                <div class="foundation-grid">
-                    <div class="foundation-card">
-                        <h4><i class="ph-light ph-code" style="color:var(--primary); font-size:1.2rem;"></i> University of Moratuwa</h4>
-                        <p>Programming in Python & Web Development.</p>
-                    </div>
-                    <div class="foundation-card">
-                        <h4><i class="ph-light ph-brain" style="color:var(--primary); font-size:1.2rem;"></i> JAVA Institute</h4>
-                        <p>Foundation in Neuroscience, Programming, and Robotic Science.</p>
-                    </div>
-                    <div class="foundation-card">
-                        <h4><i class="ph-light ph-exam" style="color:var(--primary); font-size:1.2rem;"></i> G.C.E. Advanced Level (2023)</h4>
-                        <p style="margin-bottom:6px;">D.S. Senanayake College, Beruwela. <br> Engineering Technology Stream.</p>
-                        <span class="chip" style="font-family: var(--font-mono); font-size:0.75rem; min-height:28px; padding:0 8px;">Results: C1, S2</span>
-                    </div>
-                    <div class="foundation-card">
-                        <h4><i class="ph-light ph-certificate" style="color:var(--primary); font-size:1.2rem;"></i> G.C.E. Ordinary Level (2019)</h4>
-                        <p style="margin-bottom:6px;">Tissa Central College, Kalutara.</p>
-                        <span class="chip" style="font-family: var(--font-mono); font-size:0.75rem; min-height:28px; padding:0 8px;">Results: A4, B1, C4</span>
-                    </div>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="page" data-page="contact" id="contact">
-        <div class="section">
-          <div class="section-head reveal">
-            <div>
-              <div class="section-tag mono"><i class="ph-light ph-paper-plane-tilt"></i> Contact</div>
-              <h2 class="title-lg">Let's cultivate ideas together.</h2>
-            </div>
-            <p class="lead">Whether you need a custom business automation system, a refined web overhaul, or are looking for a dedicated developer, my inbox is open.</p>
-          </div>
-
-          <div class="contact-layout">
-            <article class="card card-pad reveal">
-              <div class="mono" style="margin-bottom: 16px;"><i class="ph-light ph-link"></i> Direct Channels</div>
-              <h3 class="title-md" style="margin-bottom: 24px;">Start a conversation.</h3>
-
-              <div class="contact-list">
-                <div class="contact-item">
-                  <div style="display:flex; align-items:center; gap: 16px;">
-                    <i class="ph-light ph-envelope-simple main-icon"></i>
-                    <div>
-                      <div class="small" style="margin-bottom: 4px;">Email</div>
-                      <strong id="emailText">nikithakeshan@gmail.com</strong>
-                    </div>
-                  </div>
-                  <button class="btn btn-secondary" id="copyEmailBtn" type="button" style="min-height:36px; padding:0 16px;">Copy</button>
-                </div>
-                
-                <div class="contact-item">
-                  <div style="display:flex; align-items:center; gap: 16px;">
-                    <i class="ph-light ph-phone main-icon"></i>
-                    <div>
-                      <div class="small" style="margin-bottom: 4px;">Phone</div>
-                      <strong>+94 764849127</strong>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="contact-item" style="flex-direction:column; align-items:flex-start; gap: 20px;">
-                  <div class="small">Digital Footprint</div>
-                  <div class="social-grid">
-                    <a href="https://www.linkedin.com/in/nikitha-keshan-640927325/" target="_blank" class="social-btn"><i class="ph-fill ph-linkedin-logo"></i> LinkedIn</a>
-                    <a href="https://github.com/nikithaKesh" target="_blank" class="social-btn"><i class="ph-fill ph-github-logo"></i> GitHub</a>
-                    <a href="https://x.com/_zo_no_" target="_blank" class="social-btn"><i class="ph-fill ph-twitter-logo"></i> X (Twitter)</a>
-                    <a href="https://www.instagram.com/z.onoo/" target="_blank" class="social-btn"><i class="ph-fill ph-instagram-logo"></i> Instagram</a>
-                    <a href="https://www.facebook.com/nikitha.keshan.7?mibextid=ZbWKwL" target="_blank" class="social-btn" style="grid-column: span 2;"><i class="ph-fill ph-facebook-logo"></i> Facebook</a>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="card card-pad reveal" style="transition-delay: 100ms;">
-              <form class="contact-form" id="contactForm" novalidate>
-                <div class="field-row">
-                  <div class="field">
-                    <label for="name">Name</label>
-                    <input class="input" id="name" name="name" type="text" placeholder="Jane Doe" required />
-                  </div>
-                  <div class="field">
-                    <label for="email">Email</label>
-                    <input class="input" id="email" name="email" type="email" placeholder="jane@example.com" required />
-                  </div>
-                </div>
-
-                <div class="field">
-                  <label for="subject">Subject</label>
-                  <input class="input" id="subject" name="subject" type="text" placeholder="Project Inquiry" required />
-                </div>
-
-                <div class="field">
-                  <label for="message">Message</label>
-                  <textarea class="textarea" id="message" name="message" placeholder="How can I help you grow your business?" required></textarea>
-                </div>
-
-                <div style="margin-top: 12px;">
-                  <button class="btn btn-primary" type="submit" style="width:100%;">Send Message</button>
-                </div>
-              </form>
-            </article>
-          </div>
-        </div>
-      </section>
-
-    </div>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-bar reveal">
-        <p class="small">© 2026 Nikitha Keshan — Crafted with purpose. All rights reserved.</p>
-        <div class="footer-links">
-          <a href="#home" class="text-link" data-route-link="home">Overview</a>
-          <a href="#projects" class="text-link" data-route-link="projects">Work</a>
-          <a href="#contact" class="text-link" data-route-link="contact">Contact</a>
         </div>
       </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-tag mono"><i class="ph-light ph-user"></i> The Builder</div>
+          <h2 class="title-lg">Merging logic with execution.</h2>
+        </div>
+        
+        <div class="about-grid reveal">
+          <img src="https://via.placeholder.com/600x600/121713/a2bba5?text=Portrait+Placeholder" alt="Nikitha Keshan" class="about-image">
+          
+          <div class="card card-pad">
+            <h3 class="title-md" style="margin-bottom: 24px;">Driven by practical problem solving.</h3>
+            <p class="small" style="margin-bottom: 16px;">
+              Based in Colombo, Sri Lanka, my focus is strictly on building software that serves a distinct purpose. Whether it's designing a high-conversion e-commerce frontend or writing Python scripts to automate complex payroll calculations, I aim for high utility and low friction.
+            </p>
+            <p class="small" style="margin-bottom: 24px;">
+              Currently serving as the Assistant IT Administrator for the CER Group and Technical Lead at CodeNest, I have a proven track record of architecting digital identities, managing databases, and deploying internal tools that drastically cut down manual administrative hours.
+            </p>
+            
+            <div class="grid-2" style="border-top: 1px solid var(--line); padding-top: 24px;">
+              <div>
+                <div class="mono" style="margin-bottom: 8px; color:var(--text);">Core Focus</div>
+                <ul class="small" style="line-height: 2;">
+                  <li>Web Application Architecture</li>
+                  <li>Business Process Automation</li>
+                  <li>UI/UX Systems</li>
+                </ul>
+              </div>
+              <div>
+                <div class="mono" style="margin-bottom: 8px; color:var(--text);">Approach</div>
+                <ul class="small" style="line-height: 2;">
+                  <li>Code maintainability over shortcuts.</li>
+                  <li>Automate mundane tasks.</li>
+                  <li>Design for the end-user.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-tag mono"><i class="ph-light ph-code-block"></i> Technical Arsenal</div>
+          <h2 class="title-lg">Tools cultivated for impact.</h2>
+          <p class="lead" style="margin-top: 16px;">I select tools based on project requirements—prioritizing performance, scalability, and long-term maintainability.</p>
+        </div>
+
+        <div class="card card-pad reveal skill-categories">
+          
+          <div class="skill-row">
+            <h4>Frontend</h4>
+            <div class="skill-tags">
+              <span class="chip">React.js</span> <span class="chip">Next.js</span> <span class="chip">JavaScript (ES6+)</span> 
+              <span class="chip">TypeScript</span> <span class="chip">HTML5 / CSS3</span> <span class="chip">Tailwind CSS</span>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <h4>Backend</h4>
+            <div class="skill-tags">
+              <span class="chip">C# / .NET Core</span> <span class="chip">Python / Django</span> <span class="chip">Node.js</span> 
+              <span class="chip">REST APIs</span>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <h4>Data & Automation</h4>
+            <div class="skill-tags">
+              <span class="chip">SQL Server</span> <span class="chip">MySQL</span> <span class="chip">PostgreSQL</span> 
+              <span class="chip">Google Apps Script</span> <span class="chip">Data Pipelines</span>
+            </div>
+          </div>
+
+          <div class="skill-row" style="border-bottom: none; padding-bottom: 0;">
+            <h4>Tools & Platforms</h4>
+            <div class="skill-tags">
+              <span class="chip">Git / GitHub</span> <span class="chip">Docker</span> <span class="chip">Figma</span> 
+              <span class="chip">WooCommerce</span> <span class="chip">Looker Studio</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-tag mono"><i class="ph-light ph-folder-open"></i> Deployments</div>
+          <h2 class="title-lg">Selected proof of work.</h2>
+        </div>
+
+        <div class="grid-2" id="projectGrid">
+          </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-tag mono"><i class="ph-light ph-hourglass"></i> History</div>
+          <h2 class="title-lg">Professional timeline.</h2>
+        </div>
+
+        <div class="grid-2 reveal">
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="timeline-meta">July 2024 — Present</span>
+              <h3 class="title-md">Assistant IT Administrator</h3>
+              <p class="mono" style="margin-bottom: 12px; font-size: 0.8rem;">CER Group of Companies</p>
+              <p class="small">Managing IT systems, databases, and writing Google Apps Scripts to automate invoicing and payroll across 6 distinct brands. Responsible for WooCommerce logic, analytics dashboards via Looker Studio, and API integrations.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-meta">2025 — Present</span>
+              <h3 class="title-md">Technical Lead & Developer</h3>
+              <p class="mono" style="margin-bottom: 12px; font-size: 0.8rem;">CodeNest</p>
+              <p class="small">Leading web development, system automation, and QA. Architecting brand sites and internal tools to scale client operations efficiently.</p>
+            </div>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="timeline-meta">2024 — 2028 (Ongoing)</span>
+              <h3 class="title-md">BSc in Information Technology</h3>
+              <p class="mono" style="margin-bottom: 12px; font-size: 0.8rem;">University of Colombo</p>
+              <p class="small">Rigorous study focusing on software engineering principles, database architecture, and algorithms.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-meta">2025 — 2027</span>
+              <h3 class="title-md">HND in Computer Science</h3>
+              <p class="mono" style="margin-bottom: 12px; font-size: 0.8rem;">Londontech City Campus</p>
+              <p class="small">Practical higher national diploma reinforcing hands-on coding paradigms, logic application, and full-stack environments.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-tag mono"><i class="ph-light ph-paper-plane-tilt"></i> Contact</div>
+          <h2 class="title-lg">Start a conversation.</h2>
+        </div>
+
+        <div class="contact-grid reveal">
+          <div>
+            <p class="lead" style="margin-bottom: 32px;">Whether you need a custom business automation system, a robust web platform, or are looking for a dedicated developer to join your team, my inbox is open.</p>
+            
+            <div style="display: grid; gap: 16px;">
+              <a href="mailto:nikithakeshan@gmail.com" class="social-btn">
+                <i class="ph-light ph-envelope-simple"></i>
+                <div style="text-align: left;">
+                  <span class="mono" style="display:block; font-size:0.7rem;">Email</span>
+                  <span class="title-sm">nikithakeshan@gmail.com</span>
+                </div>
+              </a>
+              <a href="https://www.linkedin.com/in/nikitha-keshan-640927325/" target="_blank" class="social-btn">
+                <i class="ph-light ph-linkedin-logo"></i>
+                <div style="text-align: left;">
+                  <span class="mono" style="display:block; font-size:0.7rem;">Network</span>
+                  <span class="title-sm">LinkedIn Profile</span>
+                </div>
+              </a>
+              <a href="https://github.com/nikithaKesh" target="_blank" class="social-btn">
+                <i class="ph-light ph-github-logo"></i>
+                <div style="text-align: left;">
+                  <span class="mono" style="display:block; font-size:0.7rem;">Code</span>
+                  <span class="title-sm">GitHub Repositories</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="card card-pad">
+            <form id="contactForm" onsubmit="event.preventDefault(); alert('Form logic ready for backend integration (e.g. Formspree/Netlify).');">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" class="form-control" required placeholder="John Doe">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-control" required placeholder="john@example.com">
+              </div>
+              <div class="form-group">
+                <label for="message">Project Details</label>
+                <textarea id="message" class="form-control" required placeholder="How can I help optimize your business?"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Send Inquiry</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="small">© 2026 Nikitha Keshan. Engineered for scale and aesthetics.</p>
     </div>
   </footer>
 
   <div class="backdrop" id="modalBackdrop"></div>
-  <div class="modal" id="projectModal" aria-hidden="true" aria-labelledby="modalTitle" role="dialog">
-    <div class="modal-card">
-      <div class="modal-head">
-        <div>
-          <div class="mono" style="margin-bottom: 8px;">Project Blueprint</div>
-          <h3 class="title-md" id="modalTitle" style="font-family: var(--font-display); font-style:italic;">Project Title</h3>
+  <div class="modal" id="projectModal" role="dialog" aria-modal="true">
+    <div class="modal-header">
+      <div>
+        <div class="mono" style="margin-bottom: 8px;">Case Study</div>
+        <h3 class="title-lg" id="modalTitle" style="font-size: clamp(1.8rem, 3vw, 2.5rem);">Project Title</h3>
+      </div>
+      <button class="modal-close" id="modalClose" aria-label="Close modal"><i class="ph-light ph-x"></i></button>
+    </div>
+    
+    <div class="modal-body">
+      <div class="modal-meta-grid">
+        <div class="meta-block">
+          <span>Role</span>
+          <strong id="modalRole">Lead Developer</strong>
         </div>
-        <button class="modal-close" id="modalClose" aria-label="Close project details"><i class="ph-light ph-x"></i></button>
+        <div class="meta-block">
+          <span>Tech Stack</span>
+          <div class="chip-row" id="modalStack" style="display: flex; gap: 8px; flex-wrap: wrap;"></div>
+        </div>
       </div>
-      <div class="modal-body">
-        <p class="small" id="modalDescription" style="margin-bottom: 24px; font-size: 1.05rem;"></p>
-        <div class="chip-row" id="modalTags" style="margin-bottom: 24px;"></div>
-        <ul class="bullet-list" id="modalBullets"></ul>
+
+      <div class="case-section">
+        <h4>The Problem</h4>
+        <p id="modalProblem">Problem description goes here.</p>
       </div>
-      <div class="modal-foot">
-        <span class="small" id="modalLinkSpace">Live deployment link</span>
-        <button class="btn btn-secondary" id="modalDone">Close Window</button>
+      <div class="case-section">
+        <h4>The Solution</h4>
+        <p id="modalSolution">Solution description goes here.</p>
       </div>
+      <div class="case-section">
+        <h4>The Impact</h4>
+        <p id="modalImpact">Result description goes here.</p>
+      </div>
+    </div>
+    
+    <div class="modal-footer">
+      <div id="modalLinks"></div>
+      <button class="btn btn-secondary" id="modalCloseBtn">Close</button>
     </div>
   </div>
 
-  <div class="toast" id="toast"></div>
-
   <script>
-    const pages = [...document.querySelectorAll('.page')];
-    const routeLinks = [...document.querySelectorAll('[data-route-link]')];
-    const navShell = document.getElementById('navShell');
-    const mobileToggle = document.getElementById('mobileToggle');
-    const mobilePanel = document.getElementById('mobilePanel');
-    const toast = document.getElementById('toast');
-    
+    // --- Theme Logic ---
     const themeToggle = document.getElementById('themeToggle');
     const themeIcon = themeToggle.querySelector('i');
     
-    const savedTheme = localStorage.getItem('theme');
-    const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-    
-    if (savedTheme === 'light' || (!savedTheme && prefersLight)) {
-      document.documentElement.setAttribute('data-theme', 'light');
-      themeIcon.className = 'ph-light ph-moon';
-    }
-    
-    themeToggle.addEventListener('click', () => {
-      const currentTheme = document.documentElement.getAttribute('data-theme');
-      if (currentTheme === 'light') {
-        document.documentElement.removeAttribute('data-theme');
-        localStorage.setItem('theme', 'dark');
-        themeIcon.className = 'ph-light ph-sun';
-      } else {
+    const setTheme = (theme) => {
+      if(theme === 'light') {
         document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
         themeIcon.className = 'ph-light ph-moon';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        themeIcon.className = 'ph-light ph-sun';
       }
+      localStorage.setItem('theme', theme);
+    };
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setTheme(savedTheme);
+    } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+      setTheme('light');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      setTheme(current === 'light' ? 'dark' : 'light');
     });
 
-    const skillData = {
-      csharp: {
-        title: 'C# / .NET', label: 'Backend & Architecture', level: 85,
-        description: 'I utilize C# to build out robust, strongly typed application logic and backend services, ensuring scale and maintainability across the .NET ecosystem.',
-        bullets: [
-          '<i class="ph-light ph-check"></i> System-minded programming for enterprise logic.',
-          '<i class="ph-light ph-check"></i> Deepens understanding of OOP and architecture patterns.',
-          '<i class="ph-light ph-check"></i> Broadens practical development beyond the frontend.'
-        ],
-        tools: ['.NET Core', 'Blazor', 'MVC', 'OOP']
-      },
-      python: {
-        title: 'Python', label: 'Backend & Automation', level: 88,
-        description: 'I use Python for rapid backend logic, utility tools, data pipelines, and practical workflows where manual work needs to be replaced by reliable scripts.',
-        bullets: [
-          '<i class="ph-light ph-check"></i> Rapid development with Django and utility scripts.',
-          '<i class="ph-light ph-check"></i> Strong fit for business problem-solving and automation.',
-          '<i class="ph-light ph-check"></i> Supports the technical foundation of my machine learning knowledge.'
-        ],
-        tools: ['Django', 'MVT', 'Data Pipelines', 'AI / ML']
-      },
-      java: {
-        title: 'Java', label: 'OOP Foundations', level: 75,
-        description: 'Java forms a solid root system for my application architecture, helping me think in a highly structured, object-oriented way.',
-        bullets: [
-          '<i class="ph-light ph-check"></i> Ideal for learning enterprise-style programming.',
-          '<i class="ph-light ph-check"></i> Builds immense discipline around typed logic.',
-          '<i class="ph-light ph-check"></i> Deepens core computer science foundations.'
-        ],
-        tools: ['Java', 'Enterprise Structure', 'OOP']
-      },
-      javascript: {
-        title: 'JavaScript', label: 'Interaction Logic', level: 88,
-        description: 'JavaScript breathes life into static interfaces, handling routing, dynamic UI state, and seamless, fluid user interactions.',
-        bullets: [
-          '<i class="ph-light ph-check"></i> Makes pages feel like real, tactile products.',
-          '<i class="ph-light ph-check"></i> Client-side logic execution and DOM manipulation.',
-          '<i class="ph-light ph-check"></i> Essential for rich, modern frontend experiences.'
-        ],
-        tools: ['DOM', 'ES6+', 'Async Logic', 'State Management']
-      },
-      typescript: {
-        title: 'TypeScript', label: 'Typed Frontend', level: 82,
-        description: 'TypeScript adds safety and strict structural integrity to JavaScript, ensuring scalable and highly maintainable application architectures.',
-        bullets: [
-          '<i class="ph-light ph-check"></i> Prevents logic errors before code even runs.',
-          '<i class="ph-light ph-check"></i> Makes scaling large codebases manageable.',
-          '<i class="ph-light ph-check"></i> Perfect companion for modern React & Next.js ecosystems.'
-        ],
-        tools: ['Types', 'Interfaces', 'Scalability']
-      },
-      c: {
-        title: 'C / C++', label: 'Core Foundations', level: 65,
-        description: 'Working with C deepens my understanding of memory management, performance optimization, and lower-level system mechanics.',
-        bullets: [
-          '<i class="ph-light ph-check"></i> Sharpens logic and core programming fundamentals.',
-          '<i class="ph-light ph-check"></i> Useful for academic and foundational software learning.',
-          '<i class="ph-light ph-check"></i> Strengthens technical depth beyond the web layer.'
-        ],
-        tools: ['Memory', 'Logic', 'Performance']
-      },
-      react: {
-        title: 'React & Next.js', label: 'Dynamic Interfaces', level: 85,
-        description: 'I build component-driven, highly interactive web applications using React and Next.js, focusing on state management and performance.',
-        bullets: [
-          '<i class="ph-light ph-check"></i> Creating modular, reusable UI components.',
-          '<i class="ph-light ph-check"></i> Managing complex application state efficiently.',
-          '<i class="ph-light ph-check"></i> Leveraging Next.js for SSR and optimal performance.'
-        ],
-        tools: ['React.js', 'Next.js', 'Redux', 'Components']
-      },
-      blazor: {
-        title: 'Blazor & XAML', label: '.NET UI', level: 80,
-        description: 'I leverage the C# ecosystem to build seamless, unified web and application interfaces using Blazor and XAML.',
-        bullets: [
-          '<i class="ph-light ph-check"></i> Building rich interactive UIs using C# instead of JS.',
-          '<i class="ph-light ph-check"></i> Deep integration with existing .NET backend services.',
-          '<i class="ph-light ph-check"></i> Cross-platform interface design.'
-        ],
-        tools: ['Blazor', 'XAML', 'MAUI', '.NET UI']
-      },
-      htmlcss: {
-        title: 'HTML5 & CSS3', label: 'Visual Architecture', level: 92,
-        description: 'The absolute bedrock of my work. I write semantic HTML for accessibility, and modern CSS to shape the exact visual atmosphere of a product.',
-        bullets: [
-          '<i class="ph-light ph-check"></i> Clean, accessible, and scalable content structure.',
-          '<i class="ph-light ph-check"></i> Modern frosted glass, organic spacing, and transitions.',
-          '<i class="ph-light ph-check"></i> Framework-independent responsive design.'
-        ],
-        tools: ['Semantics', 'CSS Grid', 'Flexbox', 'Animations']
-      },
-      tailwind: {
-        title: 'Tailwind CSS & UI', label: 'Rapid Styling', level: 90,
-        description: 'I use utility-first CSS frameworks like Tailwind alongside Material UI to rapidly prototype and consistently scale visual design systems.',
-        bullets: [
-          '<i class="ph-light ph-check"></i> Accelerates development without losing design fidelity.',
-          '<i class="ph-light ph-check"></i> Ensures absolute consistency across large component libraries.',
-          '<i class="ph-light ph-check"></i> Easy maintenance and responsive scaling.'
-        ],
-        tools: ['Tailwind CSS', 'Material UI', 'Design Systems']
-      },
-      dotnet: {
-        title: '.NET Core & Node', label: 'Backend Systems', level: 82,
-        description: 'Crafting robust, scalable enterprise backends, microservices, and fast event-driven APIs.',
-        bullets: [
-          '<i class="ph-light ph-check"></i> Building secure, high-performance REST APIs.',
-          '<i class="ph-light ph-check"></i> Implementing microservices architecture.',
-          '<i class="ph-light ph-check"></i> Handling complex business logic securely on the server.'
-        ],
-        tools: ['.NET Core', 'Node.js', 'Microservices', 'REST APIs']
-      },
-      nodejs: {
-        title: 'Node.js', label: 'Async Backend', level: 82,
-        description: 'Crafting fast, event-driven APIs and scalable server-side applications utilizing the JavaScript ecosystem.',
-        bullets: [
-          '<i class="ph-light ph-check"></i> Perfect for real-time applications and scalable network programs.',
-          '<i class="ph-light ph-check"></i> Unifies the codebase by using JS on both client and server.',
-          '<i class="ph-light ph-check"></i> Extensive integration with modern cloud platforms.'
-        ],
-        tools: ['Node.js', 'Express', 'Async Logic', 'APIs']
-      },
-      django: {
-        title: 'Django / PHP', label: 'Rapid Backend', level: 75,
-        description: 'Utilizing robust frameworks like Django alongside legacy PHP to build secure, data-driven web applications quickly.',
-        bullets: [
-          '<i class="ph-light ph-check"></i> High-level Python frameworks that encourage clean design.',
-          '<i class="ph-light ph-check"></i> Excellent for rapid prototyping and moving ideas to production.',
-          '<i class="ph-light ph-check"></i> Built-in security and administration panels.'
-        ],
-        tools: ['Django', 'PHP', 'MVT Architecture']
-      },
-      sql: {
-        title: 'SQL / MySQL', label: 'Relational Data', level: 84,
-        description: 'The soil of any good application. I use SQL Server and MySQL for structured data storage, querying, and relational integrity.',
-        bullets: [
-          '<i class="ph-light ph-check"></i> Designing efficient relational database schemas.',
-          '<i class="ph-light ph-check"></i> Writing complex queries for reporting and dashboards.',
-          '<i class="ph-light ph-check"></i> Critical for organized, transactional business data.'
-        ],
-        tools: ['SQL Server', 'MySQL', 'Relational DBs']
-      },
-      nosql: {
-        title: 'PostgreSQL / Mongo', label: 'Advanced Data', level: 80,
-        description: 'Handling advanced relational integrity with PostgreSQL, and unstructured flexibility with NoSQL databases like MongoDB and Firebase.',
-        bullets: [
-          '<i class="ph-light ph-check"></i> Adapting database choices to the specific needs of the product.',
-          '<i class="ph-light ph-check"></i> Handling highly scalable, document-oriented data.',
-          '<i class="ph-light ph-check"></i> Real-time data syncing capabilities.'
-        ],
-        tools: ['PostgreSQL', 'MongoDB', 'Firebase']
-      },
-      flutter: {
-        title: 'Flutter / Dart', label: 'Mobile Development', level: 78,
-        description: 'Creating fluid, natively compiled mobile applications for both iOS and Android from a single, highly maintainable codebase.',
-        bullets: [
-          '<i class="ph-light ph-check"></i> Rapid cross-platform development.',
-          '<i class="ph-light ph-check"></i> Building beautiful, customized mobile UI components.',
-          '<i class="ph-light ph-check"></i> Connects seamlessly to REST APIs and Firebase.'
-        ],
-        tools: ['Flutter', 'Dart', 'Android', 'MAUI']
-      },
-      figma: {
-        title: 'Figma & UI', label: 'Prototyping', level: 85,
-        description: 'Translating user needs and business goals into high-fidelity wireframes, visual systems, and interactive prototypes.',
-        bullets: [
-          '<i class="ph-light ph-check"></i> Designing exact component libraries before writing code.',
-          '<i class="ph-light ph-check"></i> Ensuring visual harmony, typography, and spacing.',
-          '<i class="ph-light ph-check"></i> Seamless collaboration with clients during the design phase.'
-        ],
-        tools: ['Figma', 'Adobe XD', 'Prototyping', 'Wireframing']
-      },
-      adobe: {
-        title: 'Adobe Creative Suite', label: 'Visual Assets', level: 80,
-        description: 'Utilizing professional design software to generate pixel-perfect assets, edit multimedia, and polish brand identities.',
-        bullets: [
-          '<i class="ph-light ph-check"></i> Photo manipulation and asset creation.',
-          '<i class="ph-light ph-check"></i> Vector graphic illustration.',
-          '<i class="ph-light ph-check"></i> Video editing and motion graphics integration.'
-        ],
-        tools: ['Photoshop', 'Illustrator', 'Premiere Pro', 'After Effects']
-      },
-      devops: {
-        title: 'Git & Docker', label: 'Operations', level: 80,
-        description: 'Maintaining version control integrity, agile project momentum, and containerizing applications for seamless deployment.',
-        bullets: [
-          '<i class="ph-light ph-check"></i> Ensuring consistent environments from dev to production.',
-          '<i class="ph-light ph-check"></i> Managing codebases via GitHub and GitLab.',
-          '<i class="ph-light ph-check"></i> Facilitating Scrum and Agile workflows via Jira and Slack.'
-        ],
-        tools: ['Docker', 'Git', 'Agile / Scrum', 'Postman']
+    // --- Header & Scroll Spy ---
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // --- Mobile Menu ---
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobilePanel = document.getElementById('mobilePanel');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    const toggleMenu = () => {
+      const isOpen = mobilePanel.classList.contains('open');
+      if (isOpen) {
+        mobilePanel.classList.remove('open');
+        mobileToggle.classList.remove('active');
+        mobilePanel.setAttribute('aria-hidden', 'true');
+      } else {
+        mobilePanel.classList.add('open');
+        mobileToggle.classList.add('active');
+        mobilePanel.setAttribute('aria-hidden', 'false');
       }
     };
 
-    const projectData = {
-      biseka: {
-        title: 'Biseka Cosmetics Web Platform',
-        description: 'A cosmetics-focused brand website cultivated for cleaner presentation, stronger structure, and high-end storefront credibility.',
-        tags: ['Web Development', 'UI / UX', 'Brand Presence'],
-        bullets: [
-          '<i class="ph-light ph-check"></i> Built to feel inherently premium and natural.',
-          '<i class="ph-light ph-check"></i> Focused on product presentation and navigation clarity.',
-          '<i class="ph-light ph-check"></i> Combines aesthetic taste with practical business intent.'
-        ],
-        url: 'https://biseka.co/'
-      },
-      scrub: {
-        title: 'Scrub and Butter',
-        description: 'A complete technical web presence and brand identity architecture, prioritizing clean layout and credibility.',
-        tags: ['Brand Site', 'Direction', 'Frontend'],
-        bullets: [
-          '<i class="ph-light ph-check"></i> Communicates modern capability and premium positioning.',
-          '<i class="ph-light ph-check"></i> Proof of design and service architecture thinking.',
-          '<i class="ph-light ph-check"></i> Built for high conversion and lead generation.'
-        ],
-        url: 'https://scrubnbutter.com/'
-      },
-      mob: {
-        title: 'MOB Surfskate',
-        description: 'A dynamic web experience for a surfskate brand, focusing on high-quality visuals, motion, and a modern aesthetic.',
-        tags: ['Lifestyle Brand', 'WooCommerce', 'WordPress'],
-        bullets: [
-          '<i class="ph-light ph-check"></i> High-quality visual integration and motion.',
-          '<i class="ph-light ph-check"></i> Seamless e-commerce flow for lifestyle products.',
-          '<i class="ph-light ph-check"></i> Prioritizes mobile responsiveness for on-the-go users.'
-        ],
-        url: 'https://mobsurfskate.com/'
-      },
-      ola: {
-        title: 'OLA Tangalle Hotel',
-        description: 'A premium hospitality frontend experience highlighting imagery and booking flows.',
-        tags: ['Hospitality', 'WordPress', 'Codenest'],
-        bullets: [
-          '<i class="ph-light ph-check"></i> Clean, immersive design highlighting property visuals.',
-          '<i class="ph-light ph-check"></i> Intuitive user journey driving booking conversions.',
-          '<i class="ph-light ph-check"></i> High-fidelity translation from design files to code.'
-        ],
-        url: 'https://olatangalle.com/'
-      },
-      invoice: {
-        title: 'Biseka Bulk Invoice Automation',
-        description: 'Automated framework centralizing monthly data to instantly generate error-free tax invoices for Biseka Maldives.',
-        tags: ['Google Sheets', 'Apps Script', 'Financial Logic'],
-        bullets: [
-          '<i class="ph-light ph-check"></i> <strong>Dynamic Templates:</strong> Sheets auto-populate based on selected data (Customer Name, QTY, Rate).',
-          '<i class="ph-light ph-check"></i> <strong>Automated Calculations:</strong> Hard-coded formulas for line totals, 20% discounts, and 8% GST.',
-          '<i class="ph-light ph-check"></i> <strong>Archive Management:</strong> Links separate Sheet IDs for every month to ensure structured, accessible records.'
-        ],
-        url: null
-      },
-      payroll: {
-        title: 'Payslip & Email Delivery Automation',
-        description: 'An integrated payroll system that calculates complex salary variables, generates PDFs, and automates email distribution.',
-        tags: ['HR Automation', 'PDF Generation', 'Email API'],
-        bullets: [
-          '<i class="ph-light ph-check"></i> <strong>Centralized Database:</strong> Tracks over 30 employees, managing basic pay, allowances, and EPF deductions.',
-          '<i class="ph-light ph-check"></i> <strong>Automated Delivery:</strong> Creates individual PDF payslips and emails them directly to the staff member.',
-          '<i class="ph-light ph-check"></i> <strong>Error Handling:</strong> Logs PDF creation times and identifies delivery failures (e.g., missing emails).'
-        ],
-        url: null
-      },
-      sms: {
-        title: 'Logistics SMS Notification Framework',
-        description: 'A centralized command center bridging courier data (Citypack, Fardar) with automated customer SMS communication.',
-        tags: ['API Integration', 'Logistics', 'Status Logging'],
-        bullets: [
-          '<i class="ph-light ph-check"></i> <strong>Dynamic Content:</strong> Pairs courier tracking numbers with respective URLs automatically.',
-          '<i class="ph-light ph-check"></i> <strong>Real-Time Logging:</strong> Captures timestamps and API status codes (e.g., "submit success", "insufficient credits").',
-          '<i class="ph-light ph-check"></i> <strong>Multi-Agent Support:</strong> Manages unique messaging requirements tailored to different delivery agents.'
-        ],
-        url: null
-      },
-      sheets: {
-        title: 'Automated Monthly Sheet Generation',
-        description: 'A centralized controller automating the deployment, renaming, and organization of specialized tracking sheets across BISEKA locations.',
-        tags: ['Workspace', 'Architecture', 'Bulk Execution'],
-        bullets: [
-          '<i class="ph-light ph-check"></i> <strong>Template-Based:</strong> Pulls from master templates to ensure strict formatting and structural integrity.',
-          '<i class="ph-light ph-check"></i> <strong>Dynamic Routing:</strong> Automatically renames files by month/brand and places them in specific Destination Folder IDs.',
-          '<i class="ph-light ph-check"></i> <strong>Rapid Deployment:</strong> Deploys complete suites of business trackers (SHOP logs, BIS logs) in minutes.'
-        ],
-        url: null
-      },
-      repos: {
-        title: 'Development Archives & Repositories',
-        description: 'A collection of my technical prototypes, HTML/JS builds, and concept layouts hosted via GitHub Pages.',
-        tags: ['Code Repos', 'JS', 'HTML/CSS', 'GitHub'],
-        bullets: [
-          '<i class="ph-light ph-arrow-circle-right"></i> <a href="https://nikithakesh.github.io/Employee-Assets/" target="_blank" style="color:var(--text); text-decoration:underline;">Customer Care Employee Asset Form</a>',
-          '<i class="ph-light ph-arrow-circle-right"></i> <a href="https://nikithakesh.github.io/Travel-site/#" target="_blank" style="color:var(--text); text-decoration:underline;">Simple One-Page Travel Site</a>',
-          '<i class="ph-light ph-arrow-circle-right"></i> <a href="https://nikithakesh.github.io/movie/" target="_blank" style="color:var(--text); text-decoration:underline;">Movie Database Concept</a>',
-          '<i class="ph-light ph-arrow-circle-right"></i> <a href="https://nikithakesh.github.io/snake-game/" target="_blank" style="color:var(--text); text-decoration:underline;">Interactive JS Snake Game</a>',
-          '<i class="ph-light ph-arrow-circle-right"></i> <a href="https://nikithakesh.github.io/growing-flower/" target="_blank" style="color:var(--text); text-decoration:underline;">Neon CSS Animation Concept</a>'
-        ],
-        url: 'https://github.com/nikithaKesh'
-      }
-    };
+    mobileToggle.addEventListener('click', toggleMenu);
+    mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
 
-    function showToast(message) {
-      toast.innerHTML = `<i class="ph-fill ph-info" style="margin-right:8px; color:var(--primary)"></i> ${message}`;
-      toast.classList.add('show');
-      clearTimeout(showToast.timer);
-      showToast.timer = setTimeout(() => toast.classList.remove('show'), 3000);
-    }
-
-    function closeMobileMenu() {
-      mobilePanel.classList.remove('open'); mobilePanel.setAttribute('aria-hidden', 'true');
-      mobileToggle.classList.remove('active'); mobileToggle.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    }
-
-    mobileToggle.addEventListener('click', () => {
-      const isOpen = mobilePanel.classList.toggle('open');
-      mobilePanel.setAttribute('aria-hidden', String(!isOpen));
-      mobileToggle.classList.toggle('active', isOpen);
-      mobileToggle.setAttribute('aria-expanded', String(isOpen));
-      document.body.style.overflow = isOpen ? 'hidden' : '';
-    });
-
-    // --- Scroll spy (IntersectionObserver) ---
-    const sectionObserver = new IntersectionObserver((entries) => {
+    // --- Reveal Animations ---
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const id = entry.target.getAttribute('id');
-          routeLinks.forEach(link => {
-            link.classList.toggle('active', link.dataset.routeLink === id);
-          });
+          entry.target.classList.add('show');
+          revealObserver.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.2, rootMargin: "-10% 0px -50% 0px" });
-
-    pages.forEach(page => sectionObserver.observe(page));
-
-    document.addEventListener('click', (e) => {
-      const route = e.target.closest('[data-route-link]');
-      const proj = e.target.closest('[data-open-project]');
-
-      // If clicking a nav link, let the browser smoothly scroll via CSS, just close the menu.
-      if (route && route.getAttribute('href')?.startsWith('#')) {
-        closeMobileMenu();
-      }
-      if (!mobilePanel.contains(e.target) && !mobileToggle.contains(e.target) && mobilePanel.classList.contains('open')) closeMobileMenu();
-      if (proj) openProjectModal(proj.dataset.openProject);
-    });
-
-    window.addEventListener('scroll', () => navShell.classList.toggle('scrolled', window.scrollY > 10));
-
-    const revealObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('show'); });
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    revealElements.forEach(el => revealObserver.observe(el));
 
-    const skillPills = [...document.querySelectorAll('.skill-pill')];
-    function renderSkill(key) {
-      const data = skillData[key];
-      if (!data) return;
-      skillPills.forEach(p => p.classList.toggle('active', p.dataset.skill === key));
-      document.getElementById('skillTitle').textContent = data.title;
-      document.getElementById('skillLabel').textContent = data.label;
-      document.getElementById('skillDescription').textContent = data.description;
-      document.getElementById('skillBullets').innerHTML = data.bullets.map(b => `<li>${b}</li>`).join('');
-      document.getElementById('skillTools').innerHTML = data.tools.map(t => `<span class="chip">${t}</span>`).join('');
-      setTimeout(() => document.getElementById('skillMeter').style.width = `${data.level}%`, 50);
-    }
-    skillPills.forEach(p => p.addEventListener('click', () => renderSkill(p.dataset.skill)));
-    renderSkill('csharp'); 
+    // --- Project Data & Modal Logic ---
+    const projects = [
+      {
+        id: 'biseka',
+        title: 'Biseka Cosmetics Web Platform',
+        icon: 'ph-sparkle',
+        summary: 'A premium cosmetics storefront optimized for high conversions.',
+        role: 'Frontend Developer',
+        tags: ['E-Commerce', 'UI/UX', 'Performance'],
+        problem: 'The brand needed a digital storefront that reflected its premium aesthetic, but large high-resolution product images were causing severe load delays, resulting in cart abandonment.',
+        solution: 'Engineered a highly optimized, component-driven UI. Implemented lazy loading for images, streamlined the WooCommerce integration, and designed a frictionless checkout journey.',
+        impact: 'Achieved a significantly faster page load time, elevating the brand\'s credibility and directly increasing online sales conversions.',
+        url: 'https://biseka.co/'
+      },
+      {
+        id: 'payroll',
+        title: 'Payslip & Email Automation',
+        icon: 'ph-paper-plane-right',
+        summary: 'Automated HR system for salary calculation and PDF delivery.',
+        role: 'System Automation Creator',
+        tags: ['Python / Apps Script', 'HR', 'API'],
+        problem: 'The HR department was manually calculating complex salary variables (EPF, allowances) for over 30 employees, creating PDFs one by one, and manually emailing them—wasting hours every month.',
+        solution: 'Built an integrated script that pulls centralized database data, automatically calculates deductions and additions, generates formatted PDF payslips, and triggers bulk email delivery.',
+        impact: 'Reduced a 2-day manual HR process into a 5-minute automated execution with zero calculation errors.'
+      },
+      {
+        id: 'scrub',
+        title: 'Scrub and Butter',
+        icon: 'ph-buildings',
+        summary: 'Complete technical web presence and brand architecture.',
+        role: 'Lead Web Developer',
+        tags: ['Brand Identity', 'Frontend', 'Design'],
+        problem: 'The client needed a digital footprint from scratch that communicated modern capability and immediately captured lead interest.',
+        solution: 'Developed the complete technical architecture and frontend UI. Focused on clean layouts, strong typography, and strategic call-to-action placement.',
+        impact: 'Successfully launched a scalable web presence that acts as a 24/7 lead generation asset for the business.',
+        url: 'https://scrubnbutter.com/'
+      },
+      {
+        id: 'sms',
+        title: 'Logistics SMS Framework',
+        icon: 'ph-device-mobile',
+        summary: 'Centralized API bridging courier data with customer SMS.',
+        role: 'Backend Logic Engineer',
+        tags: ['API Integration', 'Logistics', 'Automation'],
+        problem: 'Customer service was overwhelmed by "Where is my order?" calls because tracking numbers across different delivery agents (Citypack, Fardar) were not actively communicated to customers.',
+        solution: 'Created a centralized command center that automatically pairs courier tracking numbers with the correct tracking URLs and triggers personalized SMS notifications to the customer upon dispatch.',
+        impact: 'Drastically reduced customer support tickets and improved post-purchase customer satisfaction through proactive communication.'
+      }
+    ];
 
-    const filters = [...document.querySelectorAll('#projectFilters [data-filter]')];
-    const cards = [...document.querySelectorAll('#projectGrid .project-card')];
-    filters.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filters.forEach(b => b.classList.remove('active')); btn.classList.add('active');
-        cards.forEach(card => card.style.display = (btn.dataset.filter === 'all' || card.dataset.category.includes(btn.dataset.filter)) ? '' : 'none');
-      });
+    const projectGrid = document.getElementById('projectGrid');
+    
+    // Render Cards
+    projects.forEach(p => {
+      const card = document.createElement('article');
+      card.className = 'project-card reveal';
+      card.innerHTML = `
+        <div class="project-top">
+          <div class="project-icon"><i class="ph-light ${p.icon}"></i></div>
+          <button class="btn btn-secondary" style="min-height:36px; padding:0 16px; font-size:0.85rem;" onclick="openModal('${p.id}')">Case Study</button>
+        </div>
+        <h3 class="title-md" style="margin-bottom: 12px;">${p.title}</h3>
+        <p class="small">${p.summary}</p>
+        <div class="project-tags">
+          ${p.tags.slice(0, 2).map(t => `<span class="chip">${t}</span>`).join('')}
+        </div>
+      `;
+      projectGrid.appendChild(card);
     });
 
-    function openProjectModal(key) {
-      const data = projectData[key]; if (!data) return;
+    // Modal Logic
+    const modal = document.getElementById('projectModal');
+    const backdrop = document.getElementById('modalBackdrop');
+    
+    window.openModal = (id) => {
+      const data = projects.find(p => p.id === id);
+      if(!data) return;
+
       document.getElementById('modalTitle').textContent = data.title;
-      document.getElementById('modalDescription').textContent = data.description;
-      document.getElementById('modalTags').innerHTML = data.tags.map(t => `<span class="chip">${t}</span>`).join('');
-      document.getElementById('modalBullets').innerHTML = data.bullets.map(b => `<li>${b}</li>`).join('');
+      document.getElementById('modalRole').textContent = data.role;
+      document.getElementById('modalStack').innerHTML = data.tags.map(t => `<span class="chip" style="border-color:var(--line-strong);">${t}</span>`).join('');
       
-      const linkSpace = document.getElementById('modalLinkSpace');
-      if(data.url) {
-        linkSpace.innerHTML = `<a href="${data.url}" target="_blank" class="text-link" style="font-size: 1rem;">View Live Project <i class="ph-light ph-arrow-up-right"></i></a>`;
+      document.getElementById('modalProblem').textContent = data.problem;
+      document.getElementById('modalSolution').textContent = data.solution;
+      document.getElementById('modalImpact').textContent = data.impact;
+
+      const linksDiv = document.getElementById('modalLinks');
+      if (data.url) {
+        linksDiv.innerHTML = `<a href="${data.url}" target="_blank" class="btn btn-primary">View Live Project <i class="ph-light ph-arrow-up-right"></i></a>`;
       } else {
-        linkSpace.innerHTML = `Internal/Backend System Tool`;
+        linksDiv.innerHTML = `<span class="chip" style="background:var(--primary-alpha-10); border:none; color:var(--primary);">Internal System</span>`;
       }
 
-      document.getElementById('modalBackdrop').classList.add('show');
-      document.getElementById('projectModal').classList.add('show');
+      modal.classList.add('show');
+      backdrop.classList.add('show');
       document.body.style.overflow = 'hidden';
-    }
-    function closeProjectModal() {
-      document.getElementById('modalBackdrop').classList.remove('show');
-      document.getElementById('projectModal').classList.remove('show');
-      document.body.style.overflow = mobilePanel.classList.contains('open') ? 'hidden' : '';
-    }
-    [document.getElementById('modalBackdrop'), document.getElementById('modalClose'), document.getElementById('modalDone')].forEach(el => el.addEventListener('click', closeProjectModal));
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeProjectModal(); closeMobileMenu(); }});
+    };
 
-    document.getElementById('contactForm').addEventListener('submit', (e) => {
-      e.preventDefault();
-      const fields = ['name', 'email', 'subject', 'message'].map(id => e.target[id].value.trim());
-      if (fields.some(f => !f)) return showToast('Please complete all fields.');
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields[1])) return showToast('Enter a valid email.');
-      showToast('Form validated. Ready for backend connection.');
-      e.target.reset();
-    });
+    const closeModal = () => {
+      modal.classList.remove('show');
+      backdrop.classList.remove('show');
+      document.body.style.overflow = '';
+    };
 
-    document.getElementById('copyEmailBtn').addEventListener('click', async () => {
-      try { await navigator.clipboard.writeText(document.getElementById('emailText').textContent.trim()); showToast('Email copied to clipboard.'); } 
-      catch { showToast('Copy failed.'); }
-    });
+    document.getElementById('modalClose').addEventListener('click', closeModal);
+    document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
+    backdrop.addEventListener('click', closeModal);
+    window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
+    // --- Custom Cursor Logic ---
     if (window.matchMedia('(pointer: fine)').matches) {
-      document.body.style.cursor = 'none';
-      const dot = document.querySelector('.cursor-dot'), ring = document.querySelector('.cursor-ring');
-      window.addEventListener('mousemove', e => {
-        dot.style.opacity = '1'; ring.style.opacity = '1';
+      const dot = document.querySelector('.cursor-dot');
+      const ring = document.querySelector('.cursor-ring');
+      
+      document.addEventListener('mousemove', (e) => {
         dot.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-        ring.animate({ transform: `translate(${e.clientX}px, ${e.clientY}px)` }, { duration: 150, fill: 'forwards' });
+        ring.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
       });
-      document.querySelectorAll('a, button, input, textarea, .project-card, .skill-pill, .social-btn, .theme-toggle').forEach(el => {
+
+      const interactables = document.querySelectorAll('a, button, input, textarea, .project-card');
+      interactables.forEach(el => {
         el.addEventListener('mouseenter', () => ring.classList.add('active'));
         el.addEventListener('mouseleave', () => ring.classList.remove('active'));
       });
