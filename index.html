@@ -3,28 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Nikitha Keshan — Software Developer, Web Developer, and System Automation Creator. Building business websites, internal tools, and scalable digital experiences." />
-  <meta name="author" content="Nikitha Keshan" />
-  
-  <meta property="og:title" content="Nikitha Keshan | Software & System Developer" />
-  <meta property="og:description" content="Engineering business systems, web applications, and automated workflows." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://nikithakesh.github.io/" />
-  <meta property="og:image" content="https://nikithakesh.github.io/social-preview.png" />
-
+  <meta name="description" content="Nikitha Keshan — Software Developer, Web Developer, and System Automation Creator." />
   <title>Nikitha Keshan | Software & System Developer</title>
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234285F4'/><text x='50' y='72' font-size='70' font-family='sans-serif' fill='%23ffffff' text-anchor='middle'>N</text></svg>">
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
   <style>
+    @font-face {
+      font-family: 'Google Sans';
+      font-style: normal;
+      font-weight: 400;
+      src: url('https://fonts.gstatic.com/s/googlesans/v29/4UaGrENHsxJlGDuGo1OIlL3Owp5eKQtG.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Google Sans';
+      font-style: normal;
+      font-weight: 500;
+      src: url('https://fonts.gstatic.com/s/googlesans/v29/4UabrENHsxJlGDuGo1OIlLU94YtzCwZhPQ.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Google Sans';
+      font-style: normal;
+      font-weight: 700;
+      src: url('https://fonts.gstatic.com/s/googlesans/v29/4UabrENHsxJlGDuGo1OIlLV154tzCwZhPQ.woff2') format('woff2');
+    }
+
     /* =========================================
-       CSS VARIABLES: PIXEL PRODUCT THEME
+       CSS VARIABLES: MATERIAL YOU THEME
        ========================================= */
     :root {
       /* Google Signature Colors */
@@ -33,105 +43,80 @@
       --g-yellow: #FBBC05;
       --g-green: #34A853;
 
-      /* Alphas for soft backgrounds */
       --g-blue-alpha: rgba(66, 133, 244, 0.12);
       --g-red-alpha: rgba(234, 67, 53, 0.12);
       --g-yellow-alpha: rgba(251, 188, 5, 0.15);
       --g-green-alpha: rgba(52, 168, 83, 0.12);
 
-      /* Light Theme (Default Pixel Look) */
+      /* Light Theme (Material 3 Defaults) */
       --bg: #F8F9FA;          
-      --bg-soft: #FFFFFF;     
+      --bg-soft: #FFFFFF;      
       --surface: #FFFFFF; 
-      --surface-2: #F1F3F4;
+      --surface-2: #F1F3F4; /* Google search bar gray */
       --surface-3: #E8EAED;
       
       --text: #202124;        
-      --muted: #5F6368;       
+      --muted: #5F6368;        
       --muted-2: #80868B;
       
-      --line: #E8EAED;
-      --line-strong: #DADCE0;
+      --line: #DADCE0;
+      --line-strong: #BDC1C6;
       
       --primary: var(--g-blue);     
-      --primary-2: #3b77db;   
+      --primary-hover: #3b77db;   
       
       --btn-text: #FFFFFF;
       
-      --nav-bg: rgba(248, 249, 250, 0.7);
-      --nav-bg-scrolled: rgba(255, 255, 255, 0.9);
+      --nav-bg: rgba(255, 255, 255, 0.85);
       --backdrop: rgba(32, 33, 36, 0.6);
-      --input-bg: #F1F3F4;
       
-      --shadow: 0 8px 32px rgba(32, 33, 36, 0.08);
-      --shadow-soft: 0 4px 16px rgba(32, 33, 36, 0.04);
+      --shadow-1: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+      --shadow-2: 0 4px 6px -1px rgba(60,64,67,0.3), 0 2px 4px -1px rgba(60,64,67,0.15);
+      --shadow-3: 0 8px 24px rgba(60,64,67,0.15);
 
-      --cursor-bg: rgba(66, 133, 244, 0.15);
-      
-      /* Playful rounded geometry */
       --radius-pill: 9999px;
-      --radius-xl: 40px;
-      --radius-lg: 28px;
+      --radius-xl: 28px;
+      --radius-lg: 24px;
       --radius-md: 16px;
-      --radius-sm: 12px;
+      --radius-sm: 8px;
       
-      --container: 1200px;
-      --nav-h: 80px;
-      --transition: 300ms cubic-bezier(0.2, 0, 0, 1); 
+      --container: 1000px;
+      --nav-h: 72px;
+      --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Material standard easing */
       
-      --font-sans: "DM Sans", sans-serif;
-      --font-display: "Plus Jakarta Sans", sans-serif;
+      --font-sans: "Roboto", sans-serif;
+      --font-display: "Google Sans", "Roboto", sans-serif;
       --font-mono: "JetBrains Mono", monospace;
     }
 
     [data-theme="dark"] {
-      /* Google Signature Pastel Colors (for Dark Mode legibility) */
       --g-blue: #8AB4F8;
       --g-red: #F28B82;
       --g-yellow: #FDE293;
       --g-green: #81C995;
 
-      --g-blue-alpha: rgba(138, 180, 248, 0.15);
-      --g-red-alpha: rgba(242, 139, 130, 0.15);
-      --g-yellow-alpha: rgba(253, 226, 147, 0.15);
-      --g-green-alpha: rgba(129, 201, 149, 0.15);
-
-      /* Dark Theme */
       --bg: #202124; 
-      --bg-soft: #303134; 
-      --surface: #303134; 
+      --bg-soft: #292A2D; 
+      --surface: #292A2D; 
       --surface-2: #3C4043;
       --surface-3: #4A4D51; 
       
       --text: #E8EAED; 
       --muted: #9AA0A6; 
-      --muted-2: #BDC1C6; 
       
       --line: #3C4043; 
       --line-strong: #5F6368; 
       
-      --primary: var(--g-blue); 
-      --primary-2: #A8C7FA; 
-      
       --btn-text: #202124;
-
-      --nav-bg: rgba(32, 33, 36, 0.7);
-      --nav-bg-scrolled: rgba(48, 49, 52, 0.9);
-      --backdrop: rgba(0, 0, 0, 0.8);
-      --input-bg: #202124;
-
-      --shadow: 0 16px 40px rgba(0, 0, 0, 0.4); 
-      --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.2);
-
-      --cursor-bg: rgba(138, 180, 248, 0.15);
+      --nav-bg: rgba(32, 33, 36, 0.85);
+      --shadow-1: 0 1px 2px 0 rgba(0,0,0,0.3), 0 1px 3px 1px rgba(0,0,0,0.15);
+      --shadow-2: 0 4px 6px -1px rgba(0,0,0,0.3), 0 2px 4px -1px rgba(0,0,0,0.15);
+      --shadow-3: 0 8px 24px rgba(0,0,0,0.4);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; scroll-padding-top: 120px; }
-
-    /* =========================================
-       GLOBAL ACCESSIBILITY & AMBIENT BACKGROUND
-       ========================================= */
+    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+    
     body {
       min-height: 100vh;
       font-family: var(--font-sans);
@@ -142,92 +127,31 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    :focus-visible { outline: 2px solid var(--primary); outline-offset: 4px; border-radius: var(--radius-sm); }
-
-    /* Abstract soft gradients inspired by Pixel wallpapers */
-    body::before {
-      content: ""; position: fixed; inset: -20%; pointer-events: none; z-index: -3;
-      background: radial-gradient(circle at 10% 20%, var(--g-blue-alpha), transparent 40%),
-                  radial-gradient(circle at 90% 80%, var(--g-yellow-alpha), transparent 40%),
-                  radial-gradient(circle at 80% 20%, var(--g-red-alpha), transparent 30%),
-                  radial-gradient(circle at 20% 80%, var(--g-green-alpha), transparent 40%);
-      transition: background var(--transition);
+    /* Standard Google Material Icons Setup */
+    .material-symbols-rounded {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-size: 1.25rem;
+      vertical-align: middle;
     }
+    .material-symbols-rounded.filled { font-variation-settings: 'FILL' 1; }
 
-    /* =========================================
-       PRELOADER: GOOGLE-STYLE BOUNCING DOTS
-       ========================================= */
-    #preloader {
-      position: fixed; inset: 0; z-index: 999999;
-      background-color: var(--bg);
-      display: flex; align-items: center; justify-content: center;
-      transition: opacity 0.6s cubic-bezier(0.2, 0, 0, 1), transform 0.6s cubic-bezier(0.2, 0, 0, 1);
-    }
-
-    .sonar-container { 
-      display: flex; gap: 12px; align-items: center; justify-content: center;
-      transition: var(--transition);
-    }
-
-    .g-dot {
-      width: 16px; height: 16px; border-radius: 50%;
-      animation: g-bounce 1.2s infinite cubic-bezier(0.2, 0, 0, 1);
-    }
-    .g-dot.blue { background-color: var(--g-blue); animation-delay: 0s; }
-    .g-dot.red { background-color: var(--g-red); animation-delay: 0.15s; }
-    .g-dot.yellow { background-color: var(--g-yellow); animation-delay: 0.3s; }
-    .g-dot.green { background-color: var(--g-green); animation-delay: 0.45s; }
-
-    @keyframes g-bounce {
-      0%, 100% { transform: translateY(0) scale(1); opacity: 0.8; }
-      50% { transform: translateY(-16px) scale(1.1); opacity: 1; }
-    }
-
-    .explode-animation {
-      animation: preloaderOut 0.8s cubic-bezier(0.2, 0, 0, 1) forwards;
-    }
-
-    @keyframes preloaderOut {
-      0% { transform: scale(1); opacity: 1; }
-      100% { transform: scale(1.5); opacity: 0; }
-    }
-
-    /* =========================================
-       BASE STYLES & LAYOUT
-       ========================================= */
     ::selection { background: var(--g-blue-alpha); color: var(--text); }
     ::-webkit-scrollbar { width: 8px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
     ::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 10px; }
-    ::-webkit-scrollbar-thumb:hover { background: var(--muted); }
 
     img { max-width: 100%; display: block; border-radius: var(--radius-md); }
-    button, a, input, textarea, select { font: inherit; outline: none; }
-    button { border: 0; background: none; color: inherit; cursor: pointer; }
-    a { color: inherit; text-decoration: none; cursor: pointer; }
+    button, a, input, textarea { font: inherit; outline: none; border: none; background: none; color: inherit; }
+    button, a { cursor: pointer; text-decoration: none; }
     ul { list-style: none; }
 
     .container { width: min(var(--container), calc(100% - 48px)); margin-inline: auto; }
+    
+    h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 500; color: var(--text); letter-spacing: -0.01em; }
+    .title-xl { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; }
+    .title-lg { font-size: clamp(2rem, 3vw, 2.5rem); }
+    .title-md { font-size: clamp(1.2rem, 2vw, 1.5rem); }
 
-    .mono { font-family: var(--font-mono); letter-spacing: 0.05em; text-transform: uppercase; font-size: 0.75rem; color: var(--muted); font-weight: 500; }
-    
-    .section-tag { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: var(--radius-pill); background: var(--surface-2); color: var(--text); font-weight: 500; font-family: var(--font-display); font-size: 0.9rem; margin-bottom: 24px; transition: var(--transition); border: 1px solid var(--line); }
-    
-    /* Section tag icons color coded */
-    #home .section-tag i { color: var(--g-blue); }
-    #about .section-tag i { color: var(--g-red); }
-    #skills .section-tag i { color: var(--g-yellow); }
-    #work .section-tag i { color: var(--g-green); }
-    #experience .section-tag i { color: var(--g-blue); }
-    #contact .section-tag i { color: var(--g-red); }
-
-    h1, h2, h3, h4 { line-height: 1.2; color: var(--text); font-family: var(--font-display); font-weight: 600; letter-spacing: -0.02em; }
-    .title-xl { font-size: clamp(2.8rem, 6vw, 4.5rem); letter-spacing: -0.03em; font-weight: 700; }
-    .title-lg { font-size: clamp(2.2rem, 4vw, 3rem); }
-    .title-md { font-size: clamp(1.4rem, 2vw, 1.8rem); font-weight: 600;}
-    .title-sm { font-size: 1.15rem; font-weight: 600; }
-    
-    /* Google 4-Color Animated Gradient Text */
     .g-gradient-text { 
       background: linear-gradient(90deg, var(--g-blue), var(--g-red), var(--g-yellow), var(--g-green), var(--g-blue));
       background-size: 200% auto;
@@ -237,264 +161,165 @@
     }
     @keyframes textShine { to { background-position: 200% center; } }
 
-    .lead { font-size: clamp(1.1rem, 1.4vw, 1.25rem); line-height: 1.6; color: var(--muted); max-width: 60ch; }
-    .muted { color: var(--muted); }
-    .small { font-size: 1rem; line-height: 1.6; color: var(--muted); }
+    .lead { font-size: 1.125rem; line-height: 1.6; color: var(--muted); }
+    .small { font-size: 0.95rem; line-height: 1.6; color: var(--muted); }
+    .mono { font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
 
-    .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 
-    /* Pixel Card Style */
-    .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); transition: var(--transition); display: flex; flex-direction: column; height: 100%; position: relative; overflow: hidden; }
-    .card-pad { padding: 40px; }
+    /* Material Cards */
+    .card { 
+      background: var(--surface); 
+      border: 1px solid var(--line); 
+      border-radius: var(--radius-lg); 
+      box-shadow: var(--shadow-1); 
+      transition: var(--transition); 
+      position: relative; 
+      overflow: hidden; 
+    }
+    .card-pad { padding: 32px; }
 
-    /* Material Buttons */
-    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; padding: 0 32px; border-radius: var(--radius-pill); font-family: var(--font-display); font-weight: 600; font-size: 1rem; transition: var(--transition); white-space: nowrap; border: 1px solid transparent; }
-    .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-soft); }
-    .btn-primary { background: var(--g-blue); color: var(--btn-text); }
-    .btn-primary:hover { background: var(--primary-2); }
-    .btn-secondary { background: var(--surface); border-color: var(--line-strong); color: var(--text); }
-    .btn-secondary:hover { background: var(--surface-2); border-color: var(--line-strong); color: var(--text); }
+    /* Material Buttons with Ripple Prep */
+    .btn { 
+      position: relative;
+      overflow: hidden;
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px; 
+      height: 48px; padding: 0 24px; 
+      border-radius: var(--radius-pill); 
+      font-family: var(--font-display); font-weight: 500; font-size: 0.95rem; 
+      transition: var(--transition); 
+    }
+    .btn-primary { background: var(--g-blue); color: var(--btn-text); box-shadow: var(--shadow-1); }
+    .btn-primary:hover { background: var(--primary-hover); box-shadow: var(--shadow-2); }
+    .btn-secondary { background: var(--surface); border: 1px solid var(--line); color: var(--g-blue); }
+    .btn-secondary:hover { background: var(--surface-2); }
+    .btn-icon { width: 48px; padding: 0; border-radius: 50%; color: var(--muted); background: transparent; }
+    .btn-icon:hover { background: var(--surface-2); color: var(--text); }
 
-    .btn-ghost { background: transparent; border: 1px solid transparent; color: var(--muted); padding: 10px 24px; border-radius: var(--radius-pill); font-family: var(--font-display); font-weight: 600; transition: var(--transition); }
-    .btn-ghost.active, .btn-ghost:hover { background: var(--g-blue-alpha); color: var(--g-blue); }
+    /* Material Chips */
+    .chip { 
+      display: inline-flex; align-items: center; gap: 6px; 
+      height: 32px; padding: 0 16px; 
+      border-radius: var(--radius-pill); 
+      border: 1px solid var(--line);
+      background: var(--surface); color: var(--text); 
+      font-size: 0.85rem; font-family: var(--font-display); 
+      transition: var(--transition); 
+    }
+    .chip.active { background: var(--g-blue-alpha); color: var(--g-blue); border-color: transparent; }
+    .chip:hover:not(.active) { background: var(--surface-2); }
 
-    .chip { display: inline-flex; align-items: center; gap: 6px; min-height: 36px; padding: 0 16px; border-radius: var(--radius-pill); background: var(--surface-2); color: var(--text); font-size: 0.9rem; font-weight: 500; font-family: var(--font-display); transition: var(--transition); }
-    .chip:hover { background: var(--surface-3); }
-
-    /* =========================================
-       NAVIGATION
-       ========================================= */
-    .site-header { position: fixed; top: 0; width: 100%; z-index: 100; transition: var(--transition); padding-top: 16px; }
-    .nav-shell { width: min(calc(var(--container) + 40px), calc(100% - 32px)); margin-inline: auto; height: var(--nav-h); display: flex; align-items: center; justify-content: space-between; padding: 0 16px 0 24px; background: var(--nav-bg); border: 1px solid var(--line); border-radius: var(--radius-pill); backdrop-filter: blur(24px); transition: var(--transition); box-shadow: var(--shadow-soft); }
-    .site-header.scrolled .nav-shell { background: var(--nav-bg-scrolled); box-shadow: var(--shadow); }
-
+    /* Navigation - Google Workspace Style */
+    .site-header { position: fixed; top: 0; width: 100%; z-index: 100; transition: var(--transition); background: var(--bg); border-bottom: 1px solid transparent; }
+    .site-header.scrolled { background: var(--nav-bg); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); box-shadow: var(--shadow-1); }
+    .nav-shell { width: min(calc(var(--container) + 40px), 100%); margin-inline: auto; height: var(--nav-h); display: flex; align-items: center; justify-content: space-between; padding: 0 24px; }
+    
     .brand { display: flex; align-items: center; gap: 12px; }
-    
-    /* Interactive Google Assistant Style Brand Mark */
-    .brand-mark-dots { display: flex; gap: 4px; padding: 8px; border-radius: var(--radius-pill); transition: var(--transition); align-items: center; height: 44px;}
-    .brand:hover .brand-mark-dots { background: var(--surface-2); }
-    .b-dot { width: 8px; height: 8px; border-radius: 50%; transition: var(--transition); }
-    .b-dot.blue { background: var(--g-blue); }
-    .b-dot.red { background: var(--g-red); }
-    .b-dot.yellow { background: var(--g-yellow); }
-    .b-dot.green { background: var(--g-green); }
-    .brand:hover .b-dot { animation: wave 1s infinite ease-in-out alternate; }
-    .brand:hover .b-dot.red { animation-delay: 0.1s; }
-    .brand:hover .b-dot.yellow { animation-delay: 0.2s; }
-    .brand:hover .b-dot.green { animation-delay: 0.3s; }
+    .b-dot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; }
+    .b-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .b-dot.blue { background: var(--g-blue); } .b-dot.red { background: var(--g-red); }
+    .b-dot.yellow { background: var(--g-yellow); } .b-dot.green { background: var(--g-green); }
+    .brand-title { font-weight: 500; font-family: var(--font-display); font-size: 1.25rem; }
 
-    @keyframes wave { 0% { transform: scale(1); } 100% { transform: scale(1.4); } }
+    .nav-links { display: flex; gap: 8px; }
+    .nav-link { padding: 8px 16px; border-radius: var(--radius-pill); color: var(--muted); font-size: 0.95rem; font-weight: 500; font-family: var(--font-display); transition: var(--transition); }
+    .nav-link:hover { color: var(--text); background: var(--surface-2); }
 
-    .brand-meta { display: flex; flex-direction: column; }
-    .brand-title { font-weight: 700; font-family: var(--font-display); font-size: 1.05rem; letter-spacing: -0.01em; }
-    .brand-sub { color: var(--muted); font-size: 0.8rem; }
-
-    .nav-links { display: flex; gap: 4px; }
-    .nav-link { padding: 8px 20px; border-radius: var(--radius-pill); color: var(--muted); font-size: 0.95rem; font-weight: 500; font-family: var(--font-display); transition: var(--transition); }
-    .nav-link:hover, .nav-link.active { color: var(--text); background: var(--surface-2); }
-
-    .nav-actions { display: flex; align-items: center; gap: 8px; }
-    .theme-toggle { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; border: 1px solid transparent; color: var(--muted); font-size: 1.3rem; transition: var(--transition); background: var(--surface-2); }
-    .theme-toggle:hover { color: var(--text); background: var(--surface-3); }
-
-    .mobile-toggle { display: none; width: 44px; height: 44px; border-radius: 50%; background: var(--surface-2); border: none; }
-    .mobile-toggle span, .mobile-toggle::before, .mobile-toggle::after { content: ""; display: block; width: 20px; height: 2px; background: var(--text); margin-inline: auto; transition: var(--transition); border-radius: 2px; }
-    .mobile-toggle::before { margin-bottom: 5px; } .mobile-toggle::after { margin-top: 5px; }
-    .mobile-toggle.active span { opacity: 0; }
-    .mobile-toggle.active::before { transform: translateY(7px) rotate(45deg); }
-    .mobile-toggle.active::after { transform: translateY(-7px) rotate(-45deg); }
-
-    .mobile-panel { position: absolute; top: calc(100% + 12px); left: 16px; right: 16px; padding: 24px; border-radius: var(--radius-lg); background: var(--bg-soft); border: 1px solid var(--line); box-shadow: var(--shadow); transform: translateY(-16px); opacity: 0; visibility: hidden; transition: var(--transition); }
-    .mobile-panel.open { opacity: 1; visibility: visible; transform: translateY(0); }
-    .mobile-panel .nav-link { display: flex; width: 100%; min-height: 48px; align-items: center; font-size: 1.1rem; }
-
-    /* =========================================
-       PAGE STRUCTURE
-       ========================================= */
-    main { padding-top: 150px; }
-    .section { padding: 80px 0; }
-    .section-head { margin-bottom: 56px; max-width: 700px; }
-    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 800ms cubic-bezier(0.2, 0, 0, 1), transform 800ms cubic-bezier(0.2, 0, 0, 1); }
-    .reveal.show { opacity: 1; transform: translateY(0); }
-
-    /* HERO */
-    .hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; min-height: 70vh; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 40px; }
-    .hero-visual { position: relative; display: flex; align-items: center; justify-content: center; }
-    
-    /* Playful Google Hardware style frame with 4-color geometry */
-    .organic-frame { width: min(100%, 450px); aspect-ratio: 4/5; border-radius: var(--radius-xl); background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); display: flex; flex-direction: column; padding: 48px; justify-content: flex-end; position: relative; overflow: hidden; }
-    
-    /* Decorative Google Shapes */
-    .g-shape { position: absolute; opacity: 0.8; z-index: 0; animation: floatShape 8s ease-in-out infinite alternate; }
-    .shape-blue { width: 140px; height: 60px; border-radius: 999px; background: var(--g-blue-alpha); top: 15%; right: -10%; transform: rotate(-15deg); }
-    .shape-red { width: 80px; height: 80px; border-radius: 50%; background: var(--g-red-alpha); top: 10%; left: 10%; animation-delay: -2s; }
-    .shape-yellow { width: 100px; height: 100px; border-radius: 24px; background: var(--g-yellow-alpha); bottom: 25%; left: -10%; transform: rotate(20deg); animation-delay: -4s; }
-    .shape-green { width: 60px; height: 60px; border-radius: 50%; background: var(--g-green-alpha); bottom: 15%; right: 15%; animation-delay: -6s; }
-
-    @keyframes floatShape {
-      0% { transform: translateY(0) rotate(0deg); }
-      100% { transform: translateY(-20px) rotate(10deg); }
-    }
-    
-    .status-indicator { position: absolute; top: 32px; right: 32px; display: flex; align-items: center; gap: 10px; font-size: 0.85rem; font-family: var(--font-display); font-weight: 600; color: var(--text); background: var(--surface-2); padding: 10px 20px; border-radius: var(--radius-pill); z-index: 2; border: 1px solid var(--line); }
-    .status-dot { width: 10px; height: 10px; background: var(--g-green); border-radius: 50%; animation: pulse 2s infinite; }
-    @keyframes pulse { 0% { box-shadow: 0 0 0 0 var(--g-green-alpha); } 70% { box-shadow: 0 0 0 10px transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
-
-    /* ABOUT & SKILLS */
-    .about-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; align-items: start; }
-    .about-image { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: var(--radius-xl); box-shadow: var(--shadow-soft); }
-    
-    .skill-categories { display: grid; gap: 32px; margin-top: 40px; background: var(--surface); border-radius: var(--radius-xl); padding: 48px; border: 1px solid var(--line); box-shadow: var(--shadow-soft);}
-    .skill-row { display: grid; grid-template-columns: 200px 1fr; gap: 24px; align-items: start; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
-    .skill-row:last-child { border-bottom: none; padding-bottom: 0; }
-    .skill-row h4 { font-family: var(--font-display); font-size: 1.1rem; margin-top: 8px;}
-    
-    /* Color code skills categories */
-    .skill-row:nth-child(1) h4 { color: var(--g-blue); }
-    .skill-row:nth-child(2) h4 { color: var(--g-red); }
-    .skill-row:nth-child(3) h4 { color: var(--g-yellow); }
-    .skill-row:nth-child(4) h4 { color: var(--g-green); }
-
-    .skill-tags { display: flex; flex-wrap: wrap; gap: 12px; }
-
-    /* PROJECTS */
-    .project-toolbar { display: flex; gap: 12px; margin-bottom: 40px; flex-wrap: wrap; }
-    .project-card { padding: 40px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-xl); transition: var(--transition); display: flex; flex-direction: column; cursor: pointer; }
-    .project-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: transparent; }
-    .project-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; }
-    .project-icon { width: 56px; height: 56px; border-radius: var(--radius-md); display: grid; place-items: center; font-size: 1.6rem; }
-    .project-tags { display: flex; gap: 8px; margin-top: auto; padding-top: 32px; flex-wrap: wrap;}
-
-    /* TIMELINE */
-    .timeline { position: relative; padding-left: 32px; display: grid; gap: 48px; }
-    .timeline::before { content: ""; position: absolute; left: 0; top: 8px; bottom: 0; width: 2px; background: var(--line); }
-    .timeline-item { position: relative; }
-    .timeline-item::before { content: ""; position: absolute; left: -38px; top: 8px; width: 14px; height: 14px; border-radius: 50%; background: var(--surface); box-shadow: 0 0 0 4px var(--bg); border: 3px solid; }
-    
-    /* Cyclical color application for timeline dots */
-    .timeline-item:nth-child(4n+1)::before { border-color: var(--g-blue); }
-    .timeline-item:nth-child(4n+2)::before { border-color: var(--g-red); }
-    .timeline-item:nth-child(4n+3)::before { border-color: var(--g-yellow); }
-    .timeline-item:nth-child(4n+4)::before { border-color: var(--g-green); }
-
-    .timeline-meta { font-family: var(--font-display); font-weight: 600; font-size: 0.9rem; color: var(--muted); margin-bottom: 8px; display: block; }
-
-    /* CONTACT */
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
-    .social-btn { display: flex; align-items: center; gap: 16px; padding: 20px; border-radius: var(--radius-lg); border: 1px solid var(--line); background: var(--surface); transition: var(--transition); }
-    .social-btn:hover { background: var(--surface-2); transform: translateX(4px); box-shadow: var(--shadow-soft); border-color: transparent;}
-    .social-btn i { font-size: 1.6rem; padding: 12px; border-radius: 50%; }
-    
-    /* Unique hover colors for contact buttons */
-    .social-btn:nth-child(1) i { color: var(--g-red); background: var(--g-red-alpha); }
-    .social-btn:nth-child(2) i { color: var(--g-blue); background: var(--g-blue-alpha); }
-    .social-btn:nth-child(3) i { color: var(--g-green); background: var(--g-green-alpha); }
-
-    .form-group { margin-bottom: 24px; }
-    .form-group label { display: block; margin-bottom: 8px; font-size: 0.95rem; font-weight: 500; font-family: var(--font-display); color: var(--text); }
-    .form-control { width: 100%; background: var(--input-bg); border: 2px solid transparent; color: var(--text); padding: 18px 24px; border-radius: var(--radius-md); font-family: var(--font-sans); font-size: 1rem; transition: var(--transition); }
-    .form-control:focus { border-color: var(--g-blue); outline: none; background: var(--surface); box-shadow: var(--shadow-soft); }
-    textarea.form-control { resize: vertical; min-height: 140px; border-radius: var(--radius-lg); }
-
-    /* MODAL */
-    .backdrop { position: fixed; inset: 0; background: var(--backdrop); backdrop-filter: blur(4px); z-index: 1000; opacity: 0; visibility: hidden; transition: var(--transition); }
-    .backdrop.show { opacity: 1; visibility: visible; }
-    .modal { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -45%) scale(0.95); width: min(800px, calc(100% - 32px)); max-height: 90vh; overflow-y: auto; background: var(--bg-soft); border-radius: var(--radius-xl); z-index: 1010; opacity: 0; visibility: hidden; transition: var(--transition); box-shadow: var(--shadow); border: 1px solid var(--line); }
-    .modal.show { opacity: 1; visibility: visible; transform: translate(-50%, -50%) scale(1); }
-    .modal-header { padding: 40px 40px 24px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: flex-start; position: sticky; top: 0; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); z-index: 10; }
-    [data-theme="dark"] .modal-header { background: rgba(48, 49, 52, 0.9); }
-    .modal-close { width: 44px; height: 44px; border-radius: 50%; background: var(--surface-2); display: grid; place-items: center; transition: var(--transition); }
-    .modal-close:hover { background: var(--g-red-alpha); color: var(--g-red); }
-    .modal-body { padding: 40px; display: grid; gap: 32px; }
-    .modal-meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding: 24px; background: var(--surface-2); border-radius: var(--radius-lg); }
-    .meta-block span { display: block; font-family: var(--font-display); font-size: 0.85rem; font-weight: 600; color: var(--muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em; }
-    .meta-block strong { font-weight: 600; font-size: 1.05rem; color: var(--text); }
-    .case-section h4 { font-family: var(--font-display); font-size: 1.1rem; color: var(--text); margin-bottom: 12px; }
-    .case-section p { font-size: 1.05rem; line-height: 1.7; color: var(--muted); }
-    .modal-footer { padding: 24px 40px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;}
-
-    /* TOAST & CURSOR */
-    .toast { position: fixed; bottom: 24px; right: 24px; background: var(--text); color: var(--bg); font-family: var(--font-display); font-weight: 500; padding: 16px 24px; border-radius: var(--radius-md); z-index: 2000; transform: translateY(20px); opacity: 0; visibility: hidden; transition: var(--transition); box-shadow: var(--shadow); }
-    .toast.show { transform: translateY(0); opacity: 1; visibility: visible; }
-    @media (pointer: fine) {
-      body { cursor: none; }
-      .cursor-dot { position: fixed; top: 0; left: 0; width: 8px; height: 8px; background: var(--g-blue); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); transition: opacity 0.2s; }
-      .cursor-ring { position: fixed; top: 0; left: 0; width: 48px; height: 48px; border: 2px solid var(--g-blue-alpha); border-radius: 50%; pointer-events: none; z-index: 9998; transform: translate(-50%, -50%); transition: width 0.2s, height 0.2s, background 0.2s, border-color 0.2s; }
-      .cursor-ring.active { width: 64px; height: 64px; background: var(--cursor-bg); border-color: transparent; }
-    }
-
-    footer { padding: 48px 0; border-top: 1px solid var(--line); margin-top: 80px; text-align: center; }
-
-    @media (max-width: 960px) {
-      .hero, .about-grid, .contact-grid, .grid-2 { grid-template-columns: 1fr; }
-      .skill-row { grid-template-columns: 1fr; gap: 12px; border-bottom: none; padding-bottom: 0; margin-bottom: 24px; }
-      .skill-row:last-child { margin-bottom: 0; }
+    /* Mobile Menu */
+    .mobile-toggle { display: none; }
+    @media (max-width: 768px) {
       .nav-links, .hide-mobile { display: none; }
-      .mobile-toggle { display: block; }
-      .hero-visual { order: -1; margin-bottom: 24px; }
-      .organic-frame { width: 100%; aspect-ratio: auto; min-height: 350px; }
-      .card-pad { padding: 32px; }
+      .mobile-toggle { display: flex; }
     }
-    @media (max-width: 600px) {
-      .section { padding: 56px 0; }
-      .card-pad, .modal-header, .modal-body, .modal-footer { padding: 24px; }
-      .modal-meta-grid { grid-template-columns: 1fr; }
-      .hero-actions { flex-direction: column; width: 100%; }
-      .hero-actions .btn { width: 100%; }
-      .organic-frame { padding: 32px; overflow: hidden;}
+
+    /* Sections */
+    main { padding-top: 100px; }
+    .section { padding: 80px 0; }
+    .section-head { margin-bottom: 40px; }
+    .section-tag { display: inline-flex; align-items: center; gap: 8px; color: var(--g-blue); font-weight: 500; font-family: var(--font-display); margin-bottom: 16px; font-size: 0.9rem; }
+
+    /* Hero */
+    .hero { min-height: 60vh; display: flex; flex-direction: column; justify-content: center; }
+    .hero-actions { display: flex; gap: 16px; margin-top: 32px; }
+
+    /* Experience Timeline - Google Maps Route Style */
+    .timeline { position: relative; padding-left: 24px; display: grid; gap: 32px; margin-top: 24px; }
+    .timeline::before { content: ""; position: absolute; left: 6px; top: 10px; bottom: 0; width: 2px; background: var(--line-strong); }
+    .timeline-item { position: relative; }
+    .timeline-item::before { content: ""; position: absolute; left: -24px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: var(--bg); border: 2px solid var(--g-blue); z-index: 2; }
+    
+    /* Project Search Bar */
+    .search-bar { 
+      display: flex; align-items: center; gap: 12px; 
+      background: var(--surface-2); border-radius: var(--radius-pill); 
+      padding: 8px 24px; margin-bottom: 24px; 
+      max-width: 600px; border: 1px solid transparent; 
+      transition: var(--transition);
     }
+    .search-bar:focus-within { background: var(--surface); border-color: var(--line); box-shadow: var(--shadow-1); }
+    .search-bar input { flex: 1; height: 36px; font-size: 1rem; color: var(--text); }
+    .search-bar input::placeholder { color: var(--muted); }
+
+    /* Projects Grid */
+    .project-card { padding: 24px; cursor: pointer; display: flex; flex-direction: column; }
+    .project-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); border-color: var(--line-strong); }
+    .project-icon { width: 40px; height: 40px; border-radius: var(--radius-sm); display: grid; place-items: center; margin-bottom: 16px; }
+
+    /* Contact Form - Material Tonal Inputs */
+    .form-control { 
+      width: 100%; background: var(--surface-2); 
+      color: var(--text); padding: 16px; 
+      border-radius: var(--radius-sm) var(--radius-sm) 0 0; 
+      border-bottom: 2px solid var(--muted); 
+      font-size: 1rem; transition: var(--transition); margin-bottom: 24px;
+    }
+    .form-control:focus { background: var(--surface); border-bottom-color: var(--g-blue); }
+
+    /* Modal - Google Drive Preview Style */
+    .backdrop { position: fixed; inset: 0; background: var(--backdrop); z-index: 1000; opacity: 0; visibility: hidden; transition: var(--transition); }
+    .backdrop.show { opacity: 1; visibility: visible; }
+    .modal { 
+      position: fixed; top: 50%; left: 50%; transform: translate(-50%, -45%) scale(0.95); 
+      width: min(700px, calc(100% - 32px)); max-height: 85vh; overflow-y: auto; 
+      background: var(--bg); border-radius: var(--radius-lg); 
+      z-index: 1010; opacity: 0; visibility: hidden; transition: var(--transition); 
+      box-shadow: var(--shadow-3); 
+    }
+    .modal.show { opacity: 1; visibility: visible; transform: translate(-50%, -50%) scale(1); }
+    .modal-header { padding: 24px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; background: var(--bg); z-index: 10; }
+    .modal-body { padding: 24px; }
+    .modal-footer { padding: 24px; border-top: 1px solid var(--line); display: flex; justify-content: flex-end; gap: 12px; }
+
+    /* Ripple Effect Class */
+    .ripple { position: absolute; border-radius: 50%; transform: scale(0); animation: ripple-anim 600ms linear; background-color: rgba(255, 255, 255, 0.3); pointer-events: none; }
+    [data-theme="light"] .btn-secondary .ripple, [data-theme="light"] .project-card .ripple { background-color: rgba(0, 0, 0, 0.05); }
+    @keyframes ripple-anim { to { transform: scale(4); opacity: 0; } }
+
   </style>
 </head>
-<body style="overflow: hidden;"> 
-  
-  <div id="preloader">
-    <div class="sonar-container">
-      <div class="g-dot blue"></div>
-      <div class="g-dot red"></div>
-      <div class="g-dot yellow"></div>
-      <div class="g-dot green"></div>
-    </div>
-  </div>
-
-  <div class="cursor-dot" aria-hidden="true"></div>
-  <div class="cursor-ring" aria-hidden="true"></div>
+<body> 
 
   <header class="site-header" id="header">
     <div class="nav-shell">
-      <a href="#home" class="brand" aria-label="Home">
-        <div class="brand-mark-dots">
-          <div class="b-dot blue"></div>
-          <div class="b-dot red"></div>
-          <div class="b-dot yellow"></div>
-          <div class="b-dot green"></div>
+      <a href="#home" class="brand">
+        <div class="b-dot-grid">
+          <div class="b-dot blue"></div><div class="b-dot red"></div>
+          <div class="b-dot yellow"></div><div class="b-dot green"></div>
         </div>
-        <div class="brand-meta">
-          <span class="brand-title">Nikitha Keshan</span>
-          <span class="brand-sub">Software & System Developer</span>
-        </div>
+        <span class="brand-title">Nikitha Keshan</span>
       </a>
 
-      <nav class="nav-links" aria-label="Primary Navigation">
+      <nav class="nav-links">
         <a href="#about" class="nav-link">About</a>
         <a href="#skills" class="nav-link">Skills</a>
         <a href="#work" class="nav-link">Work</a>
         <a href="#experience" class="nav-link">Experience</a>
       </nav>
 
-      <div class="nav-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme"><i class="ph-light ph-moon"></i></button>
-        <a href="NikithaKeshan_CV.pdf" class="btn btn-secondary hide-mobile" download>Download CV</a>
-        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu" aria-expanded="false"><span></span></button>
-      </div>
-      
-      <div class="mobile-panel" id="mobilePanel" aria-hidden="true">
-        <a href="#about" class="nav-link mobile-link">About</a>
-        <a href="#skills" class="nav-link mobile-link">Skills</a>
-        <a href="#work" class="nav-link mobile-link">Work</a>
-        <a href="#experience" class="nav-link mobile-link">Experience</a>
-        <a href="#contact" class="nav-link mobile-link">Contact</a>
-        <a href="NikithaKeshan_CV.pdf" class="btn btn-primary" style="margin-top: 16px; width: 100%; border-radius: var(--radius-md);" download>Download CV</a>
+      <div class="nav-links" style="align-items: center;">
+        <button class="btn-icon" id="themeToggle"><span class="material-symbols-rounded">dark_mode</span></button>
+        <a href="NikithaKeshan_CV.pdf" class="btn btn-primary hide-mobile" download>Resume</a>
+        <button class="btn-icon mobile-toggle"><span class="material-symbols-rounded">menu</span></button>
       </div>
     </div>
   </header>
@@ -502,133 +327,101 @@
   <main>
     <section id="home" class="section">
       <div class="container hero">
-        <div class="hero-copy reveal">
-          <div class="section-tag"><i class="ph-light ph-waves"></i> Fluid digital solutions</div>
-          <h1 class="title-xl" style="margin-bottom: 24px;">
-            I engineer <span class="g-gradient-text">business systems</span> and scalable web applications.
-          </h1>
-          <p class="lead">
-            I am Nikitha Keshan. I build clean websites, internal tools, and automated workflows that remove operational friction and foster business growth.
-          </p>
-          <div class="hero-actions">
-            <a href="#work" class="btn btn-primary">View Projects</a>
-            <a href="#contact" class="btn btn-secondary">Let's Collaborate</a>
-          </div>
-        </div>
-        <div class="hero-visual reveal">
-          <div class="organic-frame">
-            <div class="g-shape shape-blue"></div>
-            <div class="g-shape shape-red"></div>
-            <div class="g-shape shape-yellow"></div>
-            <div class="g-shape shape-green"></div>
-            <div class="status-indicator">
-              <div class="status-dot"></div> Available for Work
-            </div>
-            <div style="position: relative; z-index: 2; background: var(--surface); padding: 24px; border-radius: var(--radius-lg); border: 1px solid var(--line); box-shadow: var(--shadow-soft);">
-              <div class="mono" style="margin-bottom: 8px;">Stack / Primary</div>
-              <h3 class="title-md">C# • Python • React • SQL</h3>
-              <p class="small" style="margin-top: 16px; border-top: 1px solid var(--line); padding-top: 16px;">Building robust backend logic with minimalist, highly responsive frontends.</p>
-            </div>
-          </div>
+        <div class="section-tag"><span class="material-symbols-rounded" style="font-size: 1.2rem;">code_blocks</span> Software & System Developer</div>
+        <h1 class="title-xl" style="margin-bottom: 24px; max-width: 800px;">
+          I engineer <span class="g-gradient-text">business systems</span> and scalable web applications.
+        </h1>
+        <p class="lead" style="max-width: 600px;">
+          Building clean websites, internal tools, and automated workflows that remove operational friction and foster business growth.
+        </p>
+        <div class="hero-actions">
+          <a href="#work" class="btn btn-primary has-ripple">View Projects</a>
+          <a href="#contact" class="btn btn-secondary has-ripple">Get in touch</a>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section">
-      <div class="container">
-        <div class="section-head reveal">
-          <div class="section-tag"><i class="ph-light ph-anchor"></i> The Builder</div>
-          <h2 class="title-lg">Merging logic with execution.</h2>
-        </div>
-        
-        <div class="about-grid reveal">
-          <img src="1760549322866.png" alt="Nikitha Keshan" class="about-image">
-          
-          <div class="card card-pad">
-            <h3 class="title-md" style="margin-bottom: 24px;">Driven by practical problem solving.</h3>
-            <p class="small" style="margin-bottom: 16px;">
-              Based in Colombo, Sri Lanka, my focus is strictly on building software that serves a distinct purpose. Whether it's designing a high-conversion e-commerce frontend or writing Python scripts to automate complex payroll calculations, I aim for high utility and low friction.
-            </p>
-            <p class="small" style="margin-bottom: 32px;">
-              Currently serving as the Assistant IT Administrator for the CER Group and Technical Lead at CodeNest, I have a proven track record of architecting digital identities, managing databases, and deploying internal tools that drastically cut down manual administrative hours.
-            </p>
-            
-            <div class="grid-2" style="border-top: 1px solid var(--line); padding-top: 32px;">
-              <div>
-                <div class="mono" style="margin-bottom: 12px; color:var(--text); font-weight:600;">Core Focus</div>
-                <ul class="small" style="line-height: 2.2;">
-                  <li>Web Application Architecture</li>
-                  <li>Business Process Automation</li>
-                  <li>UI/UX Systems</li>
-                </ul>
-              </div>
-              <div>
-                <div class="mono" style="margin-bottom: 12px; color:var(--text); font-weight:600;">Approach</div>
-                <ul class="small" style="line-height: 2.2;">
-                  <li>Code maintainability over shortcuts.</li>
-                  <li>Automate mundane tasks.</li>
-                  <li>Design for the end-user.</li>
-                </ul>
-              </div>
-            </div>
+    <section id="about" class="section" style="background: var(--surface-2);">
+      <div class="container grid-2">
+        <div>
+          <div class="section-head">
+            <h2 class="title-lg">Driven by practical problem solving.</h2>
           </div>
+          <p class="small" style="margin-bottom: 16px;">
+            Based in Colombo, Sri Lanka, my focus is strictly on building software that serves a distinct purpose. Whether it's designing a high-conversion e-commerce frontend or writing Python scripts to automate complex payroll calculations, I aim for high utility and low friction.
+          </p>
+          <p class="small">
+            Currently serving as the Assistant IT Administrator for the CER Group and Technical Lead at CodeNest, I have a proven track record of architecting digital identities, managing databases, and deploying internal tools that drastically cut down manual administrative hours.
+          </p>
+        </div>
+        <div class="card card-pad">
+          <h3 class="title-md" style="margin-bottom: 16px;"><span class="material-symbols-rounded" style="color: var(--g-blue);">build</span> Core Focus</h3>
+          <ul class="small" style="margin-bottom: 24px; line-height: 2;">
+            <li>Web Application Architecture</li>
+            <li>Business Process Automation</li>
+            <li>UI/UX Systems</li>
+          </ul>
+          <h3 class="title-md" style="margin-bottom: 16px;"><span class="material-symbols-rounded" style="color: var(--g-green);">psychology</span> Approach</h3>
+          <ul class="small" style="line-height: 2;">
+            <li>Code maintainability over shortcuts</li>
+            <li>Automate mundane tasks</li>
+            <li>Design for the end-user</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <section id="skills" class="section">
       <div class="container">
-        <div class="section-head reveal">
-          <div class="section-tag"><i class="ph-light ph-compass"></i> Technical Arsenal</div>
-          <h2 class="title-lg">Tools cultivated for impact.</h2>
-          <p class="lead" style="margin-top: 16px;">I select tools based on project requirements—prioritizing performance, scalability, and long-term maintainability.</p>
+        <div class="section-head">
+          <h2 class="title-lg">Technical Arsenal</h2>
         </div>
-
-        <div class="skill-categories reveal">
-          <div class="skill-row">
-            <h4>Frontend</h4>
-            <div class="skill-tags">
-              <span class="chip">React.js</span> <span class="chip">Next.js</span> <span class="chip">JavaScript (ES6+)</span> 
-              <span class="chip">TypeScript</span> <span class="chip">HTML5 / CSS3</span> <span class="chip">Tailwind CSS</span>
+        <div class="grid-2">
+          <div class="card card-pad">
+            <h3 class="title-md" style="margin-bottom: 16px; color: var(--g-blue);">Frontend & Design</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <span class="chip">React.js</span> <span class="chip">Next.js</span> <span class="chip">TypeScript</span>
+              <span class="chip">Tailwind CSS</span> <span class="chip">Figma</span>
             </div>
           </div>
-          <div class="skill-row">
-            <h4>Backend</h4>
-            <div class="skill-tags">
-              <span class="chip">C# / .NET Core</span> <span class="chip">Python / Django</span> <span class="chip">Node.js</span> 
-              <span class="chip">REST APIs</span>
+          <div class="card card-pad">
+            <h3 class="title-md" style="margin-bottom: 16px; color: var(--g-red);">Backend & APIs</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <span class="chip">C# / .NET Core</span> <span class="chip">Python / Django</span> <span class="chip">Node.js</span>
             </div>
           </div>
-          <div class="skill-row">
-            <h4>Data & Automation</h4>
-            <div class="skill-tags">
-              <span class="chip">SQL Server</span> <span class="chip">MySQL</span> <span class="chip">PostgreSQL</span> 
-              <span class="chip">Google Apps Script</span> <span class="chip">Data Pipelines</span>
+          <div class="card card-pad">
+            <h3 class="title-md" style="margin-bottom: 16px; color: var(--g-yellow);">Data & Automation</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <span class="chip">SQL Server</span> <span class="chip">PostgreSQL</span> <span class="chip">Apps Script</span>
             </div>
           </div>
-          <div class="skill-row">
-            <h4>Tools & Platforms</h4>
-            <div class="skill-tags">
-              <span class="chip">Git / GitHub</span> <span class="chip">Docker</span> <span class="chip">Figma</span> 
-              <span class="chip">WooCommerce</span> <span class="chip">Looker Studio</span>
+          <div class="card card-pad">
+            <h3 class="title-md" style="margin-bottom: 16px; color: var(--g-green);">Infrastructure</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <span class="chip">Git</span> <span class="chip">Docker</span> <span class="chip">WooCommerce</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="work" class="section">
+    <section id="work" class="section" style="background: var(--surface-2);">
       <div class="container">
-        <div class="section-head reveal">
-          <div class="section-tag"><i class="ph-light ph-drop"></i> Deployments</div>
-          <h2 class="title-lg">Selected proof of work.</h2>
+        <div class="section-head">
+          <h2 class="title-lg">Selected Deployments</h2>
         </div>
 
-        <div class="project-toolbar reveal" id="projectFilters">
-          <button class="btn btn-ghost active" data-filter="all">All Deployments</button>
-          <button class="btn btn-ghost" data-filter="web">Web Interfaces</button>
-          <button class="btn btn-ghost" data-filter="automation">Automations</button>
-          <button class="btn btn-ghost" data-filter="repos">Repositories</button>
+        <div class="search-bar">
+          <span class="material-symbols-rounded" style="color: var(--muted);">search</span>
+          <input type="text" placeholder="Search projects or filter below..." readonly>
+          <span class="material-symbols-rounded" style="color: var(--g-blue); cursor: pointer;">mic</span>
+        </div>
+
+        <div style="display: flex; gap: 8px; margin-bottom: 32px; flex-wrap: wrap;" id="projectFilters">
+          <button class="chip active" data-filter="all">All</button>
+          <button class="chip" data-filter="web">Web Interfaces</button>
+          <button class="chip" data-filter="automation">Automations</button>
         </div>
 
         <div class="grid-2" id="projectGrid">
@@ -638,493 +431,185 @@
 
     <section id="experience" class="section">
       <div class="container">
-        <div class="section-head reveal">
-          <div class="section-tag"><i class="ph-light ph-hourglass"></i> History</div>
-          <h2 class="title-lg">Professional timeline.</h2>
+        <div class="section-head">
+          <h2 class="title-lg">Professional Timeline</h2>
         </div>
-
-        <div class="grid-2 reveal">
-          <div class="timeline">
-            <div class="timeline-item">
-              <span class="timeline-meta">July 2024 — Present</span>
-              <h3 class="title-md">Assistant IT Administrator</h3>
-              <p class="mono" style="margin-bottom: 12px; font-size: 0.8rem; text-transform: none;">CER Group of Companies</p>
-              <p class="small">Managing IT systems, databases, and writing Google Apps Scripts to automate invoicing and payroll across 6 distinct brands. Responsible for WooCommerce logic, analytics dashboards via Looker Studio, and API integrations.</p>
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-meta">2025 — Present</span>
-              <h3 class="title-md">Technical Lead & Developer</h3>
-              <p class="mono" style="margin-bottom: 12px; font-size: 0.8rem; text-transform: none;">CodeNest</p>
-              <p class="small">Leading web development, system automation, and QA. Architecting brand sites and internal tools to scale client operations efficiently.</p>
+        <div class="grid-2">
+          <div>
+            <h3 class="title-md" style="margin-bottom: 16px;">Work Experience</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="mono">July 2024 — Present</span>
+                <h4 style="font-size: 1.1rem; margin: 4px 0;">Assistant IT Administrator</h4>
+                <p class="small">CER Group of Companies • Managing IT systems, databases, and Google Apps Scripts for 6 brands.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="mono">2025 — Present</span>
+                <h4 style="font-size: 1.1rem; margin: 4px 0;">Technical Lead</h4>
+                <p class="small">CodeNest • Leading web development and internal tool architecture.</p>
+              </div>
             </div>
           </div>
-
-          <div class="timeline">
-            <div class="timeline-item">
-              <span class="timeline-meta">2024 — 2028 (Ongoing)</span>
-              <h3 class="title-md">BSc in Information Technology</h3>
-              <p class="mono" style="margin-bottom: 12px; font-size: 0.8rem; text-transform: none;">University of Colombo</p>
-              <p class="small">Rigorous study focusing on software engineering principles, database architecture, and algorithms.</p>
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-meta">2025 — 2027</span>
-              <h3 class="title-md">HND in Computer Science</h3>
-              <p class="mono" style="margin-bottom: 12px; font-size: 0.8rem; text-transform: none;">Londontech City Campus</p>
-              <p class="small">Practical higher national diploma reinforcing hands-on coding paradigms, logic application, and full-stack environments.</p>
+          <div>
+            <h3 class="title-md" style="margin-bottom: 16px;">Education</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="mono">2024 — 2028</span>
+                <h4 style="font-size: 1.1rem; margin: 4px 0;">BSc in Information Technology</h4>
+                <p class="small">University of Colombo</p>
+              </div>
+              <div class="timeline-item">
+                <span class="mono">2025 — 2027</span>
+                <h4 style="font-size: 1.1rem; margin: 4px 0;">HND in Computer Science</h4>
+                <p class="small">Londontech City Campus</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section">
-      <div class="container">
-        <div class="section-head reveal">
-          <div class="section-tag"><i class="ph-light ph-paper-plane-tilt"></i> Contact</div>
-          <h2 class="title-lg">Start a conversation.</h2>
+    <section id="contact" class="section" style="background: var(--surface-2);">
+      <div class="container grid-2">
+        <div>
+          <h2 class="title-lg" style="margin-bottom: 16px;">Start a conversation.</h2>
+          <p class="lead" style="margin-bottom: 32px;">Need a custom business automation system or a robust web platform? My inbox is open.</p>
+          
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <a href="mailto:nikithakeshan@gmail.com" style="display: flex; align-items: center; gap: 16px; color: var(--text);">
+              <span class="material-symbols-rounded filled" style="font-size: 2rem; color: var(--g-red);">mail</span>
+              <span style="font-weight: 500;">nikithakeshan@gmail.com</span>
+            </a>
+            <a href="https://github.com/nikithaKesh" style="display: flex; align-items: center; gap: 16px; color: var(--text);">
+              <span class="material-symbols-rounded filled" style="font-size: 2rem; color: var(--text);">code</span>
+              <span style="font-weight: 500;">GitHub Profile</span>
+            </a>
+          </div>
         </div>
-
-        <div class="contact-grid reveal">
-          <div>
-            <p class="lead" style="margin-bottom: 40px;">Whether you need a custom business automation system, a robust web platform, or are looking for a dedicated developer to join your team, my inbox is open.</p>
-            
-            <div style="display: grid; gap: 16px;">
-              <a href="mailto:nikithakeshan@gmail.com" class="social-btn">
-                <i class="ph-light ph-envelope-simple"></i>
-                <div style="text-align: left;">
-                  <span class="mono" style="display:block; font-size:0.75rem;">Email</span>
-                  <span class="title-sm">nikithakeshan@gmail.com</span>
-                </div>
-              </a>
-              <a href="https://www.linkedin.com/in/nikitha-keshan-640927325/" target="_blank" class="social-btn">
-                <i class="ph-light ph-linkedin-logo"></i>
-                <div style="text-align: left;">
-                  <span class="mono" style="display:block; font-size:0.75rem;">Network</span>
-                  <span class="title-sm">LinkedIn Profile</span>
-                </div>
-              </a>
-              <a href="https://github.com/nikithaKesh" target="_blank" class="social-btn">
-                <i class="ph-light ph-github-logo"></i>
-                <div style="text-align: left;">
-                  <span class="mono" style="display:block; font-size:0.75rem;">Code</span>
-                  <span class="title-sm">GitHub Repositories</span>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="card card-pad" style="border-radius: var(--radius-xl);">
-            <form id="contactForm" onsubmit="event.preventDefault(); alert('Form logic ready for backend integration (e.g. Formspree/Netlify).');">
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" class="form-control" required placeholder="John Doe">
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" class="form-control" required placeholder="john@example.com">
-              </div>
-              <div class="form-group">
-                <label for="message">Project Details</label>
-                <textarea id="message" class="form-control" required placeholder="How can I help optimize your business?"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary" style="width: 100%;">Send Inquiry</button>
-            </form>
-          </div>
+        <div class="card card-pad">
+          <form onsubmit="event.preventDefault(); alert('Form logic ready for integration.');">
+            <input type="text" class="form-control" placeholder="Name" required>
+            <input type="email" class="form-control" placeholder="Email" required>
+            <textarea class="form-control" placeholder="Project Details" rows="4" required></textarea>
+            <button type="submit" class="btn btn-primary has-ripple" style="width: 100%;">
+              <span class="material-symbols-rounded">send</span> Send Message
+            </button>
+          </form>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <p class="small">© 2026 Nikitha Keshan. Engineered for scale and aesthetics.</p>
-    </div>
-  </footer>
-
   <div class="backdrop" id="modalBackdrop"></div>
-  <div class="modal" id="projectModal" role="dialog" aria-modal="true">
+  <div class="modal" id="projectModal">
     <div class="modal-header">
-      <div>
-        <div class="mono" style="margin-bottom: 8px;">Case Study</div>
-        <h3 class="title-lg" id="modalTitle" style="font-size: clamp(1.6rem, 3vw, 2.2rem);">Project Title</h3>
-      </div>
-      <button class="modal-close" id="modalClose" aria-label="Close modal"><i class="ph-light ph-x"></i></button>
+      <h3 class="title-lg" id="modalTitle" style="font-size: 1.5rem;">Project Title</h3>
+      <button class="btn-icon" id="modalClose"><span class="material-symbols-rounded">close</span></button>
     </div>
-    
     <div class="modal-body">
-      <div class="modal-meta-grid">
-        <div class="meta-block">
-          <span>Role</span>
-          <strong id="modalRole">Lead Developer</strong>
-        </div>
-        <div class="meta-block">
-          <span>Tech Stack</span>
-          <div class="chip-row" id="modalStack" style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px;"></div>
-        </div>
-      </div>
-
-      <div class="case-section">
-        <h4>The Problem</h4>
-        <p id="modalProblem">Problem description goes here.</p>
-      </div>
-      <div class="case-section">
-        <h4>The Solution</h4>
-        <p id="modalSolution">Solution description goes here.</p>
-      </div>
-      <div class="case-section">
-        <h4>The Impact</h4>
-        <p id="modalImpact">Result description goes here.</p>
-      </div>
+      <div style="display: flex; gap: 8px; margin-bottom: 24px;" id="modalStack"></div>
+      <h4 style="margin-bottom: 8px; color: var(--g-blue);">The Problem</h4>
+      <p class="small" id="modalProblem" style="margin-bottom: 24px;"></p>
+      <h4 style="margin-bottom: 8px; color: var(--g-green);">The Solution</h4>
+      <p class="small" id="modalSolution"></p>
     </div>
-    
     <div class="modal-footer">
-      <div id="modalLinks" style="display:flex; flex-wrap:wrap; gap:12px;"></div>
-      <button class="btn btn-secondary" id="modalCloseBtn">Close</button>
+      <div id="modalLinks"></div>
     </div>
   </div>
 
-  <div class="toast" id="toast"></div>
-
   <script>
-    // --- Preloader Bouncing Dots Logic ---
-    document.addEventListener("DOMContentLoaded", () => {
-      const preloader = document.getElementById('preloader');
-      const sonarContainer = document.querySelector('.sonar-container');
-      
-      setTimeout(() => {
-        sonarContainer.classList.add('explode-animation');
-        
-        setTimeout(() => {
-          preloader.style.opacity = '0';
-          
-          setTimeout(() => {
-            preloader.style.display = 'none';
-            document.body.style.overflow = '';
-          }, 600);
-        }, 300);
-      }, 2000); 
-    });
-
     // --- Theme Logic ---
     const themeToggle = document.getElementById('themeToggle');
-    const themeIcon = themeToggle.querySelector('i');
+    const themeIcon = themeToggle.querySelector('span');
     
     const setTheme = (theme) => {
-      if(theme === 'light') {
-        document.documentElement.setAttribute('data-theme', 'light');
-        themeIcon.className = 'ph-light ph-moon';
-      } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        themeIcon.className = 'ph-light ph-sun';
-      }
+      document.documentElement.setAttribute('data-theme', theme);
+      themeIcon.textContent = theme === 'light' ? 'dark_mode' : 'light_mode';
       localStorage.setItem('theme', theme);
     };
 
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      setTheme(savedTheme);
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setTheme('dark');
-    } else {
-      setTheme('light');
-    }
+    setTheme(localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+    themeToggle.addEventListener('click', () => setTheme(document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light'));
 
-    themeToggle.addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme');
-      setTheme(current === 'light' ? 'dark' : 'light');
-    });
-
-    // --- Header & Scroll Spy ---
+    // --- Header Scroll ---
     const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 20) header.classList.add('scrolled');
-      else header.classList.remove('scrolled');
+    window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 10));
+
+    // --- Material Ripple Effect ---
+    document.addEventListener('click', function (e) {
+      const target = e.target.closest('.has-ripple, .project-card');
+      if (!target) return;
+
+      const rect = target.getBoundingClientRect();
+      const ripple = document.createElement('span');
+      ripple.classList.add('ripple');
+      
+      const diameter = Math.max(rect.width, rect.height);
+      ripple.style.width = ripple.style.height = `${diameter}px`;
+      ripple.style.left = `${e.clientX - rect.left - diameter / 2}px`;
+      ripple.style.top = `${e.clientY - rect.top - diameter / 2}px`;
+      
+      target.appendChild(ripple);
+      setTimeout(() => ripple.remove(), 600);
     });
 
-    // --- Mobile Menu ---
-    const mobileToggle = document.getElementById('mobileToggle');
-    const mobilePanel = document.getElementById('mobilePanel');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
-
-    const toggleMenu = () => {
-      const isOpen = mobilePanel.classList.contains('open');
-      if (isOpen) {
-        mobilePanel.classList.remove('open');
-        mobileToggle.classList.remove('active');
-        mobilePanel.setAttribute('aria-hidden', 'true');
-      } else {
-        mobilePanel.classList.add('open');
-        mobileToggle.classList.add('active');
-        mobilePanel.setAttribute('aria-hidden', 'false');
-      }
-    };
-
-    mobileToggle.addEventListener('click', toggleMenu);
-    mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
-
-    // --- Reveal Animations ---
-    const revealElements = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-    revealElements.forEach(el => revealObserver.observe(el));
-
-    // --- Project Data & Modal Logic ---
+    // --- Projects Data & Render ---
     const projects = [
-      {
-        id: 'biseka',
-        category: 'web',
-        title: 'Biseka Cosmetics Web Platform',
-        icon: 'ph-sparkle',
-        summary: 'Engineered digital storefront focusing on high-performance and a premium user journey.',
-        role: 'Frontend Developer',
-        tags: ['E-Commerce', 'UI/UX', 'Performance'],
-        problem: 'The brand needed a digital storefront that reflected its premium aesthetic, but large product images caused severe load delays, impacting conversion rates.',
-        solution: 'Engineered a highly optimized, component-driven UI. Implemented lazy loading for media, streamlined WooCommerce logic, and designed a frictionless checkout flow.',
-        impact: 'Achieved significantly faster page load times, elevating the brand\'s credibility and directly increasing online sales conversions.',
-        links: [{ label: 'View Live Site', url: 'https://biseka.co/' }]
-      },
-      {
-        id: 'scrub',
-        category: 'web',
-        title: 'Scrub and Butter',
-        icon: 'ph-buildings',
-        summary: 'Developed the complete technical web presence and brand identity architecture.',
-        role: 'Lead Web Developer',
-        tags: ['Brand Identity', 'Frontend', 'Design'],
-        problem: 'The client needed a digital footprint from scratch that communicated modern capability and immediately captured lead interest.',
-        solution: 'Developed the complete technical architecture and frontend UI. Focused on clean layouts, strong typography, and strategic call-to-action placement.',
-        impact: 'Successfully launched a scalable web presence that acts as a 24/7 lead generation asset for the business.',
-        links: [{ label: 'View Live Site', url: 'https://scrubnbutter.com/' }]
-      },
-      {
-        id: 'mob',
-        category: 'web',
-        title: 'MOB Surfskate',
-        icon: 'ph-waves',
-        summary: 'A dynamic web experience focusing on high-quality visuals, motion, and modern aesthetic.',
-        role: 'Frontend Developer',
-        tags: ['Lifestyle Brand', 'WooCommerce', 'WordPress'],
-        problem: 'The brand required a dynamic, high-energy digital presence to match its lifestyle product, with a seamless transition into e-commerce.',
-        solution: 'Built a highly visual, motion-rich frontend with a smooth WooCommerce flow perfectly optimized for mobile-first users.',
-        impact: 'Delivered a modern aesthetic that drives lifestyle brand engagement and facilitates seamless on-the-go purchases.',
-        links: [{ label: 'View Live Site', url: 'https://mobsurfskate.com/' }]
-      },
-      {
-        id: 'ola',
-        category: 'web',
-        title: 'OLA Tangalle Hotel',
-        icon: 'ph-storefront',
-        summary: 'A premium hospitality frontend highlighting immersive imagery and booking flows.',
-        role: 'Web Developer',
-        tags: ['Hospitality', 'Responsive Design', 'CodeNest'],
-        problem: 'A boutique hotel needed an immersive digital experience to highlight property visuals and drive direct booking conversions over third-party apps.',
-        solution: 'Engineered a premium, responsive frontend with a focus on immersive imagery and intuitive user journeys from landing page to booking engine.',
-        impact: 'Successfully translated high-fidelity designs into code, resulting in an elegant booking platform that elevates the hotel\'s online prestige.',
-        links: [{ label: 'View Live Site', url: 'https://olatangalle.com/' }]
-      },
-      {
-        id: 'exact',
-        category: 'web',
-        title: 'Exact Extract & LoveandLab',
-        icon: 'ph-drop',
-        summary: 'Web solutions for perfume and cosmetic brands emphasizing product presentation.',
-        role: 'Full Stack Developer',
-        tags: ['E-Commerce', 'Brand Presence', 'WooCommerce'],
-        problem: 'Two distinct product lines needed robust web solutions emphasizing high-end product presentation and reliable e-commerce integration.',
-        solution: 'Deployed dual web presence solutions utilizing WooCommerce, prioritizing distinct brand aesthetics while maintaining robust cart functionality.',
-        impact: 'Established stable, high-quality digital storefronts that handle active product catalogs and customer transactions simultaneously.',
-        links: [
-            { label: 'View Extract', url: 'https://exactextract.lk/' },
-            { label: 'View LoveandLab', url: 'https://loveandlab.com/' }
-        ]
-      },
-      {
-        id: 'invoice',
-        category: 'automation',
-        title: 'Biseka Bulk Invoice Automation',
-        icon: 'ph-kanban',
-        summary: 'Automated framework instantly generating error-free tax invoices for Biseka Maldives.',
-        role: 'Automation Logic Creator',
-        tags: ['Google Apps Script', 'Financial Logic', 'Sheets'],
-        problem: 'Generating monthly tax invoices involved high manual effort, risking human errors in 20% discounts and 8% GST calculations.',
-        solution: 'Engineered a Google Apps Script framework that centralizes data, automatically applying hard-coded financial logic to dynamic invoice templates.',
-        impact: 'Achieved instant, error-free generation of complex tax documents, archiving them systematically by month for easy business record retrieval.',
-        links: []
-      },
-      {
-        id: 'payroll',
-        category: 'automation',
-        title: 'Payslip & Email Delivery Automation',
-        icon: 'ph-paper-plane-right',
-        summary: 'Integrated system that tracks salary components, generates PDFs, and automates emails.',
-        role: 'System Automation Creator',
-        tags: ['Python / Apps Script', 'HR', 'API Delivery'],
-        problem: 'The HR department was manually calculating complex salary variables for over 30 employees, creating individual PDFs, and emailing them manually.',
-        solution: 'Built an integrated script that pulls database data, calculates deductions (EPF), generates formatted PDF payslips, and triggers bulk email delivery.',
-        impact: 'Reduced a multi-day manual HR process into a 5-minute automated execution with flawless calculation accuracy.',
-        links: []
-      },
-      {
-        id: 'sms',
-        category: 'automation',
-        title: 'Logistics SMS Notification Framework',
-        icon: 'ph-device-mobile',
-        summary: 'Command center bridging courier data with automated customer SMS communication.',
-        role: 'Backend API Integrator',
-        tags: ['API Integration', 'Logistics', 'Status Logging'],
-        problem: 'Customer service was overwhelmed by tracking inquiries because tracking IDs across delivery agents (Citypack, Fardar) weren\'t automatically communicated.',
-        solution: 'Created a centralized logic controller that automatically pairs courier tracking numbers with correct URLs and triggers personalized SMS notifications upon dispatch.',
-        impact: 'Drastically reduced customer support tickets and improved post-purchase satisfaction through proactive status communication.',
-        links: []
-      },
-      {
-        id: 'sheets',
-        category: 'automation',
-        title: 'Automated Monthly Sheet Generation',
-        icon: 'ph-copy',
-        summary: 'Centralized controller automating deployment and organization of tracking sheets.',
-        role: 'Data Architect',
-        tags: ['Workspace', 'Architecture', 'Bulk Execution'],
-        problem: 'Setting up specialized monthly tracking sheets across various BISEKA locations was a tedious, repetitive structural bottleneck for management.',
-        solution: 'Created a centralized controller that duplicates master templates, auto-renames files by month/brand, and routes them to precise Destination Folder IDs.',
-        impact: 'Reduced deployment time of massive business tracker suites (SHOP logs, BIS logs) from hours to just minutes, ensuring strict formatting compliance.',
-        links: []
-      },
-      {
-        id: 'repos',
-        category: 'repos',
-        title: 'Development Archives',
-        icon: 'ph-github-logo',
-        summary: 'A collection of technical prototypes, HTML/JS builds, and concept layouts.',
-        role: 'Developer',
-        tags: ['Code Repos', 'JavaScript', 'HTML/CSS', 'GitHub'],
-        problem: 'A need to consolidate and showcase various technical prototypes, interactive web tools, and pure HTML/CSS/JS layouts outside of professional client work.',
-        solution: 'Curated a central GitHub repository linking to live deployments of tools like a Customer Care Asset Form, a Movie Database layout, and Interactive JS games.',
-        impact: 'Provides a transparent, accessible archive demonstrating continuous learning, raw coding capabilities, and versatile technical interests.',
-        links: [
-            { label: 'View GitHub Profile', url: 'https://github.com/nikithaKesh' },
-            { label: 'Asset Form Demo', url: 'https://nikithakesh.github.io/Employee-Assets/' }
-        ]
-      }
+      { id: 'biseka', category: 'web', title: 'Biseka Cosmetics', icon: 'shopping_bag', color: 'var(--g-blue)', summary: 'Engineered digital storefront focusing on high-performance.', tags: ['E-Commerce', 'UI/UX'], problem: 'Large product images caused severe load delays.', solution: 'Engineered a highly optimized, component-driven UI with lazy loading.', link: 'https://biseka.co/' },
+      { id: 'invoice', category: 'automation', title: 'Invoice Automation', icon: 'receipt_long', color: 'var(--g-green)', summary: 'Automated framework for error-free tax invoices.', tags: ['Apps Script', 'Sheets'], problem: 'Manual effort risking human errors in GST calculations.', solution: 'Engineered a centralized script applying financial logic to templates.', link: '' },
+      { id: 'scrub', category: 'web', title: 'Scrub and Butter', icon: 'storefront', color: 'var(--g-yellow)', summary: 'Complete technical web presence and brand architecture.', tags: ['Frontend', 'Design'], problem: 'Needed a digital footprint from scratch.', solution: 'Developed clean layouts and strategic call-to-action placement.', link: 'https://scrubnbutter.com/' },
+      { id: 'payroll', category: 'automation', title: 'Payroll Automation', icon: 'payments', color: 'var(--g-red)', summary: 'System tracking salaries and automating PDFs.', tags: ['Python', 'API'], problem: 'HR manually calculating complex salary variables.', solution: 'Built an integrated script automating EPF, PDFs, and bulk emails.', link: '' }
     ];
 
     const projectGrid = document.getElementById('projectGrid');
     
-    // Google Color Palette for Projects Array Loop
-    const gColors = [
-      { bg: 'var(--g-blue-alpha)', fg: 'var(--g-blue)' },
-      { bg: 'var(--g-red-alpha)', fg: 'var(--g-red)' },
-      { bg: 'var(--g-yellow-alpha)', fg: 'var(--g-yellow)' },
-      { bg: 'var(--g-green-alpha)', fg: 'var(--g-green)' }
-    ];
-
-    // Render Cards
     const renderCards = () => {
-      projectGrid.innerHTML = '';
-      projects.forEach((p, index) => {
-        const color = gColors[index % 4]; // Cyclical assignment of colors
-        
-        const card = document.createElement('article');
-        card.className = 'project-card reveal show';
-        card.dataset.category = p.category;
-        
-        card.innerHTML = `
-          <div class="project-top">
-            <div class="project-icon" style="background:${color.bg}; color:${color.fg};"><i class="ph-bold ${p.icon}"></i></div>
-            <button class="btn btn-secondary" style="min-height:36px; padding:0 20px; font-size:0.85rem;" onclick="openModal('${p.id}')">Case Study</button>
+      projectGrid.innerHTML = projects.map(p => `
+        <article class="card project-card" data-category="${p.category}" onclick="openModal('${p.id}')">
+          <div class="project-icon" style="background: ${p.color}20; color: ${p.color};">
+            <span class="material-symbols-rounded">${p.icon}</span>
           </div>
-          <h3 class="title-md" style="margin-bottom: 12px;">${p.title}</h3>
-          <p class="small">${p.summary}</p>
-          <div class="project-tags">
-            ${p.tags.slice(0, 3).map(t => `<span class="chip" style="background:var(--surface-2); border:1px solid var(--line);">${t}</span>`).join('')}
+          <h3 class="title-md" style="margin-bottom: 8px;">${p.title}</h3>
+          <p class="small" style="margin-bottom: 16px;">${p.summary}</p>
+          <div style="display:flex; gap:6px; margin-top:auto;">
+            ${p.tags.map(t => `<span class="chip" style="height:24px; font-size:0.75rem;">${t}</span>`).join('')}
           </div>
-        `;
-        projectGrid.appendChild(card);
-      });
+        </article>
+      `).join('');
     };
-    renderCards(); 
+    renderCards();
 
-    // Filter Logic
-    const filters = document.querySelectorAll('#projectFilters button');
-    filters.forEach(btn => {
+    // --- Filter Logic ---
+    document.querySelectorAll('#projectFilters .chip').forEach(btn => {
       btn.addEventListener('click', () => {
-        filters.forEach(b => b.classList.remove('active')); 
+        document.querySelectorAll('#projectFilters .chip').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        const filterValue = btn.dataset.filter;
-        
-        const allCards = document.querySelectorAll('#projectGrid .project-card');
-        allCards.forEach(card => {
-          if (filterValue === 'all' || card.dataset.category === filterValue) {
-            card.style.display = 'flex';
-          } else {
-            card.style.display = 'none';
-          }
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.project-card').forEach(card => {
+          card.style.display = (filter === 'all' || card.dataset.category === filter) ? 'flex' : 'none';
         });
       });
     });
 
-    // Modal Logic
+    // --- Modal Logic ---
     const modal = document.getElementById('projectModal');
     const backdrop = document.getElementById('modalBackdrop');
-    
+
     window.openModal = (id) => {
       const data = projects.find(p => p.id === id);
-      if(!data) return;
-
       document.getElementById('modalTitle').textContent = data.title;
-      document.getElementById('modalRole').textContent = data.role;
-      document.getElementById('modalStack').innerHTML = data.tags.map(t => `<span class="chip" style="background:var(--bg); border:1px solid var(--line);">${t}</span>`).join('');
-      
+      document.getElementById('modalStack').innerHTML = data.tags.map(t => `<span class="chip">${t}</span>`).join('');
       document.getElementById('modalProblem').textContent = data.problem;
       document.getElementById('modalSolution').textContent = data.solution;
-      document.getElementById('modalImpact').textContent = data.impact;
-
-      const linksDiv = document.getElementById('modalLinks');
-      if (data.links && data.links.length > 0) {
-        linksDiv.innerHTML = data.links.map(l => `<a href="${l.url}" target="_blank" class="btn btn-primary">${l.label} <i class="ph-bold ph-arrow-up-right"></i></a>`).join('');
-      } else {
-        linksDiv.innerHTML = `<span class="chip" style="background:var(--g-blue-alpha); color:var(--g-blue); padding: 12px 20px;">Internal Backend System / Tool</span>`;
-      }
-
-      modal.classList.add('show');
-      backdrop.classList.add('show');
-      document.body.style.overflow = 'hidden';
-    };
-
-    const closeModal = () => {
-      modal.classList.remove('show');
-      backdrop.classList.remove('show');
-      document.body.style.overflow = '';
-    };
-
-    document.getElementById('modalClose').addEventListener('click', closeModal);
-    document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
-    backdrop.addEventListener('click', closeModal);
-    window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
-
-    // --- Custom Cursor Logic ---
-    if (window.matchMedia('(pointer: fine)').matches) {
-      const dot = document.querySelector('.cursor-dot');
-      const ring = document.querySelector('.cursor-ring');
+      document.getElementById('modalLinks').innerHTML = data.link ? `<a href="${data.link}" target="_blank" class="btn btn-primary has-ripple">Visit Site</a>` : '';
       
-      document.addEventListener('mousemove', (e) => {
-        dot.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-        ring.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-      });
+      modal.classList.add('show'); backdrop.classList.add('show'); document.body.style.overflow = 'hidden';
+    };
 
-      document.body.addEventListener('mouseenter', (e) => {
-        if (e.target.closest('a, button, input, textarea, .project-card, .brand')) ring.classList.add('active');
-      }, true);
-      document.body.addEventListener('mouseleave', (e) => {
-        if (e.target.closest('a, button, input, textarea, .project-card, .brand')) ring.classList.remove('active');
-      }, true);
-    }
+    const closeModal = () => { modal.classList.remove('show'); backdrop.classList.remove('show'); document.body.style.overflow = ''; };
+    document.getElementById('modalClose').addEventListener('click', closeModal);
+    backdrop.addEventListener('click', closeModal);
   </script>
 </body>
 </html>
