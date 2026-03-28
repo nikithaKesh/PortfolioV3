@@ -260,12 +260,12 @@
     }
     .chip:hover { background: var(--surface-3); }
 
-    .status-pill, .availability-pill {
+    .status-pill {
       display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 16px;
       border-radius: var(--radius-pill); border: 1px solid var(--line); background: var(--surface);
       backdrop-filter: blur(16px); box-shadow: var(--shadow-soft); font-size: 0.9rem; font-weight: 700; color: var(--text);
     }
-    .status-dot, .availability-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--g-green); animation: pulse 2s infinite; }
+    .status-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--g-green); animation: pulse 2s infinite; }
     @keyframes pulse { 0% { box-shadow: 0 0 0 0 var(--g-green-alpha); } 70% { box-shadow: 0 0 0 10px rgba(0,0,0,0); } 100% { box-shadow: 0 0 0 0 rgba(0,0,0,0); } }
 
     .scroll-progress { position: fixed; inset: 0 0 auto; z-index: 1800; height: 4px; background: transparent; pointer-events: none; }
@@ -636,7 +636,7 @@
       html { scroll-behavior: auto; }
       *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
       .reveal { opacity: 1 !important; transform: none !important; }
-      .status-dot, .availability-dot { animation: none; }
+      .status-dot { animation: none; }
     }
   </style>
 </head>
@@ -678,6 +678,7 @@
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
+      <div class="nav-actions">
         <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
           <i class="ph ph-moon"></i>
         </button>
