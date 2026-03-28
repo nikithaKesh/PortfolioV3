@@ -735,6 +735,9 @@
             <button type="button" class="chip utility-copy-link">
               <i class="ph ph-link"></i> Copy Portfolio Link
             </button>
+            <span class="chip" id="viewCountChip" aria-label="Page views" style="cursor: default;">
+              <i class="ph ph-eye"></i> <span id="viewCounter">...</span>
+            </span>
           </div>
         </div>
 
@@ -1988,6 +1991,28 @@
         });
       };
 
+      // --- ADDED: View Counter Logic ---
+      const initViewCount = async () => {
+        const counterEl = document.getElementById('viewCounter');
+        const counterChip = document.getElementById('viewCountChip');
+        if (!counterEl || !counterChip) return;
+        
+        try {
+          // Utilizing a free, serverless API designed for hitting/counting views
+          // Namespace: nikithakeshan, Key: portfolio_visits
+          const res = await fetch('https://api.counterapi.dev/v1/nikithakeshan/portfolio_visits/up');
+          if (!res.ok) throw new Error('API Response not ok');
+          
+          const data = await res.json();
+          // Format the number with commas (e.g. 1,234)
+          counterEl.textContent = data.count.toLocaleString() + ' Views';
+        } catch (error) {
+          console.error('Failed to load view count:', error);
+          // Failsafe: hide the chip entirely if the API is down so it doesn't look broken
+          counterChip.style.display = 'none';
+        }
+      };
+
       const init = () => {
         initPreloader();
         initTheme();
@@ -2003,6 +2028,8 @@
         initCursor();
         initUtilities();
         initAnchorPolish();
+        initViewCount(); // Trigger the view counter on page load
+        
         document.addEventListener('keydown', handleGlobalKeys);
         window.addEventListener('scroll', updateHeaderState, { passive: true });
         window.addEventListener('resize', updateHeaderState);
