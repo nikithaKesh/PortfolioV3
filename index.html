@@ -200,7 +200,7 @@
     .container { width: min(var(--container), calc(100% - 48px)); margin-inline: auto; }
 
     .section { padding: 96px 0; position: relative; }
-    #home.section { padding-top: 48px; } /* Adjusted top spacing */
+    #home.section { padding-top: 48px; }
     .section-head { margin-bottom: 48px; max-width: 760px; }
 
     .section-tag {
@@ -356,7 +356,6 @@
     .reveal { opacity: 0; transform: translateY(24px); transition: opacity 600ms ease, transform 600ms ease; }
     .reveal.show { opacity: 1; transform: translateY(0); }
 
-    /* Adjusted Hero specific classes for spacing */
     .hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr); gap: 48px; align-items: start; min-height: auto; align-content: start; }
     .hero-copy { display: grid; gap: 24px; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 16px; }
@@ -907,6 +906,16 @@
             <h3 class="title-sm">Website Maintenance / Optimization</h3>
             <p class="small">Ongoing technical support, cleanup, UX refinement, and performance-focused improvements for active websites.</p>
           </article>
+          <article class="card service-card" style="--service-accent: var(--g-red-alpha); --service-fg: var(--g-red);">
+            <div class="service-icon"><i class="ph ph-globe-hemisphere"></i></div>
+            <h3 class="title-sm">OTA Setup &amp; Management</h3>
+            <p class="small">Extranet profile creation, synchronization, and hosting management across all major travel platforms.</p>
+          </article>
+          <article class="card service-card" style="--service-accent: var(--g-green-alpha); --service-fg: var(--g-green);">
+            <div class="service-icon"><i class="ph ph-app-window"></i></div>
+            <h3 class="title-sm">Web Applications</h3>
+            <p class="small">Interactive platforms tailored to specific operational logic, user portals, and complex workflows.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -1185,27 +1194,28 @@
           <article class="card service-card" style="--service-accent: var(--g-blue-alpha); --service-fg: var(--g-blue); min-height: auto; padding: 24px;">
             <div class="service-icon" style="width: 48px; height: 48px; font-size: 1.25rem;"><i class="ph ph-code"></i></div>
             <h3 class="title-sm">Programming in Python &amp; Web Development</h3>
-            <p class="small">University of Moratuwa (DP Education)</p>
+            <div class="mono" style="margin-top: 12px; margin-bottom: 8px; color: var(--text); font-weight: 700;">University of Moratuwa</div>
+            <p class="small">(DP Education)</p>
           </article>
           
           <article class="card service-card" style="--service-accent: var(--g-red-alpha); --service-fg: var(--g-red); min-height: auto; padding: 24px;">
             <div class="service-icon" style="width: 48px; height: 48px; font-size: 1.25rem;"><i class="ph ph-brain"></i></div>
             <h3 class="title-sm">Foundation Program</h3>
-            <div class="mono" style="margin-bottom: 8px;">JAVA Institute</div>
+            <div class="mono" style="margin-top: 12px; margin-bottom: 8px; color: var(--text); font-weight: 700;">JAVA Institute</div>
             <p class="small">Neuroscience, Programming, Robotic Science</p>
           </article>
           
           <article class="card service-card" style="--service-accent: var(--g-yellow-alpha); --service-fg: #a77100; min-height: auto; padding: 24px;">
             <div class="service-icon" style="width: 48px; height: 48px; font-size: 1.25rem;"><i class="ph ph-student"></i></div>
             <h3 class="title-sm">G.C.E. Advanced Level 2022 (2023)</h3>
-            <div class="mono" style="margin-bottom: 8px;">D. S. Senanayake College - Beruwela</div>
+            <div class="mono" style="margin-top: 12px; margin-bottom: 8px; color: var(--text); font-weight: 700;">D. S. Senanayake College - Beruwela</div>
             <p class="small">Engineering Technology Stream<br>Results - C2s, S1.</p>
           </article>
           
           <article class="card service-card" style="--service-accent: var(--g-green-alpha); --service-fg: var(--g-green); min-height: auto; padding: 24px;">
             <div class="service-icon" style="width: 48px; height: 48px; font-size: 1.25rem;"><i class="ph ph-books"></i></div>
             <h3 class="title-sm">G.C.E. Ordinary Level 2019</h3>
-            <div class="mono" style="margin-bottom: 8px;">Tissa Central College - Kalutara</div>
+            <div class="mono" style="margin-top: 12px; margin-bottom: 8px; color: var(--text); font-weight: 700;">Tissa Central College - Kalutara</div>
             <p class="small">Results - 4As, 1Bs &amp; 4Cs.</p>
           </article>
         </div>
@@ -1464,12 +1474,22 @@
 
         <div>
           <div class="cv-section-title">Contact</div>
-          <div class="cv-item" style="display: grid; gap: 8px;">
-            <p class="cv-item-desc">📞 +94 76 484 9127</p>
-            <p class="cv-item-desc">📍 No 215/B, Kandapanasala road, Maha Waskaduwa, Waskaduwa, Kalutara</p>
-            <p class="cv-item-desc">📧 <a href="mailto:nikithakeshan@gmail.com" style="text-decoration: underline;">nikithakeshan@gmail.com</a></p>
-            <p class="cv-item-desc">🎂 27th October 2002</p>
-            <p class="cv-item-desc">🔗 <a href="https://www.linkedin.com/in/nikitha-keshan-640927325/" target="_blank" rel="noreferrer" style="text-decoration: underline;">LinkedIn - Nikitha Keshan</a></p>
+          <div class="cv-item" style="display: grid; gap: 12px;">
+            <p class="cv-item-desc" style="display: flex; align-items: center; gap: 8px;">
+              <i class="ph ph-phone" style="font-size: 1.2rem; color: var(--primary);"></i> +94 76 484 9127
+            </p>
+            <p class="cv-item-desc" style="display: flex; align-items: center; gap: 8px;">
+              <i class="ph ph-map-pin" style="font-size: 1.2rem; color: var(--primary);"></i> No 215/B, Kandapanasala road, Maha Waskaduwa, Waskaduwa, Kalutara
+            </p>
+            <p class="cv-item-desc" style="display: flex; align-items: center; gap: 8px;">
+              <i class="ph ph-envelope-simple" style="font-size: 1.2rem; color: var(--primary);"></i> <a href="mailto:nikithakeshan@gmail.com" style="text-decoration: underline;">nikithakeshan@gmail.com</a>
+            </p>
+            <p class="cv-item-desc" style="display: flex; align-items: center; gap: 8px;">
+              <i class="ph ph-cake" style="font-size: 1.2rem; color: var(--primary);"></i> 27th October 2002
+            </p>
+            <p class="cv-item-desc" style="display: flex; align-items: center; gap: 8px;">
+              <i class="ph ph-linkedin-logo" style="font-size: 1.2rem; color: var(--primary);"></i> <a href="https://www.linkedin.com/in/nikitha-keshan-640927325/" target="_blank" rel="noreferrer" style="text-decoration: underline;">LinkedIn - Nikitha Keshan</a>
+            </p>
           </div>
         </div>
 
@@ -1570,18 +1590,26 @@
             <div class="cv-item-header">
               <span class="cv-item-title">Thilina Hansamala</span>
             </div>
-            <div class="mono" style="margin-bottom: 8px;">Head IT Administrator At CER Industries</div>
-            <p class="cv-item-desc">📧 <a href="mailto:ajward@sjp.ac.lk" style="text-decoration: underline;">ajward@sjp.ac.lk</a></p>
-            <p class="cv-item-desc">📞 075 654 7410</p>
+            <div class="mono" style="margin-bottom: 12px;">Head IT Administrator At CER Industries</div>
+            <p class="cv-item-desc" style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+              <i class="ph ph-envelope-simple" style="color: var(--primary);"></i> <a href="mailto:ajward@sjp.ac.lk" style="text-decoration: underline;">ajward@sjp.ac.lk</a>
+            </p>
+            <p class="cv-item-desc" style="display: flex; align-items: center; gap: 8px;">
+              <i class="ph ph-phone" style="color: var(--primary);"></i> 075 654 7410
+            </p>
           </div>
 
           <div class="cv-item">
             <div class="cv-item-header">
               <span class="cv-item-title">Manil Alahapperuma</span>
             </div>
-            <div class="mono" style="margin-bottom: 8px;">Science Teacher at Tissa Central College (National College)</div>
-            <p class="cv-item-desc">📧 <a href="mailto:pasinduera@navalokamedicare.com" style="text-decoration: underline;">pasinduera@navalokamedicare.com</a></p>
-            <p class="cv-item-desc">📞 071 882 9540</p>
+            <div class="mono" style="margin-bottom: 12px;">Science Teacher at Tissa Central College (National College)</div>
+            <p class="cv-item-desc" style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+              <i class="ph ph-envelope-simple" style="color: var(--primary);"></i> <a href="mailto:pasinduera@navalokamedicare.com" style="text-decoration: underline;">pasinduera@navalokamedicare.com</a>
+            </p>
+            <p class="cv-item-desc" style="display: flex; align-items: center; gap: 8px;">
+              <i class="ph ph-phone" style="color: var(--primary);"></i> 071 882 9540
+            </p>
           </div>
         </div>
 
