@@ -278,14 +278,55 @@
     .g-dot:nth-child(1) { background: var(--g-blue); animation-delay: 0s; } .g-dot:nth-child(2) { background: var(--g-red); animation-delay: 0.1s; } .g-dot:nth-child(3) { background: var(--g-yellow); animation-delay: 0.2s; } .g-dot:nth-child(4) { background: var(--g-green); animation-delay: 0.3s; }
     @keyframes dotBounce { 0%, 100% { transform: translateY(0); opacity: 0.7; } 50% { transform: translateY(-12px); opacity: 1; } }
 
-    .site-header { position: fixed; inset: 16px 0 auto; z-index: 1500; transition: padding var(--transition); }
-    .nav-shell {
-      width: min(calc(var(--container) + 16px), calc(100% - 32px)); margin-inline: auto; height: var(--nav-h);
-      border-radius: var(--radius-pill); padding: 0 16px 0 24px; border: 1px solid var(--line);
-      background: var(--nav-bg); backdrop-filter: blur(24px); box-shadow: var(--shadow-soft);
-      display: flex; align-items: center; justify-content: space-between; gap: 24px; transition: var(--transition);
+    /* =========================================
+       MODIFIED HEADER CSS (BAR -> PILL)
+       ========================================= */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1500;
+      padding-top: 0;
+      transition: padding var(--transition);
     }
-    .site-header.scrolled .nav-shell { background: var(--nav-bg-scrolled); box-shadow: var(--shadow); }
+    
+    .site-header.scrolled {
+      padding-top: 16px;
+    }
+
+    .nav-shell {
+      width: 100%;
+      margin-inline: auto;
+      height: var(--nav-h);
+      border-radius: 0;
+      padding: 0 24px;
+      border: 1px solid transparent;
+      border-bottom-color: var(--line);
+      background: var(--nav-bg);
+      backdrop-filter: blur(24px);
+      box-shadow: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      transition: all var(--transition);
+    }
+    
+    @media (min-width: 1248px) {
+      /* Keep the content aligned with the max-width container when unwrapped */
+      .nav-shell { padding: 0 calc(50vw - 600px); }
+    }
+
+    .site-header.scrolled .nav-shell {
+      width: min(calc(var(--container) + 16px), calc(100% - 32px));
+      border-radius: var(--radius-pill);
+      padding: 0 16px 0 24px;
+      border-color: var(--line);
+      background: var(--nav-bg-scrolled);
+      box-shadow: var(--shadow);
+    }
+    /* ========================================= */
 
     .brand { display: inline-flex; align-items: center; gap: 12px; }
     .brand-mark { display: flex; gap: 4px; padding: 8px; border-radius: var(--radius-pill); transition: var(--transition); }
@@ -533,23 +574,20 @@
         gap: 16px; 
       }
 
-      /* ========================================================
-          HORIZONTAL SCROLLING CAROUSELS (MOBILE ONLY)
-          ======================================================== */
+      /* HORIZONTAL SCROLLING CAROUSELS (MOBILE ONLY) */
       .services-grid, .process-grid, .cred-grid, .now-grid, .logo-grid {
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
         gap: 16px;
-        padding-bottom: 24px; /* Prevents box-shadow clipping */
-        margin-bottom: -8px; /* Counters the extra bottom padding */
+        padding-bottom: 24px; 
+        margin-bottom: -8px; 
         scroll-snap-type: x mandatory;
         scroll-padding-left: 0;
         -webkit-overflow-scrolling: touch;
-        scrollbar-width: none; /* Firefox hide scrollbar */
+        scrollbar-width: none; 
       }
       
-      /* Chrome/Safari hide scrollbar */
       .services-grid::-webkit-scrollbar, 
       .process-grid::-webkit-scrollbar, 
       .cred-grid::-webkit-scrollbar, 
@@ -581,7 +619,6 @@
       .hero-copy { gap: 16px; }
       .hero-actions, .footer-shell { flex-direction: column; align-items: stretch; }
       .hero-actions .btn, .footer-links .btn, .footer-links .chip, .contact-form-card .btn, .mobile-panel .btn { width: 100%; }
-      /* Remove forced height so it hugs the internal stack perfectly */
       .hero-frame { min-height: auto; padding: 20px; }
       .hero-stack { padding: 20px; gap: 16px; }
       .metric-grid { grid-template-columns: 1fr; gap: 12px; }
@@ -601,7 +638,6 @@
 
       /* 5. Compact Projects Section */
       .featured-project { padding: 16px; gap: 16px; }
-      /* Overrides the inline HTML style without breaking desktop */
       .featured-project > .card { padding: 20px !important; gap: 12px !important; }
       .featured-thumb { min-height: 200px; }
       .thumb-caption { padding: 16px; }
@@ -639,6 +675,7 @@
       .status-dot { animation: none; }
     }
   </style>
+
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to content</a>
@@ -771,7 +808,7 @@
         <div class="about-shell reveal">
           <div class="card about-media">
             <img
-              src="1760549322866.png"
+              src="BW.png"
               alt="Portrait of Nikitha Keshan"
               class="about-image"
               loading="lazy"
@@ -918,31 +955,56 @@
 
         <div class="card card-pad skills-shell reveal">
           <div class="skill-row">
-            <h3 class="title-sm" style="color: var(--g-blue);">Frontend</h3>
+            <h3 class="title-sm" style="color: var(--g-blue);">Languages & Core</h3>
             <div class="skill-tags">
-              <span class="chip">React.js</span> <span class="chip">Next.js</span> <span class="chip">JavaScript (ES6+)</span>
-              <span class="chip">TypeScript</span> <span class="chip">HTML5 / CSS3</span> <span class="chip">Tailwind CSS</span>
+              <span class="chip">JavaScript (ES6+)</span> <span class="chip">TypeScript</span> <span class="chip">Python</span>
+              <span class="chip">Java</span> <span class="chip">C#</span> <span class="chip">C++</span>
+              <span class="chip">Kotlin</span> <span class="chip">PHP</span>
             </div>
           </div>
+
           <div class="skill-row">
-            <h3 class="title-sm" style="color: var(--g-red);">Backend</h3>
+            <h3 class="title-sm" style="color: var(--g-red);">Frontend & Mobile</h3>
             <div class="skill-tags">
-              <span class="chip">C# / .NET Core</span> <span class="chip">Python / Django</span>
-              <span class="chip">Node.js</span> <span class="chip">REST APIs</span>
+              <span class="chip">React.js</span> <span class="chip">Next.js</span> <span class="chip">Vue.js</span>
+              <span class="chip">React Native</span> <span class="chip">Flutter</span> <span class="chip">HTML5 / CSS3</span>
+              <span class="chip">Tailwind CSS</span> <span class="chip">Bootstrap</span> <span class="chip">SASS</span>
             </div>
           </div>
+
           <div class="skill-row">
-            <h3 class="title-sm" style="color: #a77100;">Data &amp; Automation</h3>
+            <h3 class="title-sm" style="color: #a77100;">Backend & Infrastructure</h3>
             <div class="skill-tags">
-              <span class="chip">SQL Server</span> <span class="chip">MySQL</span> <span class="chip">PostgreSQL</span>
-              <span class="chip">Google Apps Script</span> <span class="chip">Data Pipelines</span>
+              <span class="chip">Node.js</span> <span class="chip">Express.js</span> <span class="chip">Spring Boot</span>
+              <span class="chip">C# / .NET Core</span> <span class="chip">Django</span> <span class="chip">REST / GraphQL APIs</span>
+              <span class="chip">Nginx</span>
             </div>
           </div>
+
           <div class="skill-row">
-            <h3 class="title-sm" style="color: var(--g-green);">Tools &amp; Platforms</h3>
+            <h3 class="title-sm" style="color: var(--g-green);">Data Fortresses</h3>
             <div class="skill-tags">
-              <span class="chip">Git / GitHub</span> <span class="chip">Docker</span> <span class="chip">Figma</span>
-              <span class="chip">WooCommerce</span> <span class="chip">Looker Studio</span>
+              <span class="chip">MySQL</span> <span class="chip">PostgreSQL</span> <span class="chip">SQL Server</span>
+              <span class="chip">MongoDB</span> <span class="chip">SQLite</span> <span class="chip">Redis</span>
+              <span class="chip">Firebase</span> <span class="chip">Prisma</span>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <h3 class="title-sm" style="color: var(--g-blue);">Cloud & DevOps</h3>
+            <div class="skill-tags">
+              <span class="chip">AWS</span> <span class="chip">Azure</span> <span class="chip">Google Cloud</span>
+              <span class="chip">Docker</span> <span class="chip">Git / GitHub Actions</span> <span class="chip">Linux</span>
+              <span class="chip">Vercel</span> <span class="chip">Netlify</span>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <h3 class="title-sm" style="color: var(--g-red);">Intelligence & Tools</h3>
+            <div class="skill-tags">
+              <span class="chip">TensorFlow</span> <span class="chip">PyTorch</span> <span class="chip">OpenCV</span>
+              <span class="chip">scikit-learn</span> <span class="chip">Postman</span> <span class="chip">Figma</span> 
+              <span class="chip">Photoshop</span> <span class="chip">WordPress</span>
             </div>
           </div>
         </div>
@@ -1233,16 +1295,9 @@
       </div>
       
       <div class="footer-links">
-        <button type="button" class="chip utility-copy-email">
-          <i class="ph ph-copy"></i> Copy Email
-        </button>
         <button type="button" class="chip utility-copy-link">
           <i class="ph ph-link"></i> Copy Portfolio Link
         </button>
-        <a href="#home" class="chip">Home</a>
-        <a href="#work" class="chip">Projects</a>
-        <a href="https://x.com/_zo_no_" target="_blank" rel="noreferrer" class="chip" aria-label="Twitter / X"><i class="ph ph-x-logo"></i></a>
-        <a href="https://www.instagram.com/z.onoo/" target="_blank" rel="noreferrer" class="chip" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
       </div>
     </div>
   </footer>
@@ -1826,7 +1881,7 @@
 
       const validateField = (field) => {
         const input = $(`[name="${field}"]`, els.contactForm);
-        if (!input) return true; // Safety check
+        if (!input) return true; 
         const fieldWrap = input.closest('.field');
         const errorEl = $(`#${input.id}Error`);
         const value = input.value.trim();
@@ -1858,7 +1913,6 @@
       const submitContactForm = async (event) => {
         event.preventDefault();
         
-        // Formspree honeypot check
         if ($('[name="_gotcha"]', els.contactForm).value.trim()) return;
 
         setFormState('', '');
