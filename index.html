@@ -32,7 +32,32 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <style>
+    .cv-paper.is-exporting {
+      width: 794px; /* A4 width at 96 DPI */
+      height: 1123px; /* A4 height */
+      margin: 0 auto;
+      padding: 20px;
+      box-sizing: border-box;
+      font-size: 10px;
+      line-height: 1.2;
+      background: white;
+      color: black;
+    }
+    .cv-paper.is-exporting * {
+      font-size: inherit;
+      line-height: inherit;
+    }
+    .cv-paper.is-exporting h1 { font-size: 16px; margin-bottom: 8px; }
+    .cv-paper.is-exporting h3 { font-size: 12px; margin-bottom: 4px; }
+    .cv-paper.is-exporting p, .cv-paper.is-exporting ul { margin-bottom: 6px; }
+    .cv-paper.is-exporting .cv-section { margin-bottom: 12px; }
+    .cv-paper.is-exporting .cv-item { margin-bottom: 8px; }
+  </style>
 
   <script type="application/ld+json">
   {
@@ -545,16 +570,16 @@
       align-content: start;
       gap: 40px;
     }
-
-      .cv-profile-img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%; /* This makes it a perfect circle */
+    
+    .cv-profile-img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
       object-fit: cover;
       border: 1px solid var(--line-strong);
       margin-bottom: 24px;
-      margin-left: auto;  /* This centers the image */
-      margin-right: auto; /* This centers the image */
+      margin-left: auto;  
+      margin-right: auto; 
       background: var(--surface);
       box-shadow: var(--shadow-soft);
     }
@@ -641,6 +666,47 @@
       margin-top: 2px;
       flex-shrink: 0;
     }
+
+    .cv-references-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    /* PDF Export Override Class */
+    .cv-paper.is-exporting {
+      width: 800px !important;
+      max-width: 800px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      gap: 0 !important;
+      border: none !important;
+      box-shadow: none !important;
+      background: #ffffff !important;
+    }
+    .cv-paper.is-exporting .cv-sidebar {
+      padding: 32px 24px !important;
+      gap: 24px !important;
+      background: #f8f9fa !important;
+    }
+    .cv-paper.is-exporting .cv-main-content {
+      padding: 32px 24px !important;
+      gap: 24px !important;
+    }
+    .cv-paper.is-exporting .cv-profile-img {
+      width: 120px !important;
+      height: 120px !important;
+      margin-bottom: 16px !important;
+    }
+    .cv-paper.is-exporting .cv-header h1 { font-size: 2rem !important; }
+    .cv-paper.is-exporting .cv-section { gap: 16px !important; }
+    .cv-paper.is-exporting .cv-section-title { margin-bottom: 12px !important; padding-bottom: 6px !important; }
+    .cv-paper.is-exporting .cv-item { gap: 4px !important; margin-bottom: 12px !important; }
+    .cv-paper.is-exporting .cv-item:last-child { margin-bottom: 0 !important; }
+    .cv-paper.is-exporting .cv-item-title { font-size: 1rem !important; }
+    .cv-paper.is-exporting .cv-item-desc { font-size: 0.85rem !important; line-height: 1.4 !important; }
+    .cv-paper.is-exporting .cv-contact-item { font-size: 0.85rem !important; margin-bottom: 6px !important;}
+    .cv-paper.is-exporting .cv-references-grid { gap: 16px !important; }
 
     .toast { position: fixed; right: 24px; bottom: 24px; z-index: 1800; min-width: 300px; max-width: 420px; padding: 16px 24px; border-radius: var(--radius-md); background: var(--text); color: var(--bg); box-shadow: var(--shadow); transform: translateY(24px); opacity: 0; visibility: hidden; transition: var(--transition); }
     .toast.show { transform: translateY(0); opacity: 1; visibility: visible; }
@@ -788,6 +854,8 @@
       .cv-sidebar, .cv-main-content { padding: 24px; gap: 32px; }
       .cv-paper { border-radius: 0; border-left: none; border-right: none; }
       .cv-header h1 { font-size: 1.8rem; }
+
+      .cv-references-grid { grid-template-columns: 1fr; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -857,7 +925,7 @@
         <a href="#now" class="nav-link mobile-link">Now</a>
         <a href="#experience" class="nav-link mobile-link">Experience</a>
         <a href="#contact" class="nav-link mobile-link">Contact</a>
-        <a href="NikithaKeshan.pdf" class="btn btn-primary mobile-link" style="margin-top: 16px;" download>
+        <a href="NikithaKeshan.pdf" class="btn btn-primary mobile-link" style="margin-top: 16px; width: 100%;" download>
           Resume
         </a>
       </div>
@@ -929,7 +997,7 @@
         <div class="about-shell reveal">
           <div class="card about-media">
             <img
-              src="1760549322866.png"
+              src="keshanimage.png"
               alt="Portrait of Nikitha Keshan"
               class="about-image"
               loading="lazy"
@@ -1562,27 +1630,24 @@
   </section>
 
   <section class="modal cv-modal" id="cvModal" role="dialog" aria-modal="true" aria-labelledby="cvModalTitle" tabindex="-1">
-    <div class="modal-header">
-      <div>
-        <h3 class="title-lg" id="cvModalTitle" style="font-size: clamp(1.5rem, 3vw, 2.2rem);">Virtual Resume</h3>
-      </div>
-      <div style="display: flex; gap: 12px; align-items: center;">
-        <a href="NikithaKeshan.pdf" class="btn btn-primary" download style="min-height: 48px; padding: 0 20px;">
+    <div class="modal-header" style="justify-content: flex-end; align-items: center; border-bottom: none; padding-bottom: 0;">
+      <div style="display: flex; gap: 12px; align-items: center; margin-top: -16px;">
+        <button type="button" class="btn btn-primary download-cv-trigger" style="min-height: 40px; padding: 0 20px;">
           <i class="ph ph-download-simple"></i> <span class="hide-mobile" style="margin-left: 8px;">Download PDF</span>
-        </a>
+        </button>
         <button class="btn-icon" id="cvModalClose" type="button" aria-label="Close resume dialog">
           <i class="ph ph-x"></i>
         </button>
       </div>
     </div>
 
-    <div class="modal-body" style="padding-top: 0;">
+    <div class="modal-body" style="padding-top: 16px;">
       <div class="cv-paper">
         
         <aside class="cv-sidebar">
           
           <div>
-            <img src="1760549322866.png" alt="Nikitha Keshan" class="cv-profile-img" loading="lazy" />
+            <img src="keshanimage.png" alt="Nikitha Keshan" class="cv-profile-img" loading="lazy" />
             <div class="cv-header cv-header-mobile">
               <h1>P.N.C.K.<br>GOMES</h1>
             </div>
@@ -1654,40 +1719,6 @@
               <p class="cv-item-desc">Stream - Engineering Technology Stream<br>Results - C2s, S1</p>
             </div>
           </div>
-
-          <div class="cv-section">
-            <div class="cv-section-title">References</div>
-            
-            <div class="cv-item">
-              <div class="cv-item-title">Thilina Hansamala</div>
-              <div class="cv-item-subtitle" style="margin-bottom: 8px;">Head IT Administrator At CER Industries</div>
-              <div class="cv-contact-list" style="gap: 8px;">
-                <div class="cv-contact-item">
-                  <i class="ph ph-envelope-simple cv-contact-icon"></i> 
-                  <a href="mailto:ajward@sjp.ac.lk">ajward@sjp.ac.lk</a>
-                </div>
-                <div class="cv-contact-item">
-                  <i class="ph ph-phone cv-contact-icon"></i> 
-                  <span>075 654 7410</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="cv-item" style="margin-top: 8px;">
-              <div class="cv-item-title">Manil Alahapperuma</div>
-              <div class="cv-item-subtitle" style="margin-bottom: 8px;">Science Teacher at Tissa Central College (National College)</div>
-              <div class="cv-contact-list" style="gap: 8px;">
-                <div class="cv-contact-item">
-                  <i class="ph ph-envelope-simple cv-contact-icon"></i> 
-                  <a href="mailto:pasinduera@navalokamedicare.com">pasinduera@navalokamedicare.com</a>
-                </div>
-                <div class="cv-contact-item">
-                  <i class="ph ph-phone cv-contact-icon"></i> 
-                  <span>071 882 9540</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </aside>
 
         <main class="cv-main-content">
@@ -1723,7 +1754,6 @@
                 <li>Create and maintain IT and automation process documentation.</li>
                 <li>Build dashboards in Looker Studio for KPI tracking.</li>
               </ul>
-              <p class="cv-item-desc" style="margin-top: 24px; font-style: italic; color: var(--text);">I do hereby declare that all statement made in this application are true and correct to the best of my knowledge.</p>
             </div>
           </div>
 
@@ -1740,6 +1770,58 @@
             </div>
           </div>
 
+          <div class="cv-section" style="margin-top: 16px;">
+            <div class="cv-section-title">References</div>
+            <div class="cv-references-grid">
+              <div class="cv-item">
+                <div class="cv-item-title">Thilina Hansamala</div>
+                <div class="cv-item-subtitle" style="margin-bottom: 8px;">Head IT Administrator At CER Industries</div>
+                <div class="cv-contact-list" style="gap: 8px;">
+                  <div class="cv-contact-item">
+                    <i class="ph ph-envelope-simple cv-contact-icon"></i> 
+                    <a href="mailto:yours.automation@gmail.com">yours.automation@gmail.com</a>
+                  </div>
+                  <div class="cv-contact-item">
+                    <i class="ph ph-phone cv-contact-icon"></i> 
+                    <span>075 654 7410</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cv-item">
+                <div class="cv-item-title">Dasun Abeysooriya</div>
+                <div class="cv-item-subtitle" style="margin-bottom: 8px;">General Manager At CER Industries</div>
+                <div class="cv-contact-list" style="gap: 8px;">
+                  <div class="cv-contact-item">
+                    <i class="ph ph-envelope-simple cv-contact-icon"></i> 
+                    <a href="mailto:dasun.biseka@gmail.com">dasun.biseka@gmail.com</a>
+                  </div>
+                  <div class="cv-contact-item">
+                    <i class="ph ph-phone cv-contact-icon"></i> 
+                    <span>071 740 7494</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cv-section" style="margin-top: 16px;">
+            <div class="cv-section-title">Declaration</div>
+            <div class="cv-item">
+              <p class="cv-item-desc" style="font-style: italic;">I do hereby declare that all statement made in this application are true and correct to the best of my knowledge.</p>
+              <div style="margin-top: 20px; display: flex; gap: 150px;">
+                <div style="text-align: center;">
+                  <p>___________________</p>
+                  <p style="margin-top: 5px; font-weight: bold;">Signature</p>
+                </div>
+                <div style="text-align: center;">
+                  <p>___________________</p>
+                  <p style="margin-top: 5px; font-weight: bold;">Date: <span id="currentDate"></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </main>
       </div>
     </div>
@@ -1752,6 +1834,9 @@
       const $ = (selector, scope = document) => scope.querySelector(selector);
       const $$ = (selector, scope = document) => Array.from(scope.querySelectorAll(selector));
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Set current date in CV
+      document.getElementById('currentDate').textContent = new Date().toLocaleDateString();
 
       const siteConfig = {
         email: 'nikithakeshan@gmail.com',
@@ -2353,6 +2438,58 @@
         });
       };
 
+      // NEW: PDF Download Initialization
+      const initPdfDownload = () => {
+        $$('.download-cv-trigger').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const element = $('.cv-paper');
+            
+            // Add a loading state to the button visually
+            const originalHtml = btn.innerHTML;
+            btn.innerHTML = '<i class="ph ph-spinner-gap"></i> <span class="hide-mobile" style="margin-left: 8px;">Generating...</span>';
+            btn.style.pointerEvents = 'none';
+
+            // Temporarily add print class to fit A4 perfectly
+            element.classList.add('is-exporting');
+
+            // PDF Options
+            const opt = {
+              margin:       0, // Zero margin to maximize space, we handle padding in CSS
+              filename:     'Nikitha_Keshan_Virtual_Resume.pdf',
+              image:        { type: 'jpeg', quality: 0.98 },
+              html2canvas:  { scale: 2, useCORS: true, backgroundColor: '#ffffff', windowWidth: 800 },
+              jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' },
+              pagebreak:    { mode: 'avoid-all' }
+            };
+
+            // Force modal to render for screenshot if it was hidden
+            const wasHidden = !els.cvModal.classList.contains('show');
+            if (wasHidden) {
+              els.cvModal.style.opacity = '0';
+              els.cvModal.style.visibility = 'visible';
+              els.cvModal.style.display = 'block';
+            }
+
+            html2pdf().set(opt).from(element).save().then(() => {
+              // Remove print class
+              element.classList.remove('is-exporting');
+
+              // Restore button state
+              btn.innerHTML = originalHtml;
+              btn.style.pointerEvents = 'auto';
+              
+              // Restore modal state
+              if (wasHidden) {
+                els.cvModal.style.opacity = '';
+                els.cvModal.style.visibility = '';
+                els.cvModal.style.display = '';
+              }
+            });
+          });
+        });
+      };
+
       const initActiveNav = () => {
         if (!('IntersectionObserver' in window)) return;
         const sections = $$('main section[id]');
@@ -2437,6 +2574,7 @@
         initProjectFilters();
         initContactForm();
         initModal();
+        initPdfDownload(); // Initialize the new PDF generator
         initActiveNav();
         initCursor();
         initUtilities();
