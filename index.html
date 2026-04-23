@@ -545,14 +545,16 @@
       align-content: start;
       gap: 40px;
     }
-    
-    .cv-profile-img {
+
+      .cv-profile-img {
       width: 140px;
       height: 140px;
-      border-radius: var(--radius-lg);
+      border-radius: 50%; /* This makes it a perfect circle */
       object-fit: cover;
       border: 1px solid var(--line-strong);
       margin-bottom: 24px;
+      margin-left: auto;  /* This centers the image */
+      margin-right: auto; /* This centers the image */
       background: var(--surface);
       box-shadow: var(--shadow-soft);
     }
