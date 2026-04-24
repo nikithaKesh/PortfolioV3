@@ -572,8 +572,9 @@
     }
     
     .cv-profile-img {
-      width: 250px;
-      height: 250px;
+      width: 100%;
+      max-width: 250px;
+      aspect-ratio: 1/1;
       border-radius: 50%;
       object-fit: cover;
       border: 1px solid var(--line-strong);
@@ -657,6 +658,7 @@
       font-size: 0.9rem;
       color: var(--muted);
       line-height: 1.5;
+      word-break: break-word;
     }
     .cv-contact-item a { color: var(--text); transition: var(--transition); }
     .cv-contact-item a:hover { color: var(--primary); text-decoration: underline; }
@@ -669,8 +671,17 @@
 
     .cv-references-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 24px;
+    }
+    
+    /* New Class for responsive signatures */
+    .cv-signatures {
+      margin-top: 32px; 
+      display: flex; 
+      justify-content: space-between; 
+      flex-wrap: wrap; 
+      gap: 32px;
     }
 
     /* PDF Export Override Class */
@@ -707,6 +718,7 @@
     .cv-paper.is-exporting .cv-item-desc { font-size: 0.85rem !important; line-height: 1.4 !important; }
     .cv-paper.is-exporting .cv-contact-item { font-size: 0.85rem !important; margin-bottom: 6px !important;}
     .cv-paper.is-exporting .cv-references-grid { gap: 16px !important; }
+    .cv-paper.is-exporting .cv-signatures { flex-direction: row !important; justify-content: space-between !important; gap: 64px !important; text-align: center; }
 
     .toast { position: fixed; right: 24px; bottom: 24px; z-index: 1800; min-width: 300px; max-width: 420px; padding: 16px 24px; border-radius: var(--radius-md); background: var(--text); color: var(--bg); box-shadow: var(--shadow); transform: translateY(24px); opacity: 0; visibility: hidden; transition: var(--transition); }
     .toast.show { transform: translateY(0); opacity: 1; visibility: visible; }
@@ -749,7 +761,7 @@
       .cv-main-content { padding: 32px; }
       .cv-header-mobile { display: block; margin-bottom: -16px; }
       .cv-header-desktop { display: none; }
-      .cv-profile-img { width: 100px; height: 100px; margin-bottom: 16px; }
+      .cv-profile-img { width: 120px; height: 120px; margin-bottom: 16px; }
     }
 
     @media (max-width: 640px) {
@@ -854,8 +866,18 @@
       .cv-sidebar, .cv-main-content { padding: 24px; gap: 32px; }
       .cv-paper { border-radius: 0; border-left: none; border-right: none; }
       .cv-header h1 { font-size: 1.8rem; }
-
       .cv-references-grid { grid-template-columns: 1fr; }
+    }
+    
+    /* Ultimate Mobile Fallback for extremely small devices (e.g. iPhone SE, old Androids) */
+    @media (max-width: 480px) {
+      .cv-signatures { flex-direction: column; align-items: center; gap: 48px; text-align: center; }
+      .cv-sidebar, .cv-main-content { padding: 16px; gap: 24px; }
+      .cv-header h1 { font-size: 1.6rem; }
+      .cv-profile-img { width: 90px; height: 90px; }
+      .cv-item-title { font-size: 1rem; }
+      .modal-header, .modal-body, .modal-footer { padding: 16px; }
+      .cv-contact-item { font-size: 0.85rem; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -970,15 +992,15 @@
               <div class="metric-grid" aria-label="Focus areas">
                 <div class="metric-card">
                   <div class="mono">Web</div>
-                  <strong>Business websites</strong>
+                  <strong style="margin-top: 8px; display: block; font-size: 1.1rem; font-family: var(--font-display);">Business websites</strong>
                 </div>
                 <div class="metric-card">
                   <div class="mono">Automation</div>
-                  <strong>Internal workflows</strong>
+                  <strong style="margin-top: 8px; display: block; font-size: 1.1rem; font-family: var(--font-display);">Internal workflows</strong>
                 </div>
                 <div class="metric-card">
                   <div class="mono">Systems</div>
-                  <strong>Operational tooling</strong>
+                  <strong style="margin-top: 8px; display: block; font-size: 1.1rem; font-family: var(--font-display);">Operational tooling</strong>
                 </div>
               </div>
             </div>
@@ -1034,7 +1056,7 @@
             <div class="grid-2" style="padding-top: 16px;">
               <div>
                 <div class="mono" style="margin-bottom: 12px; color: var(--text); font-weight: 700;">Core Focus</div>
-                <ul class="small" style="display: grid; gap: 8px;">
+                <ul class="small" style="display: grid; gap: 8px; padding-left: 0;">
                   <li>Web Application Architecture</li>
                   <li>Business Process Automation</li>
                   <li>UI/UX Systems</li>
@@ -1042,7 +1064,7 @@
               </div>
               <div>
                 <div class="mono" style="margin-bottom: 12px; color: var(--text); font-weight: 700;">Business Contexts</div>
-                <ul class="small" style="display: grid; gap: 8px;">
+                <ul class="small" style="display: grid; gap: 8px; padding-left: 0;">
                   <li>E-commerce and retail operations</li>
                   <li>Internal reporting and admin workflows</li>
                   <li>Brand sites with growth-focused UX</li>
@@ -1809,7 +1831,8 @@
             <div class="cv-section-title">Declaration</div>
             <div class="cv-item">
               <p class="cv-item-desc" style="font-style: italic;">I do hereby declare that all statement made in this application are true and correct to the best of my knowledge.</p>
-              <div style="margin-top: 20px; display: flex; gap: 150px;">
+              
+              <div class="cv-signatures">
                 <div style="text-align: center;">
                   <p>___________________</p>
                   <p style="margin-top: 5px; font-weight: bold;">Signature</p>
@@ -1819,6 +1842,7 @@
                   <p style="margin-top: 5px; font-weight: bold;">Date: <span id="currentDate"></span></p>
                 </div>
               </div>
+
             </div>
           </div>
 
@@ -2574,7 +2598,7 @@
         initProjectFilters();
         initContactForm();
         initModal();
-        initPdfDownload(); // Initialize the new PDF generator
+        initPdfDownload(); 
         initActiveNav();
         initCursor();
         initUtilities();
