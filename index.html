@@ -478,13 +478,25 @@
     .social-icon.linkedin { color: var(--g-blue); background: var(--g-blue-alpha); } 
     .social-icon.whatsapp { color: #25D366; background: rgba(37, 211, 102, 0.15); }
     
-    .social-compact-row { display: flex; gap: 12px; flex-wrap: wrap; }
+    .social-compact-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
     .compact-btn { width: 56px; height: 56px; border-radius: var(--radius-md); display: grid; place-items: center; background: var(--surface); border: 1px solid var(--line); font-size: 1.5rem; transition: var(--transition); color: var(--muted); }
     .compact-btn:hover { transform: translateY(-4px); background: var(--surface-2); box-shadow: var(--shadow-soft); }
-    .compact-btn.github:hover { color: var(--text); border-color: var(--line-strong); }
-    .compact-btn.twitter:hover { color: var(--text); border-color: var(--line-strong); }
+    
+    /* Brand Colors on Hover */
+    .compact-btn.github:hover, .compact-btn.twitter:hover, .compact-btn.threads:hover, .compact-btn.medium:hover, .compact-btn.cosmos:hover, .compact-btn.blog:hover { color: var(--text); border-color: var(--line-strong); }
     .compact-btn.facebook:hover { color: #1877F2; border-color: #1877F2; background: rgba(24, 119, 242, 0.1); }
     .compact-btn.instagram:hover { color: #E4405F; border-color: #E4405F; background: rgba(228, 64, 95, 0.1); }
+    .compact-btn.pinterest:hover { color: #E60023; border-color: #E60023; background: rgba(230, 0, 35, 0.1); }
+    .compact-btn.youtube:hover { color: #FF0000; border-color: #FF0000; background: rgba(255, 0, 0, 0.1); }
+    .compact-btn.snapchat:hover { color: #FFFC00; border-color: #e6e200; background: rgba(255, 252, 0, 0.1); }
+    .compact-btn.coffee:hover { color: #FFDD00; border-color: #FFDD00; background: rgba(255, 221, 0, 0.1); }
+    .compact-btn.behance:hover { color: #1769FF; border-color: #1769FF; background: rgba(23, 105, 255, 0.1); }
+    .compact-btn.spotify:hover { color: #1DB954; border-color: #1DB954; background: rgba(29, 185, 84, 0.1); }
+    .compact-btn.gitlab:hover { color: #FC6D26; border-color: #FC6D26; background: rgba(252, 109, 38, 0.1); }
+    .compact-btn.tiktok:hover { color: #ff0050; border-color: #ff0050; background: rgba(255, 0, 80, 0.1); }
+    .compact-btn.discord:hover { color: #5865F2; border-color: #5865F2; background: rgba(88, 101, 242, 0.1); }
+    .compact-btn.duolingo:hover { color: #58CC02; border-color: #58CC02; background: rgba(88, 204, 2, 0.1); }
+    .compact-btn.wattpad:hover { color: #FF500A; border-color: #FF500A; background: rgba(255, 80, 10, 0.1); }
 
     .utility-row { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 8px; }
 
@@ -1471,19 +1483,78 @@
               <i class="ph ph-arrow-up-right"></i>
             </a>
 
-            <div class="mono" style="margin-top: 8px;">Find me elsewhere</div>
+            <div class="mono" style="margin-top: 16px;">Code & Design</div>
             <div class="social-compact-row">
-              <a href="https://github.com/nikithaKesh" target="_blank" rel="noreferrer" class="compact-btn github" aria-label="GitHub">
+              <a href="https://github.com/nikithaKesh" target="_blank" rel="noreferrer" class="compact-btn github" title="GitHub">
                 <i class="ph ph-github-logo"></i>
               </a>
-              <a href="https://x.com/_zo_no_" target="_blank" rel="noreferrer" class="compact-btn twitter" aria-label="Twitter / X">
+              <a href="https://gitlab.com/nikithagithub" target="_blank" rel="noreferrer" class="compact-btn gitlab" title="GitLab">
+                <i class="ph ph-gitlab-logo-simple"></i>
+              </a>
+              <a href="https://www.behance.net/nikithakeshan" target="_blank" rel="noreferrer" class="compact-btn behance" title="Behance">
+                <i class="ph ph-behance-logo"></i>
+              </a>
+              <a href="https://medium.com/@nikithagithub" target="_blank" rel="noreferrer" class="compact-btn medium" title="Medium">
+                <i class="ph ph-medium-logo"></i>
+              </a>
+              <a href="https://nikithakeshan.blogspot.com/" target="_blank" rel="noreferrer" class="compact-btn blog" title="Blogspot">
+                <i class="ph ph-article"></i>
+              </a>
+            </div>
+
+            <div class="mono" style="margin-top: 8px;">Social Presence</div>
+            <div class="social-compact-row">
+              <a href="https://x.com/_zo_no_" target="_blank" rel="noreferrer" class="compact-btn twitter" title="X (Twitter)">
                 <i class="ph ph-x-logo"></i>
               </a>
-              <a href="https://web.facebook.com/nikitha.keshan.7" target="_blank" rel="noreferrer" class="compact-btn facebook" aria-label="Facebook">
+              <a href="https://www.threads.net/@z.onoo" target="_blank" rel="noreferrer" class="compact-btn threads" title="Threads">
+                <i class="ph ph-threads-logo"></i>
+              </a>
+              <a href="https://www.instagram.com/z.onoo/" target="_blank" rel="noreferrer" class="compact-btn instagram" title="Instagram">
+                <i class="ph ph-instagram-logo"></i>
+              </a>
+              <a href="https://www.facebook.com/nikitha.keshan.7?mibextid=ZbWKwL" target="_blank" rel="noreferrer" class="compact-btn facebook" title="Facebook">
                 <i class="ph ph-facebook-logo"></i>
               </a>
-              <a href="https://www.instagram.com/z.onoo/" target="_blank" rel="noreferrer" class="compact-btn instagram" aria-label="Instagram">
-                <i class="ph ph-instagram-logo"></i>
+              <a href="https://www.tiktok.com/@z.onoo" target="_blank" rel="noreferrer" class="compact-btn tiktok" title="TikTok">
+                <i class="ph ph-tiktok-logo"></i>
+              </a>
+              <a href="https://www.snapchat.com/add/z.onoo" target="_blank" rel="noreferrer" class="compact-btn snapchat" title="Snapchat">
+                <i class="ph ph-snapchat-logo"></i>
+              </a>
+              <a href="https://www.pinterest.com/mrzonooo/" target="_blank" rel="noreferrer" class="compact-btn pinterest" title="Pinterest (Personal)">
+                <i class="ph ph-pinterest-logo"></i>
+              </a>
+              <a href="https://www.pinterest.com/zonocollecters/" target="_blank" rel="noreferrer" class="compact-btn pinterest" title="Pinterest (Collect)">
+                <i class="ph ph-push-pin"></i>
+              </a>
+            </div>
+
+            <div class="mono" style="margin-top: 8px;">Community & Culture</div>
+            <div class="social-compact-row">
+              <a href="https://www.youtube.com/@NikithaKeshan" target="_blank" rel="noreferrer" class="compact-btn youtube" title="YouTube">
+                <i class="ph ph-youtube-logo"></i>
+              </a>
+              <a href="https://discord.gg/4YuQ8HrJ" target="_blank" rel="noreferrer" class="compact-btn discord" title="Discord">
+                <i class="ph ph-discord-logo"></i>
+              </a>
+              <a href="https://open.spotify.com/user/31eeuieo76wofughxmzpil26x4ea" target="_blank" rel="noreferrer" class="compact-btn spotify" title="Spotify">
+                <i class="ph ph-spotify-logo"></i>
+              </a>
+              <a href="https://www.duolingo.com/profile/Nikithakeshan" target="_blank" rel="noreferrer" class="compact-btn duolingo" title="Duolingo">
+                <i class="ph ph-translate"></i>
+              </a>
+              <a href="https://www.wattpad.com/user/nikithakeshak" target="_blank" rel="noreferrer" class="compact-btn wattpad" title="Wattpad">
+                <i class="ph ph-book-open"></i>
+              </a>
+              <a href="https://buymeacoffee.com/nikitha_keshan" target="_blank" rel="noreferrer" class="compact-btn coffee" title="Buy Me a Coffee">
+                <i class="ph ph-coffee"></i>
+              </a>
+              <a href="https://cosmos.so/nikithakeshan" target="_blank" rel="noreferrer" class="compact-btn cosmos" title="Cosmos (nikithakeshan)">
+                <i class="ph ph-planet"></i>
+              </a>
+              <a href="https://cosmos.so/z.onoo" target="_blank" rel="noreferrer" class="compact-btn cosmos" title="Cosmos (z.onoo)">
+                <i class="ph ph-asterisk"></i>
               </a>
             </div>
             
